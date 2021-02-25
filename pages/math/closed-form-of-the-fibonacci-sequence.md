@@ -7,15 +7,15 @@ comments: 13
 
 (25 Feb 2021) This is a pretty standard exercise in linear algebra to get a feeling for how to use eigenvalues and eigenvectors. Let's go through it here. 
 
-**Definition**: The *Fibonacci sequence* is the sequence $$(F_n)_{n \in \NN}$$ satisfying
-1. $$F_1 = F_2 = 1$$ (for convenience below, we'll define $$F_0 = 0$$ here), and
-2. $$\forall n \geq 2: F_{n+1} = F_{n-1} + F_{n}.$$
+The *Fibonacci sequence* is the sequence $$(F_n)_{n \in \NN_0}$$ satisfying
+1. $$F_0 = 0$$, $$F_1 = 1$$, and
+2. $$\forall n \geq 1: F_{n+1} = F_{n} + F_{n-1}$$.
 
 Thus, the Fibonacci sequence is 
 
-$$1, 1, 2, 3, 5, 8, 13, 21, \dots.$$
+$$0, 1, 1, 2, 3, 5, 8, 13, 21, \dots$$
 
-Let's define the following
+(note that sometimes the 0 is not included). Let's define the following
 
 $$\mathcal F_n \coloneqq \parentheses{\begin{matrix}F_n, F_{n-1} \end{matrix}}.$$
 
@@ -25,7 +25,7 @@ $$\parentheses{\begin{matrix}F_{n+1}, F_{n} \end{matrix}} = \parentheses{\begin{
 
 we see that $$\mathcal F_{n+1} = M \mathcal F_n$$ where
 
-$$M = \parentheses{\begin{marix}1&1\\1&0 \end{matrix}}.$$
+$$M = \parentheses{\begin{matrix}1&1\\1&0 \end{matrix}}.$$
 
 Then we use that $$\mathcal F_1 = (1, 0)^T$$ (i.e. $$F_1 = 1, F_0 = 0$$) to find
 
@@ -51,7 +51,7 @@ $$a = \frac{1}{\lambda_1-\lambda_2} = \frac{1}{\sqrt{5}}$$
 and $$b = -a$$. Using the definition of eigenvectors and eigenvalues, we can then show that
 
 $$\begin{aligned}
-\parentheses{F_{n+1}\\F_n} &= \mathcal F_{n+1}\\
+\parentheses{\begin{matrix}F_{n+1}\\F_n\end{matrix}} &= \mathcal F_{n+1}\\
 &= M^n \mathcal F_1\\
 &= aM^n v_1 + b M^n v_2\\
 &= a \lambda_1^n v_1 + b \lambda_2^n v_2\\
@@ -65,6 +65,10 @@ $$F_n = a\lambda_1^n + b \lambda_2^n.$$
 Using our values for $$a, b, \lambda_1,$$ and $$\lambda_2$$ above, we find the closed form for the Fibonacci numbers to be
 
 $$F_n = \frac{1}{\sqrt{5}}\parentheses{\parentheses{\frac{1+\sqrt 5}{2}}^n - \parentheses{\frac{1-\sqrt 5}{2}}^n}.$$
+
+Asymptotically, the Fibonacci numbers are
+
+$$\lim_{n \to \infty} F_n = \frac{1}{\sqrt 5} \parentheses{\frac{1+\sqrt 5}{2}}^n.$$
 
 
 #### Golden Ratio
