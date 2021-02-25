@@ -34,4 +34,9 @@ I provide a general overview of implicit versus explicit and single- versus mult
 
 #### Android application [(View on Google Play)](https://play.google.com/store/apps/details?id=main.distancetogreen)
 
-Published Android application called "Distance to Green" on the Google Play store under the developer name "Eigenjoe" with monetized adds from AdMob. See the link for more information. 
+Published Android application called "Distance to Green" on the Google Play store under the developer name "Eigenjoe" with monetized adds from AdMob. See the link for more information.
+
+
+#### Github blog comments [(View site)](https://jtiosue.github.io/GHBlogComments/) [(View source)](https://github.com/jtiosue/GHBlogComments/)
+
+A simple javascript file hosted on my site to easily add comments to a blog by hosting the comments on Github pages. This is what I use for comments on this site.
