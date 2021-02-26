@@ -2,4 +2,4 @@
 
 {% include mathjax.html %}
 
-[*Back to home page*](/)
+<a href="/" style="font-size: 16px; font-style: italic;">Back to home page</a>

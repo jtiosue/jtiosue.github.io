@@ -17,11 +17,11 @@ $$0, 1, 1, 2, 3, 5, 8, 13, 21, \dots$$
 
 (note that sometimes the 0 is not included). Let's define the following
 
-$$\mathcal F_n \coloneqq \parentheses{\begin{matrix}F_n, F_{n-1} \end{matrix}}.$$
+$$\mathcal F_n \coloneqq \parentheses{\begin{matrix}F_n\\ F_{n-1} \end{matrix}}.$$
 
 Using
 
-$$\parentheses{\begin{matrix}F_{n+1}, F_{n} \end{matrix}} = \parentheses{\begin{matrix}F_n + F_{n-1}, F_n \end{matrix}},$$
+$$\parentheses{\begin{matrix}F_{n+1}\\ F_{n} \end{matrix}} = \parentheses{\begin{matrix}F_n + F_{n-1}\\ F_n \end{matrix}},$$
 
 we see that $$\mathcal F_{n+1} = M \mathcal F_n$$ where
 

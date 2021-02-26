@@ -1,43 +1,40 @@
 <style>
-.date {
-    float: right;
-    padding-left: 1em;
-}
-.title {
-    font-size: 16px;
+li span {
+  float: right;
+  padding-left: 1em;
 }
 </style>
 
 ## About
 
-- <a class="title" href="pages/about/about.html">About the author</a>
-- <a class="title" href="pages/about/media/cv.pdf">Curriculum Vitae</a>
-- <a class="title" href="mailto:jtiosue@umd.edu">Contact the author</a>
+- [About the author](pages/about/about.md)
+- [Curriculum Vitae](pages/about/media/cv.pdf)
+- [Contact the author](mailto:jtiosue@umd.edu)
 
 ## Math topics
 
-- <span class="date">25 Feb 2021</span><a class="title" href="pages/math/closed-form-of-the-fibonacci-sequence.html">Closed form of the Fibonacci sequence</a>
-- <span class="date">07 Feb 2021</span><a class="title" href="pages/math/compactness-on-topological-spaces-and-why-it-is-important.html">Compactness on topological spaces and why it is important</a>
-- <span class="date">01 Feb 2021</span><a class="title" href="pages/math/lagrange-multipliers-and-constrained-optimization.html">Lagrange multipliers and constrained optimization</a>
-- <span class="date">28 Jan 2021</span><a class="title" href="pages/math/quotient-groups-and-modular-integers.html">Quotient groups and modular integers</a>
-- <span class="date">25 Jan 2021</span><a class="title" href="pages/math/proof-that-eulers-number-is-irrational.html">Proof that Euler's number is irrational</a>
-- <span class="date">24 Jan 2021</span><a class="title" href="pages/math/levi-civita-determinants-volumes-and-jacobians.html">Levi-Civita, determinants, volumes, and Jacobians</a>
-- <span class="date">17 Jan 2021</span><a class="title" href="pages/math/the-prime-number-theorem.html">The Prime Number Theorem</a>
+- <span>25 Feb 2021</span>[Closed form of the Fibonacci sequence](pages/math/closed-form-of-the-fibonacci-sequence.html)
+- <span>07 Feb 2021</span>[Compactness on topological spaces and why it is important](pages/math/compactness-on-topological-spaces-and-why-it-is-important.md)
+- <span>01 Feb 2021</span>[Lagrange multipliers and constrained optimization](pages/math/lagrange-multipliers-and-constrained-optimization.md)
+- <span>28 Jan 2021</span>[Quotient groups and modular integers](pages/math/quotient-groups-and-modular-integers.md)
+- <span>25 Jan 2021</span>[Proof that Euler's number is irrational](pages/math/proof-that-eulers-number-is-irrational.md)
+- <span>24 Jan 2021</span>[Levi-Civita, determinants, volumes, and Jacobians](pages/math/levi-civita-determinants-volumes-and-jacobians.md)
+- <span>17 Jan 2021</span>[The Prime Number Theorem](pages/math/the-prime-number-theorem.md)
 
 ## Physics topics
 
-- <span class="date">16 Jan 2021</span><a class="title" href="pages/physics/the-origin-of-the-name-povm.html">The origin of the name POVM</a>
-- <span class="date">15 Jan 2021</span><a class="title" href="pages/physics/why-newtons-law-of-gravitation.html">Why Newton's law of gravitation?</a>
+- <span>16 Jan 2021</span>[The origin of the name POVM](pages/physics/the-origin-of-the-name-povm.md)
+- <span>15 Jan 2021</span>[Why Newton's law of gravitation?](pages/physics/why-newtons-law-of-gravitation.md)
 
 ## Computer science topics
 
-- <span class="date">23 Jan 2021</span><a class="title" href="pages/computerscience/uncomputability-the-halting-problem-and-diagonalization.html">Uncomputability, the halting problem, and diagonalization</a>
+- <span>23 Jan 2021</span>[Uncomputability, the halting problem, and diagonalization](pages/computerscience/uncomputability-the-halting-problem-and-diagonalization.md)
 
 ## Optimization topics
 
-- <span class="date">02 Feb 2021</span><a class="title" href="pages/optimization/methods-in-pseudo-boolean-optimization.html">Methods in pseudo-boolean optimization</a>
-- <span class="date">21 Jan 2021</span><a class="title" href="pages/optimization/the-simulated-annealing-algorithm.html">The simulated annealing algorithm</a>
+- <span>02 Feb 2021</span>[Methods in pseudo-boolean optimization](pages/optimization/methods-in-pseudo-boolean-optimization.md)
+- <span>21 Jan 2021</span>[The simulated annealing algorithm](pages/optimization/the-simulated-annealing-algorithm.md)
 
 ## Nontechnical topics
 
-- <span class="date">Ongoing</span><a class="title" href="pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.html">Recommended subjects and textbooks for self-study (for physicists)</a>
+- <span>Ongoing</span>[Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)
