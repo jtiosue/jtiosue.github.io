@@ -15,7 +15,7 @@ $$A/B \coloneqq \braces{\brackets a~\mid~a \in A },$$
 
 where $$\brackets a$$ denotes the equivalence class
 
-$$\brackets a \coloneqq \braces{a \cdot b ~\mid~ b \in B }.$$
+$$\brackets a \coloneqq \braces{a \cdot b ~\mid~ b \in B } = a \cdot B = B \cdot a.$$
 
 Now let's go back to our example where $$(A, \cdot) = (\ZZ, +)$$ and $$B = n \ZZ$$. For any $$z \in \ZZ$$, we have that
 
@@ -126,6 +126,45 @@ $$\begin{aligned}
 \end{aligned}$$
 
 (alternatively, one could think of $$\phi: \RR/ \ZZ \to U(1)$$ instead). It is straightforward to see that $$\phi$$ is both injective and surjective, and therefore is an isomorphism.
+
+
+## Aside on normal subgroups
+
+We mentioned above that a subgroup $$B \leq A$$ (the $$\leq$$ means subgroup) is a normal subgroup of $$A$$ if $$a \cdot B = B \cdot a$$ for all $$a \in A$$ (left and right *cosets* are the same). We then defined the quotient group $$A / B$$ to be the set $$\braces{a B ~\mid~ a \in A}$$. You may ask, why do we restrict our definition of the quotient group to normal subgroups? The reason is as follows.
+
+The quotient group defines an equivalence relation $$\sim$$ (for modular integers above we used $$\equiv$$ instead of $$\sim$$) so that $$\forall a, b in A$$, $$a \sim b$$ iff $$a \cdot B = b \cdot B$$. For the $$\cdot$$ operation to be well-defined under this equivalence relation, we want that if $$a \sim a'$$ and $$b \sim b'$$, then $$a \cdot b \sim a' \cdot b'$$. So
+
+$$a \cdot B = a' \cdot B, b \cdot B = b' \cdot B ~\implies~ a\cdot b \cdot B = a' \cdot b' \cdot B.$$
+
+If we require that $$B$$ is normal, then
+
+$$\begin{aligned}
+a \cdot b \cdot B &= a \cdot (B \cdot b)\\
+&= a \cdot B \cdot b'\\
+&= a' \cdot B \cdot b'\\
+&= a' \cdot b' \cdot B.
+\end{aligned}$$
+
+So we see that requiring $$B$$ to be normal means that the operation is well-defined. Next, we will *not* assume that $$B$$ is normal. We will show that the operation being well-defined implies that $$B$$ must be normal.
+
+Consider that $$b \in B$$, $$a \in A$$, and $$e$$ is the identity in $$A$$ and $$B$$. The multiplication happens on equivalence classes/cosets; i.e. $$\parentheses{a \cdot B} \cdot \parentheses{b \cdot B} = \parentheses{a \cdot b \cdot B}$$. Then
+
+$$B = e \cdot B =  b\cdot B.$$
+
+Therefore,
+
+$$\parentheses{e \cdot B }\cdot \parentheses{a \cdot B} = \parentheses{e \cdot a} \cdot B = a \cdot B.$$
+
+Similarly,
+
+$$\parentheses{b \cdot B} \cdot \parentheses{a \cdot B} = \parentheses{b \cdot a} \cdot B.$$
+
+Thus, $$a \cdot B = b \cdot a \cdot B$$, which implies that $$a^{-1} \cdot b \cdot a \cdot B = B$$. Then $$a^{-1} \cdot b \cdot a \in B$$, so that $$b \cdot a \in a \cdot B$$ and $$a^{-1} \cdot b \in B \cdot a^{-1}$$. Or, $$B \cdot a \subseteq a \cdot B$$ and $$a \cdot B \subseteq B \cdot a$$ for all $$a \in A$$ (we can get rid of the inverse by just noticing that $$\exists a' \in A$$ such that $$a^{-1} = a'$$, and then relabling $$a' \to a$$). Indeed, these two imply that $$a \cdot B = B\cdot a$$ for all $$a$$, implying that $$B$$ is indeed normal.
+
+
+#### References
+
+- [https://math.stackexchange.com/questions/14282/why-do-we-define-quotient-groups-for-normal-subgroups-only](https://math.stackexchange.com/questions/14282/why-do-we-define-quotient-groups-for-normal-subgroups-only)
 
 
 {% include post-footer.html %}
