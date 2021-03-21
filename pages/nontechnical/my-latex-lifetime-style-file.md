@@ -7,6 +7,7 @@ comments: 14
 
 (Ongoing) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command.
 
+{% raw %}
 
 ```latex
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
@@ -155,5 +156,6 @@ comments: 14
 \newcommand{\polylog}[1]{\text{polylog}\!\parentheses{#1}}
 ```
 
+{% endraw %}
 
 {% include post-footer.html %}
