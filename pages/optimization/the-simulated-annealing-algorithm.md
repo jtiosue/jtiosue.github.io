@@ -8,15 +8,15 @@ comments: 4
 (21 Jan 2021) (Copied from my notes from a long time ago) Simulated annealing is a specific application of the Metropolis-Hastings algorithm. I will use quantum notation here, with density matrices and Dirac notation. This is probably more complicated than it should be, but I already had it wrote up this way for some reason.
 
 **Define**:
-- $$\tau, N \in \ZZ^+$$,
-- $$T \in \RR_{> 0}^{\tau}$$ (i.e. $$\forall t \in \{0, \dots, \tau-1 \}: \ T_t\in \RR_{> 0}$$),
+- $$\tau, N \in \bbZ^+$$,
+- $$T \in \bbR_{> 0}^{\tau}$$ (i.e. $$\forall t \in \{0, \dots, \tau-1 \}: \ T_t\in \bbR_{> 0}$$),
 - $$\mathcal H = \left(\mathbb C^{N}, \braket{\cdot}{\cdot} \right)$$ is an $$N$$-dimensional Hilbert space,
 - $$H: \mathcal H \to \mathcal H$$ with $$H^{\dag} = H$$ is the Hamiltonian of interest,
 - $$\{\ket{i}~\mid~i\in\{0, \dots, N-1\} \}$$ are orthonormal eigenvectors of $$H$$, thus an orthonormal basis of $$\mathcal H$$,
 - $$H_{ii} = \bra{i} H \ket{i}$$,
 - $$\forall i, j, t: \ p_{ij}^t \in [0, 1]$$ with $$\forall i, t: \ \sum_{j}p_{ij}^t = 1$$; $$p_{ij}^t$$ represents the probability of going from state $$\ket i$$ to state $$\ket j$$ at step $$t$$,
 - $$\rho^0 : \mathcal H \to \mathcal H$$ is a positive semi-definite operator with $$\tr \rho^0 = 1$$ representing the initial quantum state,
-- $$K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$$; the set $$\{K_{ij}^t \}$$ forms a valid set of Krauss operators since $$\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \II_N$$,
+- $$K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$$; the set $$\{K_{ij}^t \}$$ forms a valid set of Krauss operators since $$\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \bbI_N$$,
 - $$\mathcal E^t: \rho \mapsto \sum_{i, j} K_{ij}^t \rho K_{ij}^{t\dag}$$ is the quantum channel at step $$t$$,
 - $$\rho^{t+1} = \mathcal E^t\left(\rho^t \right)$$ is a simulated annealing step, and
 - $$\rho^\tau$$ is the final state of the system.

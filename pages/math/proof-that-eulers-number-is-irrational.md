@@ -34,7 +34,7 @@ $$a / b = 1+\frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \dots$$
 Then
 
 $$\begin{aligned}
-\ZZ \ni (b!)\frac{a}{b} =& \underbrace{b! + \frac{b!}{1!} + \dots + \frac{b!}{b!}}_{\eqqcolon C\in \ZZ}\\
+\bbZ \ni (b!)\frac{a}{b} =& \underbrace{b! + \frac{b!}{1!} + \dots + \frac{b!}{b!}}_{\eqqcolon C\in \bbZ}\\
 &~~+ \underbrace{\frac{1}{b+1} + \frac{1}{(b+1)(b+2)} + \frac{1}{(b+1)(b+2)(b+3)} + \dots}_{\eqqcolon D}.
 \end{aligned}$$
 

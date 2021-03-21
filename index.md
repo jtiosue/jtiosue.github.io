@@ -37,4 +37,5 @@ li span {
 
 ## Nontechnical topics
 
+- <span>Ongoing</span>[My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)
 - <span>Ongoing</span>[Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)

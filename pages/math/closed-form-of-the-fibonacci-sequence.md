@@ -7,7 +7,7 @@ comments: 13
 
 (25 Feb 2021) This is a pretty standard exercise in linear algebra to get a feeling for how to use eigenvalues and eigenvectors. Let's go through it here. 
 
-The *Fibonacci sequence* is the sequence $$(F_n)_{n \in \NN_0}$$ satisfying
+The *Fibonacci sequence* is the sequence $$(F_n)_{n \in \bbN_0}$$ satisfying
 1. $$F_0 = 0$$, $$F_1 = 1$$, and
 2. $$\forall n \geq 1: F_{n+1} = F_{n} + F_{n-1}$$.
 
@@ -44,7 +44,7 @@ Recall these are found by requiring that $$M v_i = \lambda_i v_i$$ per the defin
 
 $$\mathcal F_1 = a v_1 + b v_2.$$
 
-We know we can do this because the set $$\braces{v_1, v_2}$$ is a basis for $$\RR^2$$. It is then straightforward to verify that 
+We know we can do this because the set $$\curlybrackets{v_1, v_2}$$ is a basis for $$\bbR^2$$. It is then straightforward to verify that 
 
 $$a = \frac{1}{\lambda_1-\lambda_2} = \frac{1}{\sqrt{5}}$$
 

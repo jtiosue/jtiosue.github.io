@@ -13,16 +13,16 @@ Here I will *briefly* go over the basics of topological spaces, including how co
 **Notation**:
 - On a metric space $$(X, d)$$, the open ball of radius $$r\geq 0$$ around the point $$x \in X$$ is 
 
-$$B_r(x) \coloneqq \braces{y \in X ~\mid~ d(x, y) < r}.$$
+$$B_r(x) \coloneqq \curlybrackets{y \in X ~\mid~ d(x, y) < r}.$$
 
 - A subset $$K \subseteq X$$ is called *open* if for every point $$x \in K$$, there exists an $$r > 0$$ such that $$B_r(x) \subseteq K$$.
 - Fix a function $$f: X \to Y$$, and subsets $$J \subseteq X$$, $$Y \subseteq K$$. The *image* of $$J$$ under $$f$$ is 
 
-$$f[J] \coloneqq \braces{f(x) ~\mid~ x \in J}.$$
+$$f[J] \coloneqq \curlybrackets{f(x) ~\mid~ x \in J}.$$
 
 - The *preimage* of $$K$$ under $$f$$ is
 
-$$f^{-1}[K] \coloneqq \braces{x \in X ~\mid~ f(x) \in K}.$$
+$$f^{-1}[K] \coloneqq \curlybrackets{x \in X ~\mid~ f(x) \in K}.$$
 
 - $$\delta_{xy}$$ is the Kroneker delta that equals 1 if $$x = y$$ and 0 otherwise.
 
@@ -37,11 +37,11 @@ When I first began learning about topological spaces, I was very confused during
 2. if $$G_\alpha$ \in T$$ for $$\alpha \in A$$, then $$\bigcup_{\alpha \in A}G_\alpha \in T$$ (arbitrary union),
 3. if $$G_i \in T$$ for $$i=1,\dots, n$$, then $$\bigcap_{i=1}^n G_i \in T$$ (finite intersections).
 
-Why does condition 3 restrict to finite intersections, whereas condition 2 allows arbitrary unions? Consider $$\RR$$ with a topology defined by the Euclidean metric. That is, the opens sets are defined as subsets of the form $$(a, b)$$. Indeed, any finite intersection of sets of these form will also be of this form. But consider
+Why does condition 3 restrict to finite intersections, whereas condition 2 allows arbitrary unions? Consider $$\bbR$$ with a topology defined by the Euclidean metric. That is, the opens sets are defined as subsets of the form $$(a, b)$$. Indeed, any finite intersection of sets of these form will also be of this form. But consider
 
-$$\parentheses{\bigcap_{x=1}^\infty \parentheses{-1, 1/x}} \cap \parentheses{\bigcap_{x=1}^\infty \parentheses{-1/x, 1}} = \braces 0.$$
+$$\parentheses{\bigcap_{x=1}^\infty \parentheses{-1, 1/x}} \cap \parentheses{\bigcap_{x=1}^\infty \parentheses{-1/x, 1}} = \curlybrackets 0.$$
 
-This is a non-finite intersection of open subsets, and it equals $$\braces 0$$, which is clearly not an open set because it is not of the form $$(a, b)$$. So we see that in order to recreate the notion of open sets that we are used to, we must only require finite intersections of open sets to be open.
+This is a non-finite intersection of open subsets, and it equals $$\curlybrackets 0$$, which is clearly not an open set because it is not of the form $$(a, b)$$. So we see that in order to recreate the notion of open sets that we are used to, we must only require finite intersections of open sets to be open.
 
 *More to come in this section.*
 
@@ -89,29 +89,29 @@ is open, so $$f^{-1}[K]$$ is closed. {% include endproof.html %}
 
 **Definition**: A subset $$K$$ of a topological space $$(X, T)$$ is *compact* if every open cover of $$K$$ contains a finite subcover.
 
-**Example**: Consider the metric space $$(\RR, d)$$ where $$d$$ is the standard Euclidean metric. This induces a topology so that open sets are of the form $$(a, b) \subseteq \RR$$. The subset $$(0, 1)$$ is covered by the open sets $$\braces{(0, 1-1/n)~\mid~ n \in \NN}$$. However, any finite subset of these does not cover $$(0, 1)$$. Therefore, $$(0, 1)$$ with this topology is not compact. However, $$[0, 1]$$ *is* compact.
+**Example**: Consider the metric space $$(\bbR, d)$$ where $$d$$ is the standard Euclidean metric. This induces a topology so that open sets are of the form $$(a, b) \subseteq \bbR$$. The subset $$(0, 1)$$ is covered by the open sets $$\curlybrackets{(0, 1-1/n)~\mid~ n \in \bbN}$$. However, any finite subset of these does not cover $$(0, 1)$$. Therefore, $$(0, 1)$$ with this topology is not compact. However, $$[0, 1]$$ *is* compact.
 
-**Example**: Consider the metric space $$(\RR, d)$$ where $$d$$ is the discrete metric defined
+**Example**: Consider the metric space $$(\bbR, d)$$ where $$d$$ is the discrete metric defined
 
 $$\begin{aligned}
-d: &~\RR \times \RR \to [0, \infty)\\
+d: &~\bbR \times \bbR \to [0, \infty)\\
 &~(x, y) \mapsto 1-\delta_{xy}.
 \end{aligned}$$
 
-This metric induces a discrete topology, so that every subset of $$\RR$$ is defined as an open set. In this case, even the subset $$[0, 1]$$ is not compact. Consider the open cover 
+This metric induces a discrete topology, so that every subset of $$\bbR$$ is defined as an open set. In this case, even the subset $$[0, 1]$$ is not compact. Consider the open cover 
 
-$$\braces{\braces{k} ~\mid~ k\in [0, 1]}.$$
+$$\curlybrackets{\curlybrackets{k} ~\mid~ k\in [0, 1]}.$$
 
-Such a cover is open because $$\braces{k}$$ is open, and it cannot be made finite. We can easily see then that a subset is compact only if it is finite; e.g. $$\braces{\braces 0, \braces 1}$$ is compact.
+Such a cover is open because $$\curlybrackets{k}$$ is open, and it cannot be made finite. We can easily see then that a subset is compact only if it is finite; e.g. $$\curlybrackets{\curlybrackets 0, \curlybrackets 1}$$ is compact.
 
 
 #### Where does this definition come from?
 
-The "open cover" definition of a compact set is intuitively a topologically invariant way of describing a bounded set. For example, consider $$\RR$$ with the Euclidean metric $$d$$. The subset $$(0, 1)$$ is bounded. But it is homeomorphic to $$(-\infty, \infty) = \RR$$ via the function $$f(x) = 1/(1-x) - 1/x$$. Indeed $$\RR$$ is unbounded. Homeomorphic spaces are indistiguishable as topological spaces since a homeomorphism preserves topology. Clearly, then, *boundedness* is not a topological invariant. We showed in our example above that $$(0, 1)$$ is not compact.
+The "open cover" definition of a compact set is intuitively a topologically invariant way of describing a bounded set. For example, consider $$\bbR$$ with the Euclidean metric $$d$$. The subset $$(0, 1)$$ is bounded. But it is homeomorphic to $$(-\infty, \infty) = \bbR$$ via the function $$f(x) = 1/(1-x) - 1/x$$. Indeed $$\bbR$$ is unbounded. Homeomorphic spaces are indistiguishable as topological spaces since a homeomorphism preserves topology. Clearly, then, *boundedness* is not a topological invariant. We showed in our example above that $$(0, 1)$$ is not compact.
 
-So how do we describe "boundedness" (and completeness) in a topologically invariant way? All statements in topology are about open sets, since that's what a topology *is*. So consider making a measuring stick on a topological space. It must be made out of open sets. Let's say our measuring stick is a collection of open sets $$(n, n+2)$$ for $$n \in \ZZ$$. We need infinitely many of these to cover the whole real line.
+So how do we describe "boundedness" (and completeness) in a topologically invariant way? All statements in topology are about open sets, since that's what a topology *is*. So consider making a measuring stick on a topological space. It must be made out of open sets. Let's say our measuring stick is a collection of open sets $$(n, n+2)$$ for $$n \in \bbZ$$. We need infinitely many of these to cover the whole real line.
 
-Measuring in this way is topologically invariant. If you have a homeomorphism, all the open sets get adjusted along with the set. With a homeomorphism from $$\RR$$ to $$(0, 1)$$, all our measuring sticks get squeezed so that $$(0, 1)$$ is still unbounded. With this topologically invariant way of describing boundedness (and completeness), we can say that a compact set is one where no matter how you cover your set with measuring sticks/open sets, you could do just as well with finitely many of them.
+Measuring in this way is topologically invariant. If you have a homeomorphism, all the open sets get adjusted along with the set. With a homeomorphism from $$\bbR$$ to $$(0, 1)$$, all our measuring sticks get squeezed so that $$(0, 1)$$ is still unbounded. With this topologically invariant way of describing boundedness (and completeness), we can say that a compact set is one where no matter how you cover your set with measuring sticks/open sets, you could do just as well with finitely many of them.
 
 
 ### Image of compact sets via continuous functions are compact
@@ -120,11 +120,11 @@ The following theorem shows that compactness is a continuous invariant. In some 
 
 **Theorem 2**: Let $$T_1, T_2$$ be two topological spaces with their own respective topologies. Let $$f: T_1 \to T_2$$ be a continuous mapping. If $$T_1$$ is compact, then its image under $$f$$, $$f[T_1] \subseteq T_2$$, is also compact.
 
-*Proof*: Suppose $$V$$ is an open cover of $$f[T_1]$$ by open sets in $$T_2$$ (i.e. $$V$$ is a potentially infinite set of open sets that cover $$f[T_1]$$). Since $$f$$ is continuous, we can use Theorem 1 from above to say that the preimage $$f^{-1}[U]$$ is open in $$T_1$$ for each open set $$U \in V$$. Therefore, $$\braces{f^{-1}[U] ~\mid~U \in V}$$ is an open cover of $$T_1$$. Since $$T_1$$ is compact, every cover has a finite subcover. Therefore, $$\braces{f^{-1}[U_1], \dots, f^{-1}[U_r]}$$ is an open cover of $$T_1$$ for $$U_i \in V$$ and a finite $$r \in \NN$$. Then we know that
+*Proof*: Suppose $$V$$ is an open cover of $$f[T_1]$$ by open sets in $$T_2$$ (i.e. $$V$$ is a potentially infinite set of open sets that cover $$f[T_1]$$). Since $$f$$ is continuous, we can use Theorem 1 from above to say that the preimage $$f^{-1}[U]$$ is open in $$T_1$$ for each open set $$U \in V$$. Therefore, $$\curlybrackets{f^{-1}[U] ~\mid~U \in V}$$ is an open cover of $$T_1$$. Since $$T_1$$ is compact, every cover has a finite subcover. Therefore, $$\curlybrackets{f^{-1}[U_1], \dots, f^{-1}[U_r]}$$ is an open cover of $$T_1$$ for $$U_i \in V$$ and a finite $$r \in \bbN$$. Then we know that
 
 $$\bigcup_{i=1}^r f^{-1}[U_i] = T_1$$
 
-by definition of open cover. But therefore $$\bigcup_{i=1}^r U_i = T_2$$. Thus, $$\braces{U_1, \dots, U_r}$$ is a finite open cover of $$f[T_1]$$. We chose $$V$$ arbitrarily, so we see that $$f[T_1]$$ admits a finite subcover for all open covers, and is therefore compact. {% include endproof.html %}
+by definition of open cover. But therefore $$\bigcup_{i=1}^r U_i = T_2$$. Thus, $$\curlybrackets{U_1, \dots, U_r}$$ is a finite open cover of $$f[T_1]$$. We chose $$V$$ arbitrarily, so we see that $$f[T_1]$$ admits a finite subcover for all open covers, and is therefore compact. {% include endproof.html %}
 
 
 
@@ -132,11 +132,11 @@ by definition of open cover. But therefore $$\bigcup_{i=1}^r U_i = T_2$$. Thus, 
 
 **Theorem 3**: Let $$(X, d)$$  be a metric space (e.g. a topological space with the open sets defined via the metric), and $$K \subseteq X$$ be compact. Then $$K$$ is closed and bounded.
 
-*Proof*: We'll begin showing boundedness. Pick a $$x \in K$$. Let $$U_n = B_n(x)$$ be the open ball of radius $$n$$ around $$x$$ in $$K$$. Then $$\braces{U_n~\mid~ n\in \NN}$$ is an open cover of $$K$$. Since $$K$$ is compact, it has a finite subcover. So $$K \subseteq U_n$$ for some finite $$n$$. Thus, $$d(x, y) \leq 2n$$ for all $$x, y\in K$$, meaning that $$K$$ is bounded. Now we'll show that $$K$$ is closed. Assume for the sake of contradiction that $$K$$ is not closed. Then $$X\setminus K$$ is not open, so $$\exists x \in X\setminus K$$ such that $$\forall r>0$$, $$B_r(x) \not\subset X\setminus K$$. Then $$\exists y \in B_r(x)$$ with $$y \in K$$. Therefore, for all $$r>0$$, 
+*Proof*: We'll begin showing boundedness. Pick a $$x \in K$$. Let $$U_n = B_n(x)$$ be the open ball of radius $$n$$ around $$x$$ in $$K$$. Then $$\curlybrackets{U_n~\mid~ n\in \bbN}$$ is an open cover of $$K$$. Since $$K$$ is compact, it has a finite subcover. So $$K \subseteq U_n$$ for some finite $$n$$. Thus, $$d(x, y) \leq 2n$$ for all $$x, y\in K$$, meaning that $$K$$ is bounded. Now we'll show that $$K$$ is closed. Assume for the sake of contradiction that $$K$$ is not closed. Then $$X\setminus K$$ is not open, so $$\exists x \in X\setminus K$$ such that $$\forall r>0$$, $$B_r(x) \not\subset X\setminus K$$. Then $$\exists y \in B_r(x)$$ with $$y \in K$$. Therefore, for all $$r>0$$, 
 
 $$B_r(x) \cap K \neq \emptyset. \qquad(*)$$
 
-Now define for every $$k \in K$$, define $$U_k = B_{d(x,k)/2}(k)$$ and $$V_k = B_{d(x, k)/2}(x)$$. Notice that $$U_k \cap V_k = \emptyset$$, and $$\braces{U_k~\mid~ k\in K}$$ is an open cover of $$K$$. Since $$K$$ is compact, there exists a finite cover $$\braces{U_{k_1}, \dots, U_{k_m}}$$. So
+Now define for every $$k \in K$$, define $$U_k = B_{d(x,k)/2}(k)$$ and $$V_k = B_{d(x, k)/2}(x)$$. Notice that $$U_k \cap V_k = \emptyset$$, and $$\curlybrackets{U_k~\mid~ k\in K}$$ is an open cover of $$K$$. Since $$K$$ is compact, there exists a finite cover $$\curlybrackets{U_{k_1}, \dots, U_{k_m}}$$. So
 
 $$U \coloneqq U_{k_1}\cup \dots \cup U_{k_m} \supseteq K$$
 
@@ -156,7 +156,7 @@ Consider the unitary group $$U(n)$$ of $$n \times n$$ complex matrices. We can d
 
 $$\begin{aligned}
 d(U_1, U_2) &= \norm{U_1 - U_2}\\
-&\coloneqq \sup\braces{\norm{(U_1-U_2)x}_2 ~\mid~ x \in \CC^n, \norm{x}_2 = 1}.
+&\coloneqq \sup\curlybrackets{\norm{(U_1-U_2)x}_2 ~\mid~ x \in \bbC^n, \norm{x}_2 = 1}.
 \end{aligned}$$
 
 Notice that $$\norm U = 1$$ for all $$U \in U(n)$$ since $$U$$ is an isometry. Therefore, for any $$U_1, U_2 \in U(n)$$,
@@ -170,26 +170,26 @@ d(U_1, U_2) &= \norm{U_1 - U_2}\\
 This then proves that $$U(n)$$ is bounded. Now we consider the continuous function
 
 $$\begin{aligned}
-f:~ &\CC^{n\times n} \to \CC^{n\times n}\\
+f:~ &\bbC^{n\times n} \to \bbC^{n\times n}\\
 &A \mapsto A^\dag A.
 \end{aligned}$$
 
-Notice that $$U(n) = f^{-1}[\braces I]$$. $$\braces I$$ is closed. So Lemma 1 from above shows that $$f^{-1}[\braces I]$$ is closed since $$f$$ is continuous. Therefore, $$U(n)$$ is closed.
+Notice that $$U(n) = f^{-1}[\curlybrackets I]$$. $$\curlybrackets I$$ is closed. So Lemma 1 from above shows that $$f^{-1}[\curlybrackets I]$$ is closed since $$f$$ is continuous. Therefore, $$U(n)$$ is closed.
 
 So we've shown that $$U(n)$$ is closed and bounded with respect to its metric topology. Thus, by Theorem 3 above, $$U(n)$$ is compact. {% include endproof.html %} -->
 
 
-### Continuous functions from compact sets to $$\RR$$
+### Continuous functions from compact sets to $$\bbR$$
 
 To prove Theorem 4, which is a useful application of compactness as a general property, we will first need the following lemma.
 
-**Lemma 2**: Let $$d$$ be a metric so that $$(\RR, d)$$ is a metric space. Suppose $$A \subset \RR$$ is closed and bounded so that $$\sup A$$ and $$\inf A$$ exists. Then $$\sup A \in A$$ and $$\inf A \in A$$, meaning that $$\sup A = \max A$$ and $$\inf A = \min A$$.
+**Lemma 2**: Let $$d$$ be a metric so that $$(\bbR, d)$$ is a metric space. Suppose $$A \subset \bbR$$ is closed and bounded so that $$\sup A$$ and $$\inf A$$ exists. Then $$\sup A \in A$$ and $$\inf A \in A$$, meaning that $$\sup A = \max A$$ and $$\inf A = \min A$$.
 
-*Proof*: We'll prove this for $$\sup$$; of course a similar proof holds for $$\inf$$. Define $$s \coloneqq \sup A$$. For the sake of contradiction, suppose $$s \notin A$$. Since $$A$$ is closed, $$\RR \setminus A$$ is open. Therefore, $$\exists r > 0$$ such that $$B_r(s) \cap A = \emptyset$$. Then $$B_r(x)$$ contains upper bounds on $$\sup A$$ that are lower than $$s$$. This implies that $$s \neq \sup A$$, which contradicts our assumption. {% include endproof.html %}
+*Proof*: We'll prove this for $$\sup$$; of course a similar proof holds for $$\inf$$. Define $$s \coloneqq \sup A$$. For the sake of contradiction, suppose $$s \notin A$$. Since $$A$$ is closed, $$\bbR \setminus A$$ is open. Therefore, $$\exists r > 0$$ such that $$B_r(s) \cap A = \emptyset$$. Then $$B_r(x)$$ contains upper bounds on $$\sup A$$ that are lower than $$s$$. This implies that $$s \neq \sup A$$, which contradicts our assumption. {% include endproof.html %}
 
-**Theorem 4**: Let $$X$$ be a topological space with some topology. Let $$K \subseteq X$$ be a compact set. Let $$d$$ be a metric so that $$(\RR, d)$$ is a metric space. Then any continuous function $$f: K \to \RR$$ attains a minimum and maximum value on $$K$$.
+**Theorem 4**: Let $$X$$ be a topological space with some topology. Let $$K \subseteq X$$ be a compact set. Let $$d$$ be a metric so that $$(\bbR, d)$$ is a metric space. Then any continuous function $$f: K \to \bbR$$ attains a minimum and maximum value on $$K$$.
 
-*Proof*: Since $$f$$ is continuous and $$K$$ is compact, we can use Theorem 2 to say that the image $$f[K]$$ is compact. Since $$\parentheses{\RR, d}$$ is a metric space, we know from Theorem 3 that $$f[K]$$ being compact implies that it is closed and bounded with respect to the metric $$d$$. Since $$f[K]$$ is bounded, it has a supremum and infimum. Since it is closed, then Lemma 2 above tells us that it contains its supremum and infimum. Therefore, $$f[K]$$ has a maximum and minimum. {% include endproof.html %}
+*Proof*: Since $$f$$ is continuous and $$K$$ is compact, we can use Theorem 2 to say that the image $$f[K]$$ is compact. Since $$\parentheses{\bbR, d}$$ is a metric space, we know from Theorem 3 that $$f[K]$$ being compact implies that it is closed and bounded with respect to the metric $$d$$. Since $$f[K]$$ is bounded, it has a supremum and infimum. Since it is closed, then Lemma 2 above tells us that it contains its supremum and infimum. Therefore, $$f[K]$$ has a maximum and minimum. {% include endproof.html %}
 
 Note here that this works for any topological space $$X$$ and any compact set $$K \subseteq X$$; $$X$$ need not be a metric space. I feel as though Theorem 4 is one of the first actual applications of general compactness one encounters. Prior to this, most applications have been with respect to metric spaces, where we could have never defined compactness and instead just always said "closed and bounded". But this theorem works for general topological spaces, and so is perhaps a reason to care about compactness as a topological property.
 

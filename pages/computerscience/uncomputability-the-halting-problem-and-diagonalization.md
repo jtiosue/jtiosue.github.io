@@ -10,9 +10,9 @@ comments: 5
 
 ### Cantor's diagonalization
 
-**Definition**: A set in countable if either 1) the set is finite, or 2) the set shares a one-to-one correspondence with the set of positive integers $$\ZZ^+$$.
+**Definition**: A set in countable if either 1) the set is finite, or 2) the set shares a one-to-one correspondence with the set of positive integers $$\bbZ^+$$.
 
-**Theorem**: The set of real numbers $$\RR$$ is not countable.
+**Theorem**: The set of real numbers $$\bbR$$ is not countable.
 
 *Proof*: We will prove that the set $$(0, 1) \subset \mathbb R$$ is uncountable. First, we assume that $$(0, 1)$$ *is* countable. Then consider we list the bijection between it and $$\mathbb Z^+$$. We represent the $$i^\textrm{th}$$ element in the list in binary form as $$0.d_{i1}d_{i2}d_{i3}\dots$$, where each $$d_{ij} \in \{0, 1 \}$$.
 
@@ -28,7 +28,7 @@ Let $$\overline d = 1 - d$$, Consider the number $$0.\overline d_{11}\overline d
 
 ### The halting problem
 
-Let $$\mathcal M = \{M_i ~\mid~ i \in \ZZ^+ \}$$, where each $$M_i$$ is a Turing machine that solves a problem. $$M_i$$ on input $$x$$ can
+Let $$\mathcal M = \{M_i ~\mid~ i \in \bbZ^+ \}$$, where each $$M_i$$ is a Turing machine that solves a problem. $$M_i$$ on input $$x$$ can
 
 1. Loop forever,
 2. return "Y" = "Yes",

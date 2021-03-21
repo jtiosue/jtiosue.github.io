@@ -7,7 +7,7 @@ comments: 6
 
 (24 Jan 2021) Here we will discuss the relationship between the determinant and volumes, something that semi-confused me for a while. My discussion here is largely derived from my reading of [this excellent textbook](https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935) and [this StackExchange post](https://math.stackexchange.com/a/547522/395731).
 
-Fix a vector space $$V$$ over the field $$\mathbb F \in \{\mathbb R, \mathbb C \}$$ with an orthonormal basis $$\{e_i ~\mid~ i=1,\dots,\textrm{dim}V \}$$. $$V^*$$ is the corresponding dual space - i.e. the set of all linear functionals from $$V$$ to $$\FF$$. $$\{e^i \}$$ is the corresponding dual basis, defined so that $$e^i(e_j) = \delta^i_j$$. Recall that the space 
+Fix a vector space $$V$$ over the field $$\mathbb F \in \{\mathbb R, \mathbb C \}$$ with an orthonormal basis $$\{e_i ~\mid~ i=1,\dots,\textrm{dim}V \}$$. $$V^*$$ is the corresponding dual space - i.e. the set of all linear functionals from $$V$$ to $$\bbF$$. $$\{e^i \}$$ is the corresponding dual basis, defined so that $$e^i(e_j) = \delta^i_j$$. Recall that the space 
 
 $$\underbrace{V^* \otimes \dots \otimes V^*}_{r \textrm{ times}} \otimes \underbrace{V \otimes \dots \otimes V}_{s \textrm{ times}}$$
 
@@ -25,7 +25,7 @@ i_k, j_k =1, \dots, \textrm{dim}V & \}.
 For example,
 
 $$\begin{aligned}
-(e^i \otimes e_j):& V \times V^* \to \FF\\
+(e^i \otimes e_j):& V \times V^* \to \bbF\\
 &(e_k, e^\ell) \mapsto e^i(e_k) e_j(e^\ell) = \delta^i_k \delta^\ell_j.
 \end{aligned}$$
 
