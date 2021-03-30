@@ -37,5 +37,6 @@ li span {
 
 ## Nontechnical topics
 
-- <span>Ongoing</span>[My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)
-- <span>Ongoing</span>[Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)
+- <span>29 Mar 2021</span>[Flappy bird with Javascript](pages/nontechnical/flappy-bird-with-javascript.md)
+- <span>20 Mar 2021</span>[My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)
+- <span>27 Feb 2021</span>[Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)

@@ -5,7 +5,7 @@ comments: 14
 
 {% include post-header.md %}
 
-(Ongoing) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command.
+(20 Mar 2021) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command.
 
 {% raw %}
 
@@ -128,6 +128,7 @@ comments: 14
 % other
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
+\newcommand{\Dom}[1]{\text{Dom}\!\parentheses{#1}}
 
 % brackets
 \newcommand{\parentheses}[1]{\left(#1\right)}
