@@ -13,11 +13,6 @@ var FONTSIZE = 30;
 var JUMP = 74;  // j
 var RESTART = 13;  // return
 
-function clear_all_intervals() {
-    for (var i=0;i<99;i++) {
-        clearInterval(i);
-    }
-}
 
 function scaling_factor(screen) {
     return [screen[0]/100.0, screen[1]/100.0];
@@ -143,8 +138,8 @@ class Home {
         this.player.draw(this.can);
         this.obstacles = [];
     }
-    stop() {
-        clear_all_intervals();
+    stop(interval) {
+        clearInterval(interval);
     }
     click() {
         this.player.click();
@@ -152,7 +147,7 @@ class Home {
     clear_canvas() {
         this.can.clearRect(-100, -100, this.screen[0]+100, this.screen[1]+100);
     }
-    update() {
+    update(interval) {
         this.clear_canvas();
         
         this.can.font = FONTSIZE+"px Arial";
@@ -160,7 +155,7 @@ class Home {
         
         this.player.update()
         this.player.draw(this.can);
-        if (this.player.off_screen()) {this.stop();}
+        if (this.player.off_screen()) {this.stop(interval);}
         
         var rect_def = this.player.get_rectangular_definition();
         
@@ -169,7 +164,7 @@ class Home {
             this.obstacles[i].update();
             this.obstacles[i].draw(this.can);
             if (this.obstacles[i].overlapping(rect_def)) {
-                this.stop();
+                this.stop(interval);
             }
             if (this.obstacles[i].off_screen()) {
                 this.obstacles.splice(i, 1);
@@ -198,13 +193,13 @@ function play(screen) {
         if (event.keyCode == JUMP) {
             main.click();
         } else if (event.keyCode == RESTART) {
-            main.stop();
+            main.stop(interval);
             main.restart();
-            setInterval(function() {main.update();}, SPEED);
+            interval = setInterval(function() {main.update(interval);}, SPEED);
         }
     })
     
-    setInterval(function() {main.update();}, SPEED);
+    var interval = setInterval(function() {main.update(interval);}, SPEED);
 }
 
 window.onload = function() {

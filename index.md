@@ -13,7 +13,7 @@ li span {
 
 ## Math topics
 
-- <span>01 Apr 2021</span>[In defense of symbols](pages/math/in-defense-of-symbols.md)
+- <span>02 Apr 2021</span>[In defense of symbols](pages/math/in-defense-of-symbols.md)
 - <span>25 Feb 2021</span>[Closed form of the Fibonacci sequence](pages/math/closed-form-of-the-fibonacci-sequence.html)
 - <span>07 Feb 2021</span>[Compactness on topological spaces and why it is important](pages/math/compactness-on-topological-spaces-and-why-it-is-important.md)
 - <span>01 Feb 2021</span>[Lagrange multipliers and constrained optimization](pages/math/lagrange-multipliers-and-constrained-optimization.md)
@@ -27,7 +27,7 @@ li span {
 - <span>16 Jan 2021</span>[The origin of the name POVM](pages/physics/the-origin-of-the-name-povm.md)
 - <span>15 Jan 2021</span>[Why Newton's law of gravitation?](pages/physics/why-newtons-law-of-gravitation.md)
 
-## Computer science, algorithms, and programming topics
+## Computer science and programming topics
 
 - <span>29 Mar 2021</span>[Flappy bird with Javascript](pages/computerscience/flappy-bird-with-javascript.md)
 - <span>02 Feb 2021</span>[Methods in pseudo-boolean optimization](pages/computerscience/methods-in-pseudo-boolean-optimization.md)
