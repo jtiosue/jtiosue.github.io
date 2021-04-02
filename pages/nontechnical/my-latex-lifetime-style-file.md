@@ -18,6 +18,9 @@ comments: 14
 \usepackage[style=numeric-comp,sorting=none]{biblatex}\renewbibmacro{in:}{}
 % use with \addbibresource{filename1.bib,filename2.bib} then \printbibliography
 
+% ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
+\usepackage{showkeys}
+
 % meta
 \newcommand{\iosuename}{Joseph~T.~Iosue}
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}

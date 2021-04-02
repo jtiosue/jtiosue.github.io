@@ -5,7 +5,7 @@ comments: 15
 
 {% include post-header.md %}
 
-(29 Mar 2021) Spacebar to jump, return to restart. See the [source code](media/flappybird.js). Embed on a webpage with the following HTML.
+(29 Mar 2021) See the [source code](media/flappybird.js). **Press the j key to jump, and the return key to restart.** Embed on a webpage with the following HTML.
 
 {% raw %}
 
