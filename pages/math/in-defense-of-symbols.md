@@ -18,7 +18,7 @@ Suppose that the interest is compounded every $$h$$ years. For example, if the i
 
 Finally, suppose that we have a function $$f(t)$$ that tells use how much money is in the account after $$t$$ years. For example, $$f(0)$$ is how much money you put into the account, $$f(1/2)$$ is how much money is in the account after six months, and $$f(2)$$ is how much money is in the account after two years. Again, we have introduced another symbol; this time, though, it is encoding a lot more than just a number like $$r$$ and $$h$$ are encoding. $$f(t)$$ is a function, meaning that you can plug in any value of $$t\geq 0$$ (i.e. nonnegative $$t$$), and it will tell you how much money is the account after that many years.
 
-Suppose that you have 10 dollars in your account. When the interest is compounded, the bank will add $10 \times h\times r$ dollars to your account (this is precisely the definition of an interest rate $$r$$ coumpounded every $$h$$ years). So in total you will have $$10 + 10 \times h\times r = 10\times (1+h\times r)$$ dollars in your account. The $$\times$$ symbol gets a bit cumbersome and makes everything look messy. So I will simply drop it. When you see something like $$10(1+hr)$$ just remember that it means $$10 \times (1+h\times r)$$. This is in fact another benefit of using symbols is place of numbers - you don't have to carry around the messy $$\times$$ symbol.
+Suppose that you have 10 dollars in your account. When the interest is compounded, the bank will add $$10 \times h\times r$$ dollars to your account (this is precisely the definition of an interest rate $$r$$ coumpounded every $$h$$ years). So in total you will have $$10 + 10 \times h\times r = 10\times (1+h\times r)$$ dollars in your account. The $$\times$$ symbol gets a bit cumbersome and makes everything look messy. So I will simply drop it. When you see something like $$10(1+hr)$$ just remember that it means $$10 \times (1+h\times r)$$. This is in fact another benefit of using symbols is place of numbers - you don't have to carry around the messy $$\times$$ symbol.
 
 Generalizing the previous statement, we can say the following. Suppose after $$t$$ years, you have $$f(t)$$ dollars in your account. Then when the interest is compounded, the bank will add $$f(t)hr$$ dollars to your account, and so you will have $$(1+hr)f(t)$$. The interest is compounded once every $$h$$ years. Therefore, if at time $$t$$ you have $$f(t)$$ dollars, then at time $$t+h$$ you will have $$f(t)(1+hr)$$. In other words, we have the important equation
 
@@ -159,7 +159,7 @@ On the right hand side of equation $$(\star)$$, we had the quantity
 
 $$\frac{f(t+h) - f(t)}{h}.$$
 
-This ends up turning up often in math and physics, and so we give it a symbol. Oftentimes it is expressed as $$\Delta f(t)$$ or some variant of that. Even more often, the limit of this expression as $$h \to 0$$ shows up, as it did for us when were looking at continuously compounded interest. So we define a symbol for that as well, namely
+This ends up turning up often in math and physics, and so we give it a symbol. Oftentimes it is expressed as $$\Delta_h f(t)$$ or some variant of that. Even more often, the limit of this expression as $$h \to 0$$ shows up, as it did for us when were looking at continuously compounded interest. So we define a symbol for that as well, namely
 
 $$\frac{df}{dt}(t) = \lim_{h\to 0}\frac{f(t+h) - f(t)}{h}.$$
 

@@ -130,6 +130,7 @@ class Home {
     constructor(canvas, screen) {
         this.can = canvas;
         this.screen = screen;
+        this.highscore = 0;
         this.restart();
     }
     restart() {
@@ -150,8 +151,9 @@ class Home {
     update(interval) {
         this.clear_canvas();
         
+        this.highscore = Math.max(this.highscore, this.score);
         this.can.font = FONTSIZE+"px Arial";
-        this.can.fillText(this.score, 0, FONTSIZE)
+        this.can.fillText(this.score + " (high score: " + this.highscore + ")", 0, FONTSIZE)
         
         this.player.update()
         this.player.draw(this.can);

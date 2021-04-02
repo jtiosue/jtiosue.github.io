@@ -31,6 +31,8 @@ Tensors were always very cryptic to me. I learned them very briefly in my relati
 
 Group theory is one of the most beautiful subjects I've ever encountered. It is so beautiful how it connects so much of physics in such an elegant way. I also firmly believe that a physicst should learn group theory, specifically Lie group theory, as soon as they can, because it seems to apply to everything. I used the second part of [An Introduction to Tensors and Group Theory for Physicists, by Nadir Jeevanjee](https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935) to learn group theory. I think it's good, but I don't have anything else to compare it to. To get a full understanding of Lie groups, one needs differntial geometry, which this textbook does not do. It is a nice and quick way to get up to speed on group theory and I would definitely recommend it. I look forward to reading other textbooks to get a more sophisticated view Lie groups and their applications.
 
+I just started [these lectures](https://www.youtube.com/playlist?list=PL8yHsr3EFj53RWBkiHKoOsTw-dGHAoJ-h) by Richard Borcherds. They are awesome. He has a bunch of amazing lectures on YouTube.
+
 
 #### Differential geometry
 
@@ -45,6 +47,11 @@ These are two subject I believe are essential to theoretical physicists, althoug
 #### Classical complexity theory
 
 I've loved this book so far: [Computational Complexity: A Modern Approach, by Arora and Barak](http://theory.cs.princeton.edu/complexity/).
+
+
+#### Complex analysis
+
+[Great lectures](https://www.youtube.com/playlist?list=PL8yHsr3EFj537_iYA5QrvwhvMlpkJ1yGN) by Richard Borcherds.
 
 
 #### Miscellaneous
