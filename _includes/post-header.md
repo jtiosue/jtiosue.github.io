@@ -2,6 +2,9 @@
 
 {% include mathjax.html %}
 
-<a href="/" style="font-size: 16px; font-style: italic;">Back to home page</a>
+<style>
+  p, ul, ol, blockquote {text-align: justify;}
+  a {font-weight: 300;}
+</style>
 
-<style> p {text-align: justify;}</style>
+<a href="/" style="font-size: 16px; font-style: italic;">Back to home page</a>

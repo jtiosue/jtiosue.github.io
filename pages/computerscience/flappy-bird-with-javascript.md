@@ -5,7 +5,7 @@ comments: 15
 
 {% include post-header.md %}
 
-(29 Mar 2021) See the [source code](media/flappybird.js). **Press the j key to jump, and the return key to restart.** Embed on a webpage with the following HTML.
+(29 Mar 2021) See the [source code](media/flappybird.js). Embed on a webpage with the following HTML.
 
 {% raw %}
 
@@ -16,7 +16,7 @@ comments: 15
 
 {% endraw %}
 
-And the result is...
+The result is below. **Click anywhere on the game to jump or restart.** *If you are on a mobile phone, it is best to tilt the phone to landscape mode and then refresh the page.*
 
 
 <script src="media/flappybird.js"></script>
