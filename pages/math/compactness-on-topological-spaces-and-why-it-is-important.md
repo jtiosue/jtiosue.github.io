@@ -34,7 +34,7 @@ When I first began learning about topological spaces, I was very confused during
 **Definition**: Let $X$ be a set, and $T$ a collection of subsets of $X$ (called *open sets*), $(X, T)$ is a *topological space*. $T$ is called the *topology* of $X$, and $T$ *defines* which subsets are open. $T$ as a topology must satisfy
 
 1. $\emptyset, X \in T$,
-2. if $G_\alpha$ \in T$ for $\alpha \in A$, then $\bigcup_{\alpha \in A}G_\alpha \in T$ (arbitrary union),
+2. if $G_\alpha \in T$ for $\alpha \in A$, then $\bigcup_{\alpha \in A}G_\alpha \in T$ (arbitrary union),
 3. if $G_i \in T$ for $i=1,\dots, n$, then $\bigcap_{i=1}^n G_i \in T$ (finite intersections).
 
 Why does condition 3 restrict to finite intersections, whereas condition 2 allows arbitrary unions? Consider $\bbR$ with a topology defined by the Euclidean metric. That is, the opens sets are defined as subsets of the form $(a, b)$. Indeed, any finite intersection of sets of these form will also be of this form. But consider

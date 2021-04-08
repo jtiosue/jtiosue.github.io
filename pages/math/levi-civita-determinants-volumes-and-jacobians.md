@@ -18,8 +18,8 @@ $$\underbrace{V \times \dots \times V}_{r \textrm{ times}} \times \underbrace{V^
 Thus it is the vector space of all rank $(r, s)$ tensors. It is spanned by the basis 
 
 $$\begin{aligned}
-\curlybrackets{e^{i_1} \otimes \dots\otimes e^{i_r} \otimes e_{j_1} \otimes \dots \otimes e_{j_s} & \mid \\
-i_k, j_k =1, \dots, \textrm{dim}V & }.
+\{ e^{i_1} \otimes \dots\otimes e^{i_r} \otimes e_{j_1} \otimes \dots \otimes e_{j_s} & \mid \\
+i_k, j_k =1, \dots, \textrm{dim}V & \}.
 \end{aligned}$$
 
 For example,
@@ -206,7 +206,7 @@ where $\curlybrackets{A_{i}^j e_j}$ is the transformation of the orthonormal bas
 
 ### Jacobian
 
-So we have seen that for a change of basis matrix A $e_{i'} = A^{j}_{i'} e_j$, the ratio of the volume spanned by $\curlybrackets{e_{i'} }$ and the volume spanned by $\curlybrackets{e_i }$ is $\vert \det(A) \vert$. Consider performing a volume integral with $dV = \prod_i dx_i$. When we transform coordinates with $dx_i' = \frac{\partial x_i'}{\partial x_j} dx_j$, the proportional change in volume is thus $\left\lvert\det J \right\rvert$, where $J_{ij} \coloneqq \frac{\partial x_i'}{\partial x_j}$ is the Jacobian matrix. Therefore, to componsate for the change so that $dV$ remains the same, we have that $dV = \left\lvert\det J \right\rvert^{-1} \prod_{i'} dx_{i}'$.
+So we have seen that for a change of basis matrix A $e_{i'} = A_{i'}^{j} e_j$, the ratio of the volume spanned by $\curlybrackets{e_{i'} }$ and the volume spanned by $\curlybrackets{e_i }$ is $\vert \det(A) \vert$. Consider performing a volume integral with $dV = \prod_i dx_i$. When we transform coordinates with $dx_i' = \frac{\partial x_i'}{\partial x_j} dx_j$, the proportional change in volume is thus $\left\lvert\det J \right\rvert$, where $J_{ij} \coloneqq \frac{\partial x_i'}{\partial x_j}$ is the Jacobian matrix. Therefore, to componsate for the change so that $dV$ remains the same, we have that $dV = \left\lvert\det J \right\rvert^{-1} \prod_{i'} dx_{i}'$.
 
 So, for example, when switching from cartesian coordinates $x, y$ to polar coordinates $r, \theta$ in an area integral, we have that
 
