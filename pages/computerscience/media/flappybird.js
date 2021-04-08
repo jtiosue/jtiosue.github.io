@@ -204,6 +204,7 @@ function play(screen) {
 
 window.onload = function() {
     // screen = [700, 500];
-    screen = [Math.min(900, .9*window.innerWidth), Math.min(700, window.innerHeight*.9)];
-    play(screen);
+    var width = Math.min(650, .75 * window.innerWidth);
+    var height = Math.min(width * 3/4, .85 * window.innerHeight);
+    play([width, height]);
 }
