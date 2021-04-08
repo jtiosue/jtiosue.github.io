@@ -36,7 +36,7 @@ $$0 = \parentheses{\vec \nabla f \cdot \frac{d}{dt}\vec\gamma}\bigg\rvert_{t=0}.
 
 Since $\vec \gamma(t)$ is any curve that lies on the constraint set (provided that $\vec \gamma(0) = (x_1^*,\dots, x_n^*)$), the gradient of $f$ at the local maximum must be perpendicular to the whole constraint set. By the Lemma, we also know that $\parentheses{\vec \nabla g}\big\rvert_{(x_1^*,\dots, x_n^*)}$ is perpendicular to the constraint set, since the constraint set is precisely a level set of $g$.
 
-$$g(x_1, \dots, x_n)=0$ defines an $n-1$ dimensional surface. Thus, if two $n$ dimensional vectors are perpendicular to it at a point, then there is only one other dimension that they can be oriented. Therefore, the two vectors must be parallel at that point. So we can conclude that $\parentheses{\vec \nabla f}\big\rvert_{(x_1^*,\dots, x_n^*)}$ is parallel to $\parentheses{\vec \nabla g}\big\rvert_{(x_1^*,\dots, x_n^*)}$, proving the theorem. {% include endproof.html %}
+$g(x_1, \dots, x_n)=0$ defines an $n-1$ dimensional surface. Thus, if two $n$ dimensional vectors are perpendicular to it at a point, then there is only one other dimension that they can be oriented. Therefore, the two vectors must be parallel at that point. So we can conclude that $\parentheses{\vec \nabla f}\big\rvert_{(x_1^*,\dots, x_n^*)}$ is parallel to $\parentheses{\vec \nabla g}\big\rvert_{(x_1^*,\dots, x_n^*)}$, proving the theorem. {% include endproof.html %}
 
 
 **Corollary**: The local maximum of a function $f(x_1, \dots. x_n)$ subject to the constraints that $g_i(x_1, \dots, x_n) = 0$ for $i=1,\dots,\ell$ satisfies $\vec\nabla L = 0$, where

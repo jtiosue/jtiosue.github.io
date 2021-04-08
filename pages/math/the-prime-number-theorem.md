@@ -26,7 +26,7 @@ So we have proved the lemma. {% include endproof.html %}
 
 **Lemma 2**: $\forall p\in \mathbb P: P_p\left({2n \choose n} \right) \leq \log_p 2n$.
 
-*Proof*: First notice some simple properties of $P_p$$; namely that for any $a, b \in \mathbb N$, we have that $P_p(ab) = P_p(a) + P_p(b)$. Similarly, if $a/b \in \mathbb N$, then $P_p(a/b) = P_p(a) - P_p(b)$.
+*Proof*: First notice some simple properties of $P_p$; namely that for any $a, b \in \mathbb N$, we have that $P_p(ab) = P_p(a) + P_p(b)$. Similarly, if $a/b \in \mathbb N$, then $P_p(a/b) = P_p(a) - P_p(b)$.
 
 Let's first consider the $p=2$ case.
 
@@ -39,7 +39,7 @@ P_2(n!) &= P_2(1) + P_2(2) + P_2(3) + \dots + P_2(n)\\
 &= \lfloor n/2 \rfloor + P_2(\lfloor n/2 \rfloor!).
 \end{aligned}$$
 
-Similarly, for general $p \in \mathbb P$$: $P_p(n!) = \lfloor n/p\rfloor + P_p(\lfloor n/p \rfloor!)$. So,
+Similarly, for general $p \in \mathbb P$: $P_p(n!) = \lfloor n/p\rfloor + P_p(\lfloor n/p \rfloor!)$. So,
 
 $$\begin{aligned}
 P_p(n!) &= \lfloor n/p\rfloor + P_p(\lfloor n/p \rfloor!)\\

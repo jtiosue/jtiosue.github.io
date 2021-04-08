@@ -59,9 +59,9 @@ Let's call our Hilbert Space $H$. Let $P(H)$ denote the set of positive bounded 
 
 - $E(A) = I$ (normalized),
 - $E(\emptyset) = 0$,
-- For all $A_i \in B(A)$ such that $A_i \cap A_j = \emptyset$, we have that $E\parentheses{\bigcup_{i\in S} A_i} = \sum_{i\in S} E(A_i)$, where $S \subseteq \mathbb N$ ($\sigma$$-additive for finite and/or *countable* unions).
+- For all $A_i \in B(A)$ such that $A_i \cap A_j = \emptyset$, we have that $E\parentheses{\bigcup_{i\in S} A_i} = \sum_{i\in S} E(A_i)$, where $S \subseteq \mathbb N$ ($\sigma$-additive for finite and/or *countable* unions).
 
-Then we can associate a standard measure $\mu_E: B(A) \to [0, 1]$ to the POVM $E$ where $\mu_E(\mathcal A) = \Tr E(\mathcal A)\rho$ which is precisely equivalent to $\sum_{a\in\mathcal A}\textrm{Pr}(a)$$!
+Then we can associate a standard measure $\mu_E: B(A) \to [0, 1]$ to the POVM $E$ where $\mu_E(\mathcal A) = \Tr E(\mathcal A)\rho$ which is precisely equivalent to $\sum_{a\in\mathcal A}\textrm{Pr}(a)$!
 
 Let's go to two examples.
 
@@ -148,7 +148,7 @@ $$\begin{aligned}
 
 *Similar to the previous example, I could be a little wrong here, or at least a little imprecise.*
 
-Next we consider a particle somewhere in the $(x, y)$$-plane. The POVM is $E: B(\mathbb R^2) \to P(L^2(\mathbb R^2))$ (recall that $L^2(\mathbb R^2) = L^2(\mathbb R) \otimes L^2(\mathbb R)$), with
+Next we consider a particle somewhere in the $(x, y)$-plane. The POVM is $E: B(\mathbb R^2) \to P(L^2(\mathbb R^2))$ (recall that $L^2(\mathbb R^2) = L^2(\mathbb R) \otimes L^2(\mathbb R)$), with
 
 $$\begin{aligned}
 E([x, x+dx] \times [y, y+dy]) &= \int_x^{x+dx}\int_y^{y+dy} \vert x' \rangle \langle x' \vert \otimes \vert y' \rangle \langle y' \vert dx'dy'\\

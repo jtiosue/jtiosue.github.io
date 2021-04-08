@@ -7,7 +7,7 @@ comments: 8
 
 (28 Jan 2021) Perhaps the main point of my website is to organize the many small things that I learn as I go along so that they are easily accessible for future reference. With that in mind, the purpose of this post is really only to describe the notation $\bbZ / n \bbZ$ for the set of integers modulo $n$.
 
-First consider a group $(A, \cdot)$. $B$ is called a *normal subgroup* of $A$ if $\forall a \in A$$: $a\cdot B = B \cdot a$. For example, $(n\bbZ = \curlybrackets{nx ~\mid~ x \in \bbZ }, +)$ is a normal subgroup of $(\bbZ, +)$ because for any $z \in \bbZ$, we have that $z + n\bbZ = n\bbZ + z.$$
+First consider a group $(A, \cdot)$. $B$ is called a *normal subgroup* of $A$ if $\forall a \in A$: $a\cdot B = B \cdot a$. For example, $(n\bbZ = \curlybrackets{nx ~\mid~ x \in \bbZ }, +)$ is a normal subgroup of $(\bbZ, +)$ because for any $z \in \bbZ$, we have that $z + n\bbZ = n\bbZ + z.$
 
 Given $(A, \cdot)$ and a normal subgroup $B$, the quotient group $A/B$ is defined by
 

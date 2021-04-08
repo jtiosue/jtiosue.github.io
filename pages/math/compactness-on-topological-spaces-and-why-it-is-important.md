@@ -179,19 +179,19 @@ Notice that $U(n) = f^{-1}[\curlybrackets I]$. $\curlybrackets I$ is closed. So 
 So we've shown that $U(n)$ is closed and bounded with respect to its metric topology. Thus, by Theorem 3 above, $U(n)$ is compact. {% include endproof.html %} -->
 
 
-### Continuous functions from compact sets to $\bbR$$
+### Continuous functions from compact sets to $\bbR$
 
 To prove Theorem 4, which is a useful application of compactness as a general property, we will first need the following lemma.
 
 **Lemma 2**: Let $d$ be a metric so that $(\bbR, d)$ is a metric space. Suppose $A \subset \bbR$ is closed and bounded so that $\sup A$ and $\inf A$ exists. Then $\sup A \in A$ and $\inf A \in A$, meaning that $\sup A = \max A$ and $\inf A = \min A$.
 
-*Proof*: We'll prove this for $\sup$$; of course a similar proof holds for $\inf$. Define $s \coloneqq \sup A$. For the sake of contradiction, suppose $s \notin A$. Since $A$ is closed, $\bbR \setminus A$ is open. Therefore, $\exists r > 0$ such that $B_r(s) \cap A = \emptyset$. Then $B_r(x)$ contains upper bounds on $\sup A$ that are lower than $s$. This implies that $s \neq \sup A$, which contradicts our assumption. {% include endproof.html %}
+*Proof*: We'll prove this for $\sup$; of course a similar proof holds for $\inf$. Define $s \coloneqq \sup A$. For the sake of contradiction, suppose $s \notin A$. Since $A$ is closed, $\bbR \setminus A$ is open. Therefore, $\exists r > 0$ such that $B_r(s) \cap A = \emptyset$. Then $B_r(x)$ contains upper bounds on $\sup A$ that are lower than $s$. This implies that $s \neq \sup A$, which contradicts our assumption. {% include endproof.html %}
 
 **Theorem 4**: Let $X$ be a topological space with some topology. Let $K \subseteq X$ be a compact set. Let $d$ be a metric so that $(\bbR, d)$ is a metric space. Then any continuous function $f: K \to \bbR$ attains a minimum and maximum value on $K$.
 
 *Proof*: Since $f$ is continuous and $K$ is compact, we can use Theorem 2 to say that the image $f[K]$ is compact. Since $\parentheses{\bbR, d}$ is a metric space, we know from Theorem 3 that $f[K]$ being compact implies that it is closed and bounded with respect to the metric $d$. Since $f[K]$ is bounded, it has a supremum and infimum. Since it is closed, then Lemma 2 above tells us that it contains its supremum and infimum. Therefore, $f[K]$ has a maximum and minimum. {% include endproof.html %}
 
-Note here that this works for any topological space $X$ and any compact set $K \subseteq X$$; $X$ need not be a metric space. I feel as though Theorem 4 is one of the first actual applications of general compactness one encounters. Prior to this, most applications have been with respect to metric spaces, where we could have never defined compactness and instead just always said "closed and bounded". But this theorem works for general topological spaces, and so is perhaps a reason to care about compactness as a topological property.
+Note here that this works for any topological space $X$ and any compact set $K \subseteq X$; $X$ need not be a metric space. I feel as though Theorem 4 is one of the first actual applications of general compactness one encounters. Prior to this, most applications have been with respect to metric spaces, where we could have never defined compactness and instead just always said "closed and bounded". But this theorem works for general topological spaces, and so is perhaps a reason to care about compactness as a topological property.
 
 
 #### References

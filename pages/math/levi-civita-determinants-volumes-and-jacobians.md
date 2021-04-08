@@ -7,19 +7,19 @@ comments: 6
 
 (24 Jan 2021) Here we will discuss the relationship between the determinant and volumes, something that semi-confused me for a while. My discussion here is largely derived from my reading of [this excellent textbook](https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935) and [this StackExchange post](https://math.stackexchange.com/a/547522/395731).
 
-Fix a vector space $V$ over the field $\mathbb F \in \{\mathbb R, \mathbb C \}$ with an orthonormal basis $\{e_i ~\mid~ i=1,\dots,\textrm{dim}V \}$. $V^*$ is the corresponding dual space - i.e. the set of all linear functionals from $V$ to $\bbF$. $\{e^i \}$ is the corresponding dual basis, defined so that $e^i(e_j) = \delta^i_j$. Recall that the space 
+Fix a vector space $V$ over the field $\mathbb F \in \curlybrackets{\mathbb R, \mathbb C }$ with an orthonormal basis $\curlybrackets{e_i ~\mid~ i=1,\dots,\textrm{dim}V }$. $V^*$ is the corresponding dual space - i.e. the set of all linear functionals from $V$ to $\bbF$. $\curlybrackets{e^i }$ is the corresponding dual basis, defined so that $e^i(e_j) = \delta^i_j$. Recall that the space 
 
 $$\underbrace{V^* \otimes \dots \otimes V^*}_{r \textrm{ times}} \otimes \underbrace{V \otimes \dots \otimes V}_{s \textrm{ times}}$$
 
-is the set of all $\mathbb F$$-valued multilinear functions on 
+is the set of all $\mathbb F$-valued multilinear functions on 
 
 $$\underbrace{V \times \dots \times V}_{r \textrm{ times}} \times \underbrace{V^* \times \dots \times V^*}_{s \textrm{ times}}.$$
 
 Thus it is the vector space of all rank $(r, s)$ tensors. It is spanned by the basis 
 
 $$\begin{aligned}
-\{e^{i_1} \otimes \dots\otimes e^{i_r} \otimes e_{j_1} \otimes \dots \otimes e_{j_s} & \mid \\
-i_k, j_k =1, \dots, \textrm{dim}V & \}.
+\curlybrackets{e^{i_1} \otimes \dots\otimes e^{i_r} \otimes e_{j_1} \otimes \dots \otimes e_{j_s} & \mid \\
+i_k, j_k =1, \dots, \textrm{dim}V & }.
 \end{aligned}$$
 
 For example,
@@ -60,7 +60,7 @@ $$\begin{aligned}
 
 Consider an $n \times n$ matrix $A$ with components $A_{ij}$. Denote the $i^{\textrm th}$ column vector of $A$ as $A_i$, so that 
 
-$$A_i \coloneqq \left(\begin{matrix}A_{1i}\\\vdots\\A_{ni} \end{matrix}\right).$ 
+$$A_i \coloneqq \left(\begin{matrix}A_{1i}\\\vdots\\A_{ni} \end{matrix}\right).$$
 
 Then the determinant of $A$ is defined as
 
@@ -94,7 +94,7 @@ $$\begin{aligned}
 &= \textrm{sgn}(\sigma) \det A.
 \end{aligned}$$
 
-Here we defined $\sigma$ to be the permutation that maps $i \mapsto j_i$$; thus, 
+Here we defined $\sigma$ to be the permutation that maps $i \mapsto j_i$; thus, 
 
 $$\begin{aligned}
 \textrm{sgn}(\sigma) &= \epsilon(e_{\sigma(1)}, \dots, e_{\sigma(n)})\\
@@ -152,7 +152,7 @@ where we used property 1 in the third line and property 2 in the fourth line. Th
 
 ### Volume
 
-Now we argue that the determinant is related to (signed) volume. Consider the unit $n$$-cube defined by the volume enclosed by the unit vectors $\{e_1, \dots, e_n \}$. The volume of such a cube is 1, which happens to also be $\epsilon(e_1, \dots, e_n) = 1$. Now we consider a matrix $A$ that sends the orthonormal basis $\{e_1, \dots, e_n\}$ to a set $\{A_{1}^j e_j, \dots, A_n^j e_j \}$ (recall summation convension). Since a tensor is multilinear, we then have that
+Now we argue that the determinant is related to (signed) volume. Consider the unit $n$-cube defined by the volume enclosed by the unit vectors $\curlybrackets{e_1, \dots, e_n }$. The volume of such a cube is 1, which happens to also be $\epsilon(e_1, \dots, e_n) = 1$. Now we consider a matrix $A$ that sends the orthonormal basis $\curlybrackets{e_1, \dots, e_n}$ to a set $\curlybrackets{A_{1}^j e_j, \dots, A_n^j e_j }$ (recall summation convension). Since a tensor is multilinear, we then have that
 
 $$\begin{aligned}
 \epsilon(A_{1}^{j_1} e_{j_1}, \dots, A_n^{j_n} e_{j_n}) &= A_1^{j_1} \dots A_n^{j_n} \epsilon(e_{j_1}, \dots, e_{j_{n}})\\
@@ -163,7 +163,7 @@ $$\begin{aligned}
 
 where we go from the first to second line by noting that any case in which $j_i = j_k$ for $i \neq k$ will result in a zero from $\epsilon(e_{j_1}, \dots, e_{j_{n}})$ - so we only have to consider permutations of $1, \dots, n$ instead of $j_1, \dots, j_n = 1, \dots, n$.
 
-Consider the volume that is spanned by the new set of vectors $\{v_1 \coloneqq A_{1}^j e_j, \dots, v_n \coloneqq A_n^j e_j \}$. We apply the Gram-Schmidt procedure to this set to get that
+Consider the volume that is spanned by the new set of vectors $\curlybrackets{v_1 \coloneqq A_{1}^j e_j, \dots, v_n \coloneqq A_n^j e_j }$. We apply the Gram-Schmidt procedure to this set to get that
 
 $$\begin{aligned}
 v_1 &= v_1\\
@@ -179,7 +179,7 @@ $$\begin{aligned}
 &= \epsilon(v_1, v_2^\perp, v_3^\perp, \dots, v_n^\perp)
 \end{aligned}$$
 
-since, for example, something like $\epsilon(v_1, v_1, \dots) = 0$ due to antisymmetry. Since these are all orthogonal, we can define a new orthonormal basis $\{f_i \}$ such that 
+since, for example, something like $\epsilon(v_1, v_1, \dots) = 0$ due to antisymmetry. Since these are all orthogonal, we can define a new orthonormal basis $\curlybrackets{f_i }$ such that 
 
 $$\begin{aligned}
 v_1 &= \norm{v_1} f_1\\
@@ -192,21 +192,21 @@ Then
 
 $$\epsilon(v_1, v_2, v_3, \dots, v_n) = \norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots \cdot \epsilon(f_1, \dots, f_n).$$
 
-Since $\{f_i \}$ is orthonormal, we know that $\{ e_i\}$ and $\{f_i\}$ are related by some orthogonal/unitary transformation $T$. We also showed above that for a change of basis tranformation $T$, $\epsilon(Te_1, \dots, Te_n) = \det(T)$. In this case, $T$ is orthogonal/unitary, and so as we showed in Property 3 has determinant equal to $\pm 1$. Thus,
+Since $\curlybrackets{f_i }$ is orthonormal, we know that $\curlybrackets{ e_i}$ and $\curlybrackets{f_i}$ are related by some orthogonal/unitary transformation $T$. We also showed above that for a change of basis tranformation $T$, $\epsilon(Te_1, \dots, Te_n) = \det(T)$. In this case, $T$ is orthogonal/unitary, and so as we showed in Property 3 has determinant equal to $\pm 1$. Thus,
 
 $$\epsilon(v_1, v_2, v_3, \dots, v_n) = \pm \norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$$
 
-where the sign depends on the transformation from the $\{e_i\}$ basis to the $\{f_i\}$ basis. We easily now recognize $\norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$ as the volume enclosed by the vectors $v_1, \dots, v_n$.
+where the sign depends on the transformation from the $\curlybrackets{e_i}$ basis to the $\curlybrackets{f_i}$ basis. We easily now recognize $\norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$ as the volume enclosed by the vectors $v_1, \dots, v_n$.
 
 In the case of the determinant, $v_1, \dots, v_n$ represent the columns of the matrix in question. So the determinant gives the (signed) volume enclosed by the column vectors of the matrix. Going back to the beginning now, we found that 
 
 $$\epsilon(A_{1}^{j_1} e_{j_1}, \dots, A_n^{j_n} e_{j_n}) = \det(A),$$
 
-where $\{A_{i}^j e_j\}$ is the transformation of the orthonormal basis $\{e_i \}$ given by $A$. We now see that this is just the (signed) volume enclosed by the new set of vectors. Hence, the determinant tells us how much a transformation on a set of vectors will affect the resulting volume enclosed by the vectors.
+where $\curlybrackets{A_{i}^j e_j}$ is the transformation of the orthonormal basis $\curlybrackets{e_i }$ given by $A$. We now see that this is just the (signed) volume enclosed by the new set of vectors. Hence, the determinant tells us how much a transformation on a set of vectors will affect the resulting volume enclosed by the vectors.
 
 ### Jacobian
 
-So we have seen that for a change of basis matrix A $e_{i'} = A^{j}_{i'} e_j$, the ratio of the volume spanned by $\{e_{i'} \}$ and the volume spanned by $\{e_i \}$ is $\vert \det(A) \vert$. Consider performing a volume integral with $dV = \prod_i dx_i$. When we transform coordinates with $dx_i' = \frac{\partial x_i'}{\partial x_j} dx_j$, the proportional change in volume is thus $\left\lvert\det J \right\rvert$, where $J_{ij} \coloneqq \frac{\partial x_i'}{\partial x_j}$ is the Jacobian matrix. Therefore, to componsate for the change so that $dV$ remains the same, we have that $dV = \left\lvert\det J \right\rvert^{-1} \prod_{i'} dx_{i}'$.
+So we have seen that for a change of basis matrix A $e_{i'} = A^{j}_{i'} e_j$, the ratio of the volume spanned by $\curlybrackets{e_{i'} }$ and the volume spanned by $\curlybrackets{e_i }$ is $\vert \det(A) \vert$. Consider performing a volume integral with $dV = \prod_i dx_i$. When we transform coordinates with $dx_i' = \frac{\partial x_i'}{\partial x_j} dx_j$, the proportional change in volume is thus $\left\lvert\det J \right\rvert$, where $J_{ij} \coloneqq \frac{\partial x_i'}{\partial x_j}$ is the Jacobian matrix. Therefore, to componsate for the change so that $dV$ remains the same, we have that $dV = \left\lvert\det J \right\rvert^{-1} \prod_{i'} dx_{i}'$.
 
 So, for example, when switching from cartesian coordinates $x, y$ to polar coordinates $r, \theta$ in an area integral, we have that
 

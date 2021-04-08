@@ -13,7 +13,7 @@ Therefore, the force is $F(m_1, m_2, \vec r_1 - \vec r_2)$. Since we assume that
 
 $$F(m_1, m_2, R(\vec r_1 - \vec r_2)) = F(m_1, m_2, \vec r_1 - \vec r_2)$$
 
-for any rotation $R \in$ SO$$(3)$. Therefore, the force is $F(m_1, m_2, \norm{\vec r_1 - \vec r_2})$. Let's define $r \coloneqq \norm{\vec r_1 - \vec r_2}$, so $F(m_1, m_2, r)$.
+for any rotation $R \in$ SO$(3)$. Therefore, the force is $F(m_1, m_2, \norm{\vec r_1 - \vec r_2})$. Let's define $r \coloneqq \norm{\vec r_1 - \vec r_2}$, so $F(m_1, m_2, r)$.
 
 Next we make the assumption that mass and space are decoupled; that is, we expect the force between two masses to decay at the same rate with distance regardless of the values of the mass. Therefore $F(m_1, m_2, r) = f(m_1, m_2) g(r)$. If we consider the gravitational force to be like a field, we've already determined that the field is spherically symmetric (a function of $r$ only). Then the density of the field lines at a fixed radius $r$ will decay with the surface area of the sphere. Thus we expect $g(r) \propto 1/r^2$. Let's call the proportionality constant $G$. Then we have $F(m_1, m_2, r) = G f(m_1, m_2) / r^2$.
 

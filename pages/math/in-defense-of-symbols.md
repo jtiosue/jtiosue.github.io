@@ -72,7 +72,7 @@ Now a brief technical note. Recall that this works for discrete values of $t$. A
 
 $$f(t) = P \parentheses{1 + rh}^{\floor{t/h}}.$$
 
-We've simply changed $$t/h$ to $\floor{t/h}$, which always rounds $t/h$ down to its nearest integer so that the equation holds.
+We've simply changed $t/h$ to $\floor{t/h}$, which always rounds $t/h$ down to its nearest integer so that the equation holds.
 
 Notice this result works for all values of $h > 0$. But it does not work when $h=0$ because we cannot divide by zero. In the next section, we will complete this picture and figure out what happens when $h \to 0$. Then, I will show a plot to interpret $f(t)$.
 

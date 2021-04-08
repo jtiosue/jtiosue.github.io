@@ -10,13 +10,13 @@ comments: 4
 **Define**:
 - $\tau, N \in \bbZ^+$,
 - $T \in \bbR_{> 0}^{\tau}$ (i.e. $\forall t \in \{0, \dots, \tau-1 \}: \ T_t\in \bbR_{> 0}$),
-- $\mathcal H = \left(\mathbb C^{N}, \braket{\cdot}{\cdot} \right)$ is an $N$$-dimensional Hilbert space,
+- $\mathcal H = \left(\mathbb C^{N}, \braket{\cdot}{\cdot} \right)$ is an $N$-dimensional Hilbert space,
 - $H: \mathcal H \to \mathcal H$ with $H^{\dag} = H$ is the Hamiltonian of interest,
 - $\{\ket{i}~\mid~i\in\{0, \dots, N-1\} \}$ are orthonormal eigenvectors of $H$, thus an orthonormal basis of $\mathcal H$,
 - $H_{ii} = \bra{i} H \ket{i}$,
-- $\forall i, j, t: \ p_{ij}^t \in [0, 1]$ with $\forall i, t: \ \sum_{j}p_{ij}^t = 1$$; $p_{ij}^t$ represents the probability of going from state $\ket i$ to state $\ket j$ at step $t$,
+- $\forall i, j, t: \ p_{ij}^t \in [0, 1]$ with $\forall i, t: \ \sum_{j}p_{ij}^t = 1$; $p_{ij}^t$ represents the probability of going from state $\ket i$ to state $\ket j$ at step $t$,
 - $\rho^0 : \mathcal H \to \mathcal H$ is a positive semi-definite operator with $\tr \rho^0 = 1$ representing the initial quantum state,
-- $K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$$; the set $\{K_{ij}^t \}$ forms a valid set of Krauss operators since $\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \bbI_N$,
+- $K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$; the set $\{K_{ij}^t \}$ forms a valid set of Krauss operators since $\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \bbI_N$,
 - $\mathcal E^t: \rho \mapsto \sum_{i, j} K_{ij}^t \rho K_{ij}^{t\dag}$ is the quantum channel at step $t$,
 - $\rho^{t+1} = \mathcal E^t\left(\rho^t \right)$ is a simulated annealing step, and
 - $\rho^\tau$ is the final state of the system.
@@ -63,19 +63,19 @@ Consider annealing a spin-1/2 Hamiltonian $H$ represented by the energy function
 
 
 - *Input*
-  - $E: \{1, -1 \}^n \to \mathbb R$$;
-  - $z^0 \in \{1, -1 \}^n$$;
-  - $\tau \in \mathbb Z^+$$;
-  - $T \in \mathbb R_{>0}^\tau$$;
+  - $E: \{1, -1 \}^n \to \mathbb R$;
+  - $z^0 \in \{1, -1 \}^n$;
+  - $\tau \in \mathbb Z^+$;
+  - $T \in \mathbb R_{>0}^\tau$;
 - *Steps*
-  - $z \leftarrow z^0$$;
-  - For $t=0,\dots,\tau-1$$;
-    - For $s=0,\dots,n-1$$;
-      - $h \stackrel{\textrm{uniform}}{\sim} \{0, \dots, n-1 \}$$;
+  - $z \leftarrow z^0$;
+  - For $t=0,\dots,\tau-1$;
+    - For $s=0,\dots,n-1$;
+      - $h \stackrel{\textrm{uniform}}{\sim} \{0, \dots, n-1 \}$;
       - $z' \leftarrow z$ but with the spin $h$ flipped;
-      - $u \stackrel{\textrm{uniform}}{\sim} [0, 1]$$;
-      - If $u < \exp\left(-\frac{\max\{0, E(z) - E(z') \}}{T_t}\right)$$;
-        - $z \leftarrow z'$$;
+      - $u \stackrel{\textrm{uniform}}{\sim} [0, 1]$;
+      - If $u < \exp\left(-\frac{\max\{0, E(z) - E(z') \}}{T_t}\right)$;
+        - $z \leftarrow z'$;
 - *Output*
   - $z \in \{1, -1 \}^n$.
 
