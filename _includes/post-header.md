@@ -1,6 +1,7 @@
 # {{ page.title }}
 
 {% include mathjax.html %}
+{% include top-button.html %}
 
 <style>
   a {font-weight: 300;}

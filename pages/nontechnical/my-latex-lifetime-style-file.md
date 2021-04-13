@@ -40,7 +40,9 @@ comments: 14
 % for ``commenting out'' chunks of text 
 \newcommand{\ignore}[1]{}
 % for notes on the text 
-\newcommand{\note}[1]{{\color{red} [#1]}}
+\newcommand{\notewbrackets}[1]{{\color{red} [#1]}}
+\newcommand{\notewobrackets}[1]{{\color{red} #1}}
+\newcommand{\note}{\@ifstar{\notewobrackets}{\notewbrackets}}
 
 % theorems and etc.
 \newtheorem{theorem}{Theorem}[section]
@@ -58,6 +60,7 @@ comments: 14
 % ref
 \newcommand{\Equation}[1]{\eqref{eq:#1}}
 \newcommand{\Section}[1]{Section~\ref{sec:#1}}
+\newcommand{\Appendix}[1]{Appendix~\ref{ap:#1}}
 \newcommand{\Figure}[1]{Figure~\ref{fig:#1}}
 \newcommand{\Table}[1]{Table~\ref{table:#1}}
 \newcommand{\Definition}[1]{Definition~\ref{def:#1}}
@@ -128,11 +131,6 @@ comments: 14
 \newcommand{\calY}{\mathcal{Y}}
 \newcommand{\calZ}{\mathcal{Z}}
 
-% other
-\DeclareMathOperator*{\argmax}{arg\!\max}
-\DeclareMathOperator*{\argmin}{arg\!\min}
-\newcommand{\Dom}[1]{\text{Dom}\!\parentheses{#1}}
-
 % brackets
 \newcommand{\parentheses}[1]{\left(#1\right)}
 \newcommand{\brackets}[1]{\left[#1\right]}
@@ -141,23 +139,32 @@ comments: 14
 \newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
 \newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
 
+% other
+\newcommand{\pargs}[1]{\!\parentheses{#1}}
+\newcommand{\bargs}[1]{\!\brackets{#1}}
+\newcommand{\cbargs}[1]{\!\curlybrackets{#1}}
+\DeclareMathOperator*{\argmax}{arg\!\max}
+\DeclareMathOperator*{\argmin}{arg\!\min}
+\newcommand{\Dom}[1]{\text{Dom}\pargs{#1}}
+
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}
-\newcommand{\EX}[2]{\Expval_{#1}\!\brackets{#2}}
+\newcommand{\EX}[2]{\Expval_{#1}\bargs{#2}}
 
 % morphisms
-\newcommand{\Hom}[1]{\text{Hom}\!\parentheses{#1}}
-\newcommand{\End}[1]{\text{End}\!\parentheses{#1}}
-\newcommand{\Aut}[1]{\text{Aut}\!\parentheses{#1}}
+\newcommand{\Hom}[1]{\text{Hom}\pargs{#1}}
+\newcommand{\End}[1]{\text{End}\pargs{#1}}
+\newcommand{\Aut}[1]{\text{Aut}\pargs{#1}}
 
 % big O notation
-\newcommand{\bigO}[1]{\calO\!\parentheses{#1}}
-\newcommand{\littleo}[1]{o\!\parentheses{#1}}
-\newcommand{\bigOmega}[1]{\Omega\!\parentheses{#1}}
-\newcommand{\littleomega}[1]{\omega\!\parentheses{#1}}
-\newcommand{\bigTheta}[1]{\Theta\!\parentheses{#1}}
-\newcommand{\poly}[1]{\text{poly}\!\parentheses{#1}}
-\newcommand{\polylog}[1]{\text{polylog}\!\parentheses{#1}}
+\newcommand{\bigO}[1]{\calO\pargs{#1}}
+\newcommand{\littleo}[1]{o\pargs{#1}}
+\newcommand{\bigOmega}[1]{\Omega\pargs{#1}}
+\newcommand{\littleomega}[1]{\omega\pargs{#1}}
+\newcommand{\bigTheta}[1]{\Theta\pargs{#1}}
+\newcommand{\poly}[1]{\text{poly}\pargs{#1}}
+\newcommand{\polylog}[1]{\text{polylog}\pargs{#1}}
+
 ```
 
 {% endraw %}

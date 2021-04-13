@@ -8,7 +8,7 @@ var WIDTH = 20;
 var OBSTACLE_SPEED = -0.75;
 var LINE_WIDTH = 2.5;
 var FREQ = 60;
-var FONTSIZE = 30;
+var FONTSIZE = 20;
 
 
 function scaling_factor(screen) {
