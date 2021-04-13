@@ -29,7 +29,7 @@ comments: 17
 
 **Theorem** *(Feynman/Bogoliubov inequality)*: For any $H'$, $F \leq F' + \expval{H-H'}\_{H'}$.
 
-*Proof of theorem:* Let
+*Proof:* Let
 
 $$\calH(\lambda) = H' + \lambda \parentheses{H-H'}$$
 
@@ -39,18 +39,18 @@ $$\calF(\lambda) = -\frac{1}{\beta}\ln \sum_{s \in S} \exp\bargs{-\beta \calH(\l
 
 so that $\calF(0) = F'$ and $\calF(1) = F$. We will prove in the lemma below that $\calF$ is a concave function in $\lambda$. Therefore, it is always below any tangent line. Thus,
 
-$$\calF(\lambda) \leq \calF(0) + \frac{d\calF}{d\lambda}\rvert_{\lambda=0} \lambda.$$
+$$\calF(\lambda) \leq \calF(0) + \frac{d\calF}{d\lambda}\big\rvert_{\lambda=0} \lambda.$$
 
-Plugging in $\lambda = 1$ gives $F \leq F' + \frac{d\cal F}{d\lambda}\rvert_{\lambda=0}.$ It remains to calculate
+Plugging in $\lambda = 1$ gives $F \leq F' + \frac{d\cal F}{d\lambda}\big\rvert_{\lambda=0}.$ It remains to calculate
 
 $$\begin{aligned}
 \frac{d\calF}{d\lambda} &= -\frac{1}{\beta}\ln \sum_{s\in S}\exp\bargs{-\beta \calH(\lambda)(s)}\\
 &= \frac{\sum_{s\in S} \frac{d\calH(\lambda)}{d\lambda}\exp\bargs{-\beta \calH(\lambda)(s)}}{\sum_{s\in S}\exp\bargs{-\beta \calH(\lambda)(s)}}\\
 &= \frac{\sum_{s\in S} \parentheses{H(s) - H'(s)} \exp\bargs{-\beta \calH(\lambda)(s)}}{\sum_{s\in S}\exp\bargs{-\beta \calH(\lambda)(s)}}\\
-&= \expval{H-H'}\_{\calH(\lambda)}.
+&= \expval{H-H'}_{\calH(\lambda)}.
 \end{aligned}$$
 
-Thus, $\frac{d\calF}{d\lambda}\rvert_{\lambda=0} = \expval{H-H'}\_{H'}$, proving the theorem. {% include endproof.html %}
+Thus, $\frac{d\calF}{d\lambda}\big\rvert_{\lambda=0} = \expval{H-H'}\_{H'}$, proving the theorem. {% include endproof.html %}
 
 **Corollary:** For any $H'$, $Z \geq Z' \exp\bargs{-\beta \expval{H-H'}\_{H'}}$.
 
@@ -61,8 +61,8 @@ To completely prove the theorem, it only remains to prove that $\calF$ is concav
 *Proof:* In the proof of the theorem, we had that $\frac{d\calF}{d\lambda} = \expval{H-H'}\_{\calH(\lambda)}$. Taking one more derivative yields (I omit the algebra)
 
 $$\begin{aligned}
-  \frac{d^2 \calF}{d\lambda^2} &= -\beta \parentheses{\expval{\parentheses{H-H'}^2}\_{\calH(\lambda)} - \expval{H-H'}^2\_{\calH(\lambda)}}\\
-  &= -\beta \text{Var}\_{\calH(\lambda)}\pargs{H-H'}.
+  \frac{d^2 \calF}{d\lambda^2} &= -\beta \parentheses{\expval{\parentheses{H-H'}^2}_{\calH(\lambda)} - \expval{H-H'}^2_{\calH(\lambda)}}\\
+  &= -\beta \text{Var}_{\calH(\lambda)}\pargs{H-H'}.
 \end{aligned}$$
 
 Variance is of course always positive, since
@@ -81,7 +81,7 @@ Suppose we have some parameterized Hamiltonian $H_\theta'$, where $\theta$ is so
 Define $F_{\theta}^{\text{MF}} = F_\theta' + \expval{H-H_\theta'}\_{H_\theta'}$. Notice that
 
 $$\begin{aligned}
-\expval{H'}\_{H'} &= -\frac{\partial \ln Z'}{\partial\beta}\\
+\expval{H'}_{H'} &= -\frac{\partial \ln Z'}{\partial\beta}\\
 &= \frac{\partial\pargs{\beta F'}}{\partial\beta}\\
 &= F' + \beta \frac{\partial F'}{\partial \beta}.
 \end{aligned}$$
@@ -92,9 +92,8 @@ Thus,
 \end{equation}
 
 The Feynman/Bogoliubov inequality tells us that $F_\theta^{\text{MF}} \geq F$. Thus, we look for a set of parameters $\theta^\ast$ that minimizes $F_\theta^{\text{MF}}$ in order to get the best approximation of $F$ as possible. As such, the mean field equation is summarized by $\delta F_\theta^{\text{MF}} = 0$, where the variation $\delta$ is with respect to the variational parameters $\theta$. In summary,
-\begin{equation}
-  \theta^\ast = \argmin_{\theta} F_\theta^{\text{MF}}.
-\end{equation}
+
+$$\theta^\ast = \argmin_{\theta} F_\theta^{\text{MF}}.$$
 
 The point of all this is that $H_\theta'$ is chosen to be noninteracting, and thus simple. All the expectation values in \eqref{eq:mf} are taken with respect to the noninteracting Hamiltonian $H_\theta'$, and so are doable. Then we simply minimize over $\theta$ to get a noninterating approximation of $F$.
 
@@ -123,7 +122,7 @@ m &= \frac{e^{\beta h'} - e^{-\beta h'}}{2\cosh\pargs{\beta h'}}\\
 Therefore,
 
 $$\begin{aligned}
-\expval{H}\_{H_{h'}'} &= -J \sum_{i< j = 1}^n \expval{s_i}\_{H_{h'}'} \expval{s_j}\_{H_{h'}'}\\
+\expval{H}_{H_{h'}'} &= -J \sum_{i< j = 1}^n \expval{s_i}\_{H_{h'}'} \expval{s_j}\_{H_{h'}'}\\
 &= -J \sum_{i< j = 1}^n \tanh^2\pargs{\beta h'}\\
 &= -J \binom{n}{2} \tanh^2\pargs{\beta h'}.
 \end{aligned}$$
@@ -162,7 +161,7 @@ Define the dimensionless quantity $\gamma \coloneqq \beta J (n-1)$. Then
 
 We now look at solutions to \eqref{eq:mag}. Note that $\tanh$ is an odd function, and
 
-$$\forall x\geq 0\colon~~ \tanh x \leq x, \quad \text{and} \quad \frac{d}{dx}\tanh\pargs{\alpha x}\rvert_{x=0} = \alpha.$$
+$$\forall x\geq 0\colon~~ \tanh x \leq x, \quad \text{and} \quad \frac{d}{dx}\tanh\pargs{\alpha x}\big\rvert_{x=0} = \alpha.$$
 
 From these facts, it is easy to see that $m=0$ is the only solution to \eqref{eq:mag} when $\gamma \leq 1$. However, when $\gamma > 1$, there are three solutions; namely, $m \in \curlybrackets{0, a, -a}$ for some $a\in (0,1)$ that we must find numerically. A simple calculation shows that a nonzero average magnetization gives a smaller free energy than an average magnetization of zero.
 
