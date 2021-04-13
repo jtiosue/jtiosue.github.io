@@ -27,7 +27,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
-- <span>12 Apr 2021</span>[Mean field theory in statistical mechanics](pages/physics/mean-field-theory-in-statistical-mechanics.md)
+- <span>13 Apr 2021</span>[Mean field theory in statistical mechanics](pages/physics/mean-field-theory-in-statistical-mechanics.md)
 - <span>16 Jan 2021</span>[The origin of the name POVM](pages/physics/the-origin-of-the-name-povm.md)
 - <span>15 Jan 2021</span>[Why Newton's law of gravitation?](pages/physics/why-newtons-law-of-gravitation.md)
 
