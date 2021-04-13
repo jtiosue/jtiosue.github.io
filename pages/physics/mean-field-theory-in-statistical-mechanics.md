@@ -122,7 +122,7 @@ m &= \frac{e^{\beta h'} - e^{-\beta h'}}{2\cosh\pargs{\beta h'}}\\
 Therefore,
 
 $$\begin{aligned}
-\expval{H}_{H_{h'}'} &= -J \sum_{i< j = 1}^n \expval{s_i}\_{H_{h'}'} \expval{s_j}\_{H_{h'}'}\\
+\expval{H}\_{H_{h'}'} &= -J \sum_{i< j = 1}^n \expval{s_i}\_{H_{h'}'} \expval{s_j}\_{H_{h'}'}\\
 &= -J \sum_{i< j = 1}^n \tanh^2\pargs{\beta h'}\\
 &= -J \binom{n}{2} \tanh^2\pargs{\beta h'}.
 \end{aligned}$$
@@ -130,7 +130,7 @@ $$\begin{aligned}
 Putting this together, we find
 
 $$\begin{aligned}
-  F_{h'}^{\text{MF}} &= \expval{H}\_{H'} - \beta \frac{\partial F_\theta'}{\partial \beta}\\
+  F_{h'}^{\text{MF}} &= \expval{H}\_{H'} - \beta \frac{\partial F\_\theta'}{\partial \beta}\\
   &= -J \binom{n}{2} \tanh^2\pargs{\beta h'} + \beta \frac{\partial}{\partial \beta}\parentheses{\frac{n}{\beta} \ln 2\cosh\pargs{\beta h'}}\\
   &= -J \binom{n}{2} \tanh^2\pargs{\beta h'} - \frac{n}{\beta} \ln 2 \cosh\pargs{\beta h'} + n h'\tanh\pargs{\beta h'}.
 \end{aligned}$$
