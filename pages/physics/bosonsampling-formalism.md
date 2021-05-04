@@ -125,11 +125,11 @@ A unitary $U \in \Aut{H_{2,1}}$ acts as
 Then with the homomorphism $f$, a unitary $U \in \Aut{H_{2,2}}$ acts as
 
 \begin{align}
-    f(U)\parentheses{\frac{x_1^2}{\sqrt{2!}}} &= \frac{1}{\sqrt{2!}}(U_{11}x_1 + U_{21}x_2)^2\\\\\\\\
+    &f(U)\parentheses{\frac{x_1^2}{\sqrt{2!}}} = \frac{1}{\sqrt{2!}}(U_{11}x_1 + U_{21}x_2)^2\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{20} = U_{11}^2 \ket{20} + \sqrt{2} U_{11}U_{21}\ket{11} + U_{21}^2\ket{02},\nonumber\\\\\\\\
-    f(U)(x_1 x_2) &= (U_{11}x_1 + U_{21}x_2)(U_{12} x_1 + U_{22}x_2)\label{eq:f-example}\\\\\\\\
+    &f(U)(x_1 x_2) = (U_{11}x_1 + U_{21}x_2)(U_{12} x_1 + U_{22}x_2)\label{eq:f-example}\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{11} = \sqrt{2} U_{11}U_{12} \ket{20} + (U_{11}U_{22}+U_{12}U_{21})\ket{11} + \sqrt{2} U_{21}U_{22}\ket{02},\nonumber\\\\\\\\
-    f(U)\parentheses{\frac{x_2^2}{\sqrt{2!}}} &= \frac{1}{\sqrt{2!}}(U_{12}x_1 + U_{22}x_2)^2\\\\\\\\
+    &f(U)\parentheses{\frac{x_2^2}{\sqrt{2!}}} = \frac{1}{\sqrt{2!}}(U_{12}x_1 + U_{22}x_2)^2\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{02} = U_{12}^2 \ket{20} + \sqrt{2} U_{12}U_{22}\ket{11} + U_{22}^2\ket{02}.\nonumber
 \end{align}
 
@@ -146,7 +146,8 @@ This was a simple but instructive example. {% include endproof.html %}
     &\qquad \parentheses{V_{12}\parentheses{U_{11}x_i + U_{21}x_j} + V_{22}\parentheses{U_{12}x_i + U_{22}x_j}}^b\nonumber\\\\\\\\
     &= \parentheses{\parentheses{V_{11}U_{11}+V_{21}U_{12}}x_i + \parentheses{V_{11}U_{21} + V_{21}U_{22}}x_j}^a\\\\\\\\
     &\qquad \parentheses{\parentheses{V_{12}U_{11} + V_{22}U_{12}}x_i + \parentheses{V_{12}U_{21} + V_{22}U_{22}}x_j}^b\nonumber\\\\\\\\
-    &= f\parentheses{\begin{matrix}U_{11} V_{11}+U_{12} V_{21} & U_{11} V_{12}+U_{12} V_{22} \\\\\\\\ U_{21} V_{11}+U_{22} V_{21} & U_{21} V_{12}+U_{22} V_{22}\end{matrix}}\parentheses{x_i^a x_j^b}\\\\\\\\
+    &= f\pargs{\begin{pmatrix}U_{11} V_{11}+U_{12} V_{21} & U_{11} V_{12}+U_{12} V_{22} \\\\\\\\ 
+    U_{21} V_{11}+U_{22} V_{21} & U_{21} V_{12}+U_{22} V_{22}\end{pmatrix}}\parentheses{x_i^a x_j^b}\\\\\\\\
     &= f(U \circ V) \parentheses{x_i^a x_j^b},
 \end{align}
 
@@ -162,7 +163,8 @@ The only remaining step is to show that $f(U)$ is indeed unitary, which will val
 \begin{align}
     f(U)\ket{a,b} &= \frac{1}{\sqrt{a!b!}}\parentheses{U_{11} x_i + U_{21}x_j}^a \parentheses{U_{12}x_i + U_{22}x_j}^b\\\\\\\\
     &= \frac{1}{\sqrt{a!b!}}\sum_{s=0}^a\sum_{t=0}^b \binom{a}{s}\binom{b}{t}U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}x_i^{s+t}x_j^{a+b-s-t}\\\\\\\\
-    &= \sum_{s=0}^a\sum_{t=0}^b \binom{a}{s}\binom{b}{t}\sqrt{\frac{(s+t)!(a+b-s-t)!}{a!b!}}U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}\ket{s+t,a+b-s-t}.
+    &= \sum_{s=0}^a\sum_{t=0}^b \binom{a}{s}\binom{b}{t}\sqrt{\frac{(s+t)!(a+b-s-t)!}{a!b!}}\\\\\\\\
+    &~ \times U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}\ket{s+t,a+b-s-t}.
 \end{align}
 
 Therefore, the matrix elements of $f(U)$ are
@@ -200,7 +202,7 @@ Suppose we begin in the state
 
 \begin{equation}
     \label{eq:psi0}
-    \ket{\psi\_0} \coloneqq \lvert \underbrace{1\dots 1}\_{n} \underbrace{0\dots 0}\_{m-n} \rangle
+    \ket{\psi\_0} \coloneqq \lvert \underbrace{1\dots 1}\_{n} ~ \underbrace{0\dots 0}\_{m-n} \rangle
 \end{equation}
 
 and apply a unitary $U$ on the $m$ modes. Then
@@ -245,7 +247,8 @@ This example hints at a relationship between $\Pr[\bm n]$ and the permanent of $
 for an $N\times N$ matrix. Additionally,
 
 \begin{equation}
-    \Pr[(2,0)] = \frac{1}{2}\abs{\perm\pargs{\begin{matrix}U_{11}&U_{12}\\\\\\\\U_{11}&U_{12}\end{matrix}}}^2,\label{eq:repeated-rows-ex}
+    \Pr[(2,0)] = \frac{1}{2}\abs{\perm\pargs{\begin{matrix}U_{11}&U_{12}\\\\\\\\
+    U_{11}&U_{12}\end{matrix}}}^2,\label{eq:repeated-rows-ex}
 \end{equation}
 
 and the expression for $\Pr[(0,2)]$ is similar. By examination of \eqref{eq:alpha_sigma}, the result can be extrapolated as follows. For a general $m\times m$ unitary matrix $U$ representing a linear-optic network on $m$ modes, define $U_{\bm n}$ to be the $n \times n$ matrix formed from $U$ by first removing columns $n+1$ through $m$, and then repeating each row $r$ a total of $n_r$ times. Then,
@@ -276,7 +279,13 @@ Define $a_k(t) = V(t) a_k V^\dagger(t)$. Then,
     &= -i \sum_j h_{kj}a_j(t).
 \end{align}
 
-This is simply a linear equation, and can expressed in matrix notation. Associate a vector $\ket{k(t)} \leftrightarrow a_k(t)$. Then the corresponding equation is $\partial_t \ket{k(t)} = -i h^T\ket{k(t)}$, which is solved by $\ket{k(t)} = e^{-i h^T t}\ket{k(0)}$. Therefore, $a\_k(t) = \sum\_j (e^{-i h^T t})\_{kj}a\_j(0)$, or equivalently $a\_k^\dagger(t) = \sum\_{j} (e^{ih^T t})\_{kj}a\_j^\dagger(0)$. This finally brings us the important result that
+This is simply a linear equation, and can expressed in matrix notation. Associate a vector $\ket{k(t)} \leftrightarrow a_k(t)$. Then the corresponding equation is $\partial_t \ket{k(t)} = -i h^T\ket{k(t)}$, which is solved by $\ket{k(t)} = e^{-i h^T t}\ket{k(0)}$. Therefore, $a\_k(t) = \sum\_j (e^{-i h^T t})\_{kj}a\_j(0)$, or equivalently
+
+\begin{equation}
+a\_k^\dagger(t) = \sum\_{j} (e^{ih^T t})\_{kj}a\_j^\dagger(0).
+\end{equation}
+
+This finally brings us the important result that
 
 \begin{equation}
     V(1) a_k^\dagger V^\dagger(1) = \sum_{j}U_{jk}a_j^\dagger
@@ -309,7 +318,7 @@ From this, one can imagine the scenario in which the $a_i$ operators are fermion
 Understanding BosonSampling from the linear optics point of view helps us to understand other potential variants of the experiment. For example, one alternative to the input state $\ket{\psi_0} = \ket{1^n 0^{m-n}}$ is instead a product state of *coherent states*. A coherent state defined by $\alpha \in \bbC$ on one mode is $\ket{\phi(\alpha)} = e^{-\abs{\alpha}^2/2}e^{\alpha a^\dagger} \ket{0}$. The outputs of standard lasers can be thought of as coherent states. Therefore, if we replace the single photon source in BosonSampling by laser light, the resulting input state is
 
 \begin{equation}
-    \ket{\psi\_0^c(\alpha)} = \lvert \underbrace{\phi(\alpha)\dots\phi(\alpha)}\_{n} \underbrace{0\dots0}\_{m-n}\rangle = e^{-n\abs{\alpha}^2 / 2}\parentheses{\prod\_{i=1}^n e^{\alpha a\_i^\dagger}}\ket{0^m}.
+    \ket{\psi\_0^c(\alpha)} = \lvert \underbrace{\phi(\alpha)\dots\phi(\alpha)}\_{n} ~ \underbrace{0\dots0}\_{m-n}\rangle = e^{-n\abs{\alpha}^2 / 2}\parentheses{\prod\_{i=1}^n e^{\alpha a\_i^\dagger}}\ket{0^m}.
 \end{equation}
 
 After sending $\ket{\psi_0^c}$ through a linear optic network $V$, the output state is
