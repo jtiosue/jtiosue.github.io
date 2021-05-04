@@ -127,8 +127,10 @@ Then with the homomorphism $f$, a unitary $U \in \Aut{H_{2,2}}$ acts as
 \begin{align}
     &f(U)\parentheses{\frac{x_1^2}{\sqrt{2!}}} = \frac{1}{\sqrt{2!}}(U_{11}x_1 + U_{21}x_2)^2\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{20} = U_{11}^2 \ket{20} + \sqrt{2} U_{11}U_{21}\ket{11} + U_{21}^2\ket{02},\nonumber\\\\\\\\
+    \nonumber\\\\\\\\
     &f(U)(x_1 x_2) = (U_{11}x_1 + U_{21}x_2)(U_{12} x_1 + U_{22}x_2)\label{eq:f-example}\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{11} = \sqrt{2} U_{11}U_{12} \ket{20} + (U_{11}U_{22}+U_{12}U_{21})\ket{11} + \sqrt{2} U_{21}U_{22}\ket{02},\nonumber\\\\\\\\
+    \nonumber\\\\\\\\
     &f(U)\parentheses{\frac{x_2^2}{\sqrt{2!}}} = \frac{1}{\sqrt{2!}}(U_{12}x_1 + U_{22}x_2)^2\\\\\\\\
     &~\longleftrightarrow~ f(U)\ket{02} = U_{12}^2 \ket{20} + \sqrt{2} U_{12}U_{22}\ket{11} + U_{22}^2\ket{02}.\nonumber
 \end{align}
@@ -148,7 +150,7 @@ This was a simple but instructive example. {% include endproof.html %}
     &\qquad \parentheses{\parentheses{V_{12}U_{11} + V_{22}U_{12}}x_i + \parentheses{V_{12}U_{21} + V_{22}U_{22}}x_j}^b\nonumber\\\\\\\\
     &= f\pargs{
       \begin{pmatrix}
-        U_{11} V_{11}+U_{12} V_{21} & U_{11} V_{12}+U_{12} V_{22} \\\\
+        U_{11} V_{11}+U_{12} V_{21} & U_{11} V_{12}+U_{12} V_{22} \\\\\\
         U_{21} V_{11}+U_{22} V_{21} & U_{21} V_{12}+U_{22} V_{22}
       \end{pmatrix}
     }\parentheses{x_i^a x_j^b}\\\\\\\\
