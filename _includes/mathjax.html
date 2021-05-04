@@ -76,9 +76,10 @@ $$\newcommand{\calZ}{\mathcal{Z}}$$
 
 <!-- Math operators -->
 $$\newcommand{\dag}{\dagger}$$
-$$\newcommand{\tr}{\textrm{tr}}$$
-$$\newcommand{\Tr}{\textrm{Tr}}$$
-$$\newcommand{\det}{\textrm{det}}$$
+$$\newcommand{\tr}{\mathrm{tr}}$$
+$$\newcommand{\Tr}{\mathrm{Tr}}$$
+$$\newcommand{\det}{\mathrm{det}}$$
+$$\newcommand{\perm}{\mathrm{perm}}$$
 $$\newcommand{\coloneqq}{\mathrel{\vcenter{:}}=}$$
 $$\newcommand{\eqqcolon}{\mathrel{=\vcenter{:}}}$$
 $$\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}$$
@@ -101,17 +102,25 @@ $$\newcommand{\curlybrackets}[1]{\left\{#1\right\}}$$
 $$\newcommand{\angles}[1]{\left\langle #1\right\rangle}$$
 $$\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}$$
 $$\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}$$
-$$\newcommand{\expval}[1]{\left\langle #1 \right\rangle}$$
+$$\newcommand{\set}{\curlybrackets}$$
+$$\newcommand{\expval}{\angles}$$
+$$\newcommand{\comm}[2]{\brackets{#1, #2}}$$
 
 $$\newcommand{\pargs}[1]{\!\parentheses{#1}}$$
 $$\newcommand{\bargs}[1]{\!\brackets{#1}}$$
 $$\newcommand{\cbargs}[1]{\!\curlybrackets{#1}}$$
 $$\newcommand{\Dom}[1]{\text{Dom}\pargs{#1}}$$
 
+<!-- Probability -->
+
+$$\DeclareMathOperator*{\Expval}{\mathbb{E}}$$
+$$\newcommand{\EX}[2]{\Expval_{#1}\bargs{#2}}$$
+$$\newcommand{\Pr}{\mathrm{Pr}}$$
+
 <!-- morphims -->
-$$\newcommand{\Hom}[1]{\textrm{Hom}\pargs{#1}}$$
-$$\newcommand{\End}[1]{\textrm{End}\pargs{#1}}$$
-$$\newcommand{\Aut}[1]{\textrm{Aut}\pargs{#1}}$$
+$$\newcommand{\Hom}[1]{\mathrm{Hom}\pargs{#1}}$$
+$$\newcommand{\End}[1]{\mathrm{End}\pargs{#1}}$$
+$$\newcommand{\Aut}[1]{\mathrm{Aut}\pargs{#1}}$$
 
  <!-- big O notation -->
 $$\newcommand{\bigO}[1]{\calO\pargs{#1}}$$
@@ -119,6 +128,6 @@ $$\newcommand{\littleo}[1]{o\pargs{#1}}$$
 $$\newcommand{\bigOmega}[1]{\Omega\pargs{#1}}$$
 $$\newcommand{\littleomega}[1]{\omega\pargs{#1}}$$
 $$\newcommand{\bigTheta}[1]{\Theta\pargs{#1}}$$
-$$\newcommand{\poly}[1]{\textrm{poly}\pargs{#1}}$$
-$$\newcommand{\polylog}[1]{\textrm{polylog}\pargs{#1}}$$
+$$\newcommand{\poly}[1]{\mathrm{poly}\pargs{#1}}$$
+$$\newcommand{\polylog}[1]{\mathrm{polylog}\pargs{#1}}$$
 </div>

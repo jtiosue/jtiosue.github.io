@@ -13,7 +13,7 @@ To measure non orthogonal quantum states, we must perform some operation on the 
 
 $$U: \vert\psi\rangle\otimes \vert 0 \rangle \to \sum_a \parentheses{M_a \vert \psi\rangle} \otimes \vert a \rangle$$
 
-$$U$ must be unitary, so
+$U$ must be unitary, so
 
 $$\begin{aligned}
 1 &= \left\lvert\left\lvert\sum_a \left(M_a \vert\psi\rangle \right)\otimes \vert a\rangle\right\rvert\right\rvert^2\\

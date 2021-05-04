@@ -34,7 +34,7 @@ Now our goal is to find an explicit form of $f(t)$ so that we can plug in any va
 
 I'm going to make an educated guess that $f(t) = P A^{rt}$ for some numbers $A$ and $P$. If this is the case, then by simply plugging in $t=0$ to the right hand side, we find that $f(0) = P A^0 = P$ (recall that for any number $A$, $A^0 = 1$). Therefore, we have a nice understanding of what $P$ should be; $P$ is the money that we *initially* put in our bank account - it is the money we have at time $0$, called the Principle. Again though, we would like to see how this all looks for different values of $P$ and different rates $r$ and different compounding schedules $h$, so we'll just leave $P$ as a symbol rather than plugging in any specific value for $P$.
 
-So what about $A$$? Well I don't know yet! It is just some value that we don't know yet, but we will see shortly that we can *choose* a value of $A$ so that our guess $f(t) = PA^{rt}$ satisfies \eqref{eq:star}. Without further ado, let's just plug $f(t) = PA^{rt}$ into \eqref{eq:star}. This gives
+So what about $A$? Well I don't know yet! It is just some value that we don't know yet, but we will see shortly that we can *choose* a value of $A$ so that our guess $f(t) = PA^{rt}$ satisfies \eqref{eq:star}. Without further ado, let's just plug $f(t) = PA^{rt}$ into \eqref{eq:star}. This gives
 
 $$r P A^{rt} = \frac{P A^{r(t+h)} - PA^{rt}}{h}.$$
 
@@ -68,7 +68,7 @@ We can again simplify this to get the well-known compounding interest formula
 
 $$f(t) = P \parentheses{1 + rh}^{t/h}.$$
 
-Now a brief technical note. Recall that this works for discrete values of $t$. At time $t=0$, we have a balance of $f(0) = P$. At time $t=h$, the interest is compounded for the first time, and we have a balance $f(h) = \parentheses{1 + rh}$. At time $t=2h$, the interest is compounded for the second time, and we have a balance $f(2h) = P \parentheses{1 + rh}^{2}$. And we can continue on like this. Thus, our equation for $f(t)$ is valid when $t$ is $0,h, 2h,3h,\dots$. In order to extend the results to any arbitrary value of $t$, we add the floor symbol $\floor{\cdot}$, which rounds any non integer down to its nearest integer value. Thus, our final formula for $f(t)$ is
+Now a brief technical note. Recall that this works for discrete values of $t$. At time $t=0$, we have a balance of $f(0) = P$. At time $t=h$, the interest is compounded for the first time, and we have a balance $f(h) = P\parentheses{1 + rh}$. At time $t=2h$, the interest is compounded for the second time, and we have a balance $f(2h) = P \parentheses{1 + rh}^{2}$. And we can continue on like this. Thus, our equation for $f(t)$ is valid when $t$ is $0,h, 2h,3h,\dots$. In order to extend the results to any arbitrary value of $t$, we add the floor symbol $\floor{\cdot}$, which rounds any non integer down to its nearest integer value. Thus, our final formula for $f(t)$ is
 
 $$f(t) = P \parentheses{1 + rh}^{\floor{t/h}}.$$
 
@@ -127,7 +127,7 @@ Now let's compare what happens to the money in your bank account as a function o
 
 We are plotting $f(t) / P$, where recall that $P = f(0)$, the initial amount of money that you put into the account. When $h$ is greater than 0, the plot jumps every $h$ years, which corresponds to when the interest is compounded. When $h=0$, there is no such jump because the interest is being compounded continuously - i.e. all the time. From the blue line, we can see that with an interest rate of 10% and compounding continuously ($h = 0$), after 10 years your $P$ dollars will become almost $3P$ dollars. This is much better than the 5% interest rate.
 
-The lines on this plot follow an *exponential growth*. Exponential growth occurs whenever the *change* in some quanity is proportional to the quantity itself. In this case, the amount of money that is added to your account (i.e. the change of your account balance) is proportional to the current balance in your account.
+The lines on this plot follow an *exponential growth*. Exponential growth occurs whenever the *change* in some quanity is proportional to the quantity itself. In this case, the amount of money that is added to your account (i.e. the change of your account balance) is proportional to the current balance in your account. This observation then suggests that $f(t)$ should follow an exponential growth, which is precisely where my "educated guess" of $f(t) = PA^{rt}$ from earlier came from.
 
 
 ### So what is e?

@@ -21,6 +21,9 @@ comments: 14
 % ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
 \usepackage{showkeys}
 
+% for dummy words, use with \lipsum or \lipsum[50], etc.
+\usepackage{lipsum}
+
 % meta
 \newcommand{\iosuename}{Joseph~T.~Iosue}
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}
@@ -40,9 +43,9 @@ comments: 14
 % for ``commenting out'' chunks of text 
 \newcommand{\ignore}[1]{}
 % for notes on the text 
-\newcommand{\notewbrackets}[1]{{\color{red} [#1]}}
-\newcommand{\notewobrackets}[1]{{\color{red} #1}}
-\newcommand{\note}{\@ifstar{\notewobrackets}{\notewbrackets}}
+\usepackage{suffix}
+\newcommand{\note}[1]{{\color{red} [#1]}}
+\WithSuffix\newcommand\note*[1]{{\color{red} #1}}
 
 % theorems and etc.
 \newtheorem{theorem}{Theorem}[section]
@@ -55,7 +58,11 @@ comments: 14
 \newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
 \theoremstyle{remark}\newtheorem{observation}[theorem]{Observation}
-\theoremstyle{definition}\newtheorem{example}[theorem]{Example}
+% \theoremstyle{definition}\newtheorem{example}[theorem]{Example}
+\theoremstyle{definition}\newtheorem{examplex}[theorem]{Example}
+\newenvironment{example}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\diamond$}\examplex}
+  {\popQED\endexamplex}
 
 % ref
 \newcommand{\Equation}[1]{\eqref{eq:#1}}
@@ -138,6 +145,7 @@ comments: 14
 \newcommand{\angles}[1]{\left\langle #1\right\rangle}
 \newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
 \newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\set}{\curlybrackets}
 
 % other
 \newcommand{\pargs}[1]{\!\parentheses{#1}}
@@ -145,16 +153,16 @@ comments: 14
 \newcommand{\cbargs}[1]{\!\curlybrackets{#1}}
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
-\newcommand{\Dom}[1]{\text{Dom}\pargs{#1}}
+\newcommand{\Dom}[1]{\mathrm{Dom}\pargs{#1}}
 
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}
 \newcommand{\EX}[2]{\Expval_{#1}\bargs{#2}}
 
 % morphisms
-\newcommand{\Hom}[1]{\text{Hom}\pargs{#1}}
-\newcommand{\End}[1]{\text{End}\pargs{#1}}
-\newcommand{\Aut}[1]{\text{Aut}\pargs{#1}}
+\newcommand{\Hom}[1]{\mathrm{Hom}\pargs{#1}}
+\newcommand{\End}[1]{\mathrm{End}\pargs{#1}}
+\newcommand{\Aut}[1]{\mathrm{Aut}\pargs{#1}}
 
 % big O notation
 \newcommand{\bigO}[1]{\calO\pargs{#1}}
@@ -162,8 +170,8 @@ comments: 14
 \newcommand{\bigOmega}[1]{\Omega\pargs{#1}}
 \newcommand{\littleomega}[1]{\omega\pargs{#1}}
 \newcommand{\bigTheta}[1]{\Theta\pargs{#1}}
-\newcommand{\poly}[1]{\text{poly}\pargs{#1}}
-\newcommand{\polylog}[1]{\text{polylog}\pargs{#1}}
+\newcommand{\poly}[1]{\mathrm{poly}\pargs{#1}}
+\newcommand{\polylog}[1]{\mathrm{polylog}\pargs{#1}}
 
 ```
 

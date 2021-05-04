@@ -8,7 +8,7 @@ comments: 3
 (17 Jan 2021) For my own education, I followed [Michael Nielsen](https://twitter.com/michael_nielsen/status/1342181807630897157?s=19)'s post on the subject and wrote in the details. As he mentions, this is not the most common (I don't think) proof of the Prime Number Theorem, but it is a cool and easy one. The Prime Number Theorem states that the number of prime numbers $\leq n$ is $\Theta(n/\ln n)$. As far as I know, the proof we show here only shows that it is $\Omega(n/\ln n)$, and so it remains to be shown that it is also $\mathcal O(n/\ln n)$. Let's begin.
 
 **Definitions**: 
-- $\mathbb P \coloneqq \{p \in \mathbb N ~\mid~ p \textrm{ is prime} \}$ is the set of of all prime numbers.
+- $\mathbb P \coloneqq \curlybrackets{p \in \mathbb N ~\mid~ p \textrm{ is prime} }$ is the set of of all prime numbers.
 - $\pi(n) \coloneqq \left\lvert \mathbb P \setminus [n+1, \infty)  \right\rvert$ is the number of prime numbers less than or equal to $n$.
 - $P_p: \mathbb N \to \mathbb N_0$ for $p \in \mathbb P$ is defined such that $P_p(x)$ is the prime power of $p$ in the prime factorization of $x$. Thus for any $x \in \mathbb N$, we have that $x = \prod_{p\in \mathbb P} p^{P_p(x)}$.
 
