@@ -11,6 +11,5 @@ description: for my own benefit
 
 # added this so newlines in align mathjax enviroments work
 compress_html:
-  clippings: pre
-  ignore:
-    envs: 
+  clippings: all
+  blanklines: true

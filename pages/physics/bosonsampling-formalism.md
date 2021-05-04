@@ -68,10 +68,10 @@ There are three operations that a linear-optics network can perform on the two-d
 Here the direct sum is to be understood as the direct sum of operators, namely $a \oplus b = \text{diag}(a, b)$. The third unitary operation is the *beamsplitter*,
 
 \begin{equation}
-    B(\theta) = \parentheses{\begin{matrix}
+    B(\theta) = \begin{pmatrix}
     \cos \theta&-\sin\theta\\
     \sin\theta&\cos\theta
-    \end{matrix}}.
+    \end{pmatrix}.
 \end{equation}
 
 Together, products of these three operations can generate an arbitrary unitary operation on $\bbC^2$.
