@@ -8,3 +8,9 @@ relative_links:
 title: ramblings
 description: for my own benefit
 # favicon: favicon.ico
+
+# added this so newlines in align mathjax enviroments work
+compress_html:
+  clippings: pre
+  ignore:
+    envs: 
