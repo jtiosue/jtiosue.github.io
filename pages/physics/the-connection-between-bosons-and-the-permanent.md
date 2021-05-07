@@ -97,8 +97,8 @@ One natural set of representatives of the equivalence classes is the set
 
 \begin{equation}
     \begin{aligned}
-        \set{e_1\otimes e_1, &e_2 \otimes e_2, e_3 \otimes e_3} \\
-         & \cup set{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
+        &\set{e_1\otimes e_1, e_2 \otimes e_2, e_3 \otimes e_3} \\
+         & \qquad \cup set{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
     \end{aligned}
 \end{equation}
 
@@ -314,7 +314,7 @@ Notice that this is not equal to one for a general $2 \times 2$ unitary matrix. 
     2 &= \angles{e_1 \otimes e_1, e_1 \otimes e_1}\\\\\\\\
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
-    &= \big]\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
+    &= \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
     &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
     &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
     &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle \nonumber \\\\\\\\
