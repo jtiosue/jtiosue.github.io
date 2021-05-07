@@ -97,8 +97,8 @@ One natural set of representatives of the equivalence classes is the set
 
 \begin{equation}
     \begin{aligned}
-        &\set{e_1\otimes e_1, e_2 \otimes e_2, e_3 \otimes e_3} \\
-         & \qquad \cup set{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
+        &\set{e_1\otimes e_1, e_2 \otimes e_2, e_3 \otimes e_3} \\\\\\\\
+         & \qquad \cup \set{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
     \end{aligned}
 \end{equation}
 
