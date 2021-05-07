@@ -97,8 +97,8 @@ One natural set of representatives of the equivalence classes is the set
 
 \begin{equation}
     \begin{aligned}
-        \bigg\{e_1\otimes e_1, &e_2 \otimes e_2, e_3 \otimes e_3, \\
-         &\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2} \bigg\},
+        \set{e_1\otimes e_1, &e_2 \otimes e_2, e_3 \otimes e_3} \\
+         & \cup set{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
     \end{aligned}
 \end{equation}
 
@@ -300,10 +300,10 @@ In this case, though, we will have to redefine our inner product because $f(U)$ 
     1 &= \angles{e_1 \otimes e_1, e_1 \otimes e_1}\\\\\\\\
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
-    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1},\\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}} \nonumber \\\\\\\\
-    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2,\\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\nonumber \\\\\\\\
+    &= \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1},\\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
+    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2,\\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle\nonumber \\\\\\\\
     &= \abs{U_{11}}^4 + \abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &\neq 1.
 \end{align}
@@ -314,10 +314,10 @@ Notice that this is not equal to one for a general $2 \times 2$ unitary matrix. 
     2 &= \angles{e_1 \otimes e_1, e_1 \otimes e_1}\\\\\\\\
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
-    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}}\nonumber \\\\\\\\
-    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\nonumber \\\\\\\\
+    &= \big]\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
+    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle \nonumber \\\\\\\\
     &= 2\abs{U_{11}}^4 + 2\abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &= 2 \parentheses{\abs{U_{11}}^4 + \abs{U_{21}}^4 + 2 \abs{U_{11}U_{21}}^2}\\\\\\\\
     &= 2 \parentheses{\abs{U_{11}}^2 + \abs{U_{21}^2}}^2\\\\\\\\
