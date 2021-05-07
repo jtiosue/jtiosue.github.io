@@ -8,12 +8,10 @@ comments: 18
 (03 May 2021) In this post, I will derive the connection between bosons and the permanent in two ways - first, by following along with the [original BosonSampling paper][BS2013] (though I found their derivation of the permanent a bit confusing, so I will deviate slightly), and second, using linear-optics. Neither of these are my favorite way to derive the connection, but it was nonetheless instructive going through and understanding them. See [this post of mine](the-connection-between-bosons-and-the-permanent.md) for my preferred way of understanding the connection between bosons and the permanent.
 
 
-**Contents**
-1. [Aaronson & Arkhipov formulation](#aaronson--arkhipov-formulation)
-   1. [Unitary operations on one photon](#unitary-operations-on-one-photon)
-   2. [Unitary operations on many photons](#unitary-operations-on-many-photons)
-   3. [Relationship to the permanent](#relationship-to-the-permanent)
-2. [Linear optics formulation](#linear-optics-formulation)
+**Contents:**
+
+* TOC
+{:toc}
 
 
 

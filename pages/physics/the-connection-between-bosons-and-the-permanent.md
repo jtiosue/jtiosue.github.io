@@ -7,6 +7,7 @@ comments: 19
 
 (07 May 2021) In this post, I will derive the relationship between bosons and the matrix permanent. This ultimately serves as the basis for the argument that BosonSampling is computationally hard, since computing the matrix permanent is known to be #P-Hard. I will take a different approach than was taken in the [BosonSampling paper](https://www.theoryofcomputing.org/articles/v009a004/v009a004.pdf). I have [another post](bosonsampling-formalism.html) that moreso follows along with the paper. But I personally prefer this way.
 
+**Contents:**
 
 * TOC
 {:toc}
@@ -24,12 +25,12 @@ We will consider a system of $m$ *modes*. In the case of photons, optical modes 
 Mathematically, the boson lives in the Hilbert space $H_{m, 1} \coloneqq \bbC^m$. Thus, for a single boson system, the modes form a direct product space. We will choose the orthonormal basis of $H_{m,1}$ $\calB_{m,1} \coloneqq \set{e_i\mid i\in [m]}$, where each basis vector is
 
 \begin{equation}
-    e_i \coloneqq 
+    e\_i \coloneqq 
     \begin{pmatrix}
-      \bm 0_{i-1}\\\\\\\\
+      \bm 0\_{i-1}\\\\\\\\
       1\\\\\\\\
-      \bm 0_{m-i}
-    \end{pmatrix} = \parentheses{\bigoplus_{j=1}^{i-1} 0} \oplus 1 \oplus \parentheses{\bigoplus_{j=1}^{m-i} 0}.
+      \bm 0\_{m-i}
+    \end{pmatrix} = \parentheses{\bigoplus\_{j=1}^{i-1} 0} \oplus 1 \oplus \parentheses{\bigoplus\_{j=1}^{m-i} 0}.
 \end{equation}
 
 There are three operations that a linear-optical network can perform on the two-dimensional Hilbert space $H_{2,1}$. The first and second are phase shifts on the first and second modes, and the third is the beamsplitter;
@@ -66,7 +67,13 @@ for any $0 \leq i \leq m-2$ and angles $\phi_1, \phi_2, \theta$.
 
 We've seen that an $m$-mode system of one boson is nothing more than an $m$-dimensional qudit system. However, bosonic systems become interesting when we introduce multiple particles. Clearly, a $2$-boson system will be in the Hilbert space $H_{m,1} \otimes H_{m,1}$. The state $e_1 \otimes e_2$, for example, represents the first boson being in the first mode and the second boson being in the second mode. Quantum field theory teaches that fundamental particles are indistinguishable. As such, labeling one boson as the *first* and the other as the *second* does not make any physical sense. In other words, the vector $e_1 \otimes e_2$ and $e_2 \otimes e_1$ represent the same quantum state of one boson in the first mode and one boson in the second mode. This suggest that we define an equivalence relation $\sim$ such that $e_1 \otimes e_2 \sim e_2 \otimes e_1$. In this way, there is no way to tell *which* boson is in which mode. Indeed, this is how we define bosons in the following definition.
 
-**Definition** *(Bosons)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ bosons lives in $H_{m,n} \coloneqq H_{m,1}^{\otimes n} /\mathord \sim$. Equivalently, $H_{m,n} = H_{m,1}^{\otimes n} / \mathord{\set{v_1\otimes \dots \otimes v_n - v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)} \mid v_i \in H_{m,1}, \pi\in S_n}}$. {% include endproof.html %}
+**Definition** *(Bosons)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ bosons lives in $H_{m,n} \coloneqq H_{m,1}^{\otimes n} /\mathord \sim$. {% include endproof.html %}
+
+Note that this is equivalent to
+
+\begin{equation}
+    H_{m,n} = H_{m,1}^{\otimes n} / \mathord{\set{v_1\otimes \dots \otimes v_n - v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)} \mid v_i \in H_{m,1}, \pi\in S_n}}.
+\end{equation}
 
 **Example** *($H_{3, 2}$)* The space of two *distinguishable* three-level particles is
 
@@ -89,12 +96,15 @@ where $\brackets{\cdot}$ denotes the equivalence class, so that
 One natural set of representatives of the equivalence classes is the set
 
 \begin{equation}
-    \set{e_1\otimes e_1, e_2 \otimes e_2, e_3 \otimes e_3, \frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2}},
+    \begin{aligned}
+        \bigg\{e_1\otimes e_1, &e_2 \otimes e_2, e_3 \otimes e_3, \\
+         &\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \frac{1}{{2}} \parentheses{e_1 \otimes e_3 + e_3 \otimes e_1}, \frac{1}{{2}} \parentheses{e_2 \otimes e_3 + e_3 \otimes e_2} \bigg\},
+    \end{aligned}
 \end{equation}
 
 where we note that, for example, $\brackets{e_1 \otimes e_2} = \brackets{\frac{1}{{2}} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}}$. {% include endproof.html %}
 
-As noted in the example, the most convenient set of representatives of the quotient space to work with is the set of all rank $n$ symmetric tensors on $H_{m,1}$. By choosing this set of representatives, the inner product induced from the space $H_{m,1}^{\otimes n}$ behaves nicely in the sense that we can essentially forget about the equivalence relation altogether. We could of course choose any set of representatives provided that we ensure the inner product is respecting the equivalence relation; in fact I will show an example in the appendix below titled [another way to deal with the quotient space](#Appendix:-another-way-to-deal-with-the-quotient-space) where we work with just the equivalence classes themselves. To that end, we will now fix the space $H_{m,n}$ to be all symmetric representatives and drop the equivalence classes. We define the inner product $\angles{\cdot, \cdot}\_{H_{m,n}}$ to be the inner product of the symmetric tensor representatives on $H_{m,1}^{\otimes n}$. In the following, I will write $\angles{\cdot, \cdot}$ to denote $\angles{\cdot, \cdot}\_{H_{m,1}^{\otimes n}}$ for brevity.
+As noted in the example, the most convenient set of representatives of the quotient space to work with is the set of all rank $n$ symmetric tensors on $H_{m,1}$. By choosing this set of representatives, the inner product induced from the space $H_{m,1}^{\otimes n}$ behaves nicely in the sense that we can essentially forget about the equivalence relation altogether. We could of course choose any set of representatives provided that we ensure the inner product is respecting the equivalence relation; in fact I will show an example in the appendix below titled [another way to deal with the quotient space](#appendix:-another-way-to-deal-with-the-quotient-space) where we work with just the equivalence classes themselves. To that end, we will now fix the space $H_{m,n}$ to be all symmetric representatives and drop the equivalence classes. We define the inner product $\angles{\cdot, \cdot}\_{H_{m,n}}$ to be the inner product of the symmetric tensor representatives on $H_{m,1}^{\otimes n}$. In the following, I will write $\angles{\cdot, \cdot}$ to denote $\angles{\cdot, \cdot}\_{H_{m,1}^{\otimes n}}$ for brevity.
 
 We define the map $b\colon H_{m,1}^n \to H_{m,n}$ as
 
@@ -115,7 +125,7 @@ Then
     \calB_{m,n} \coloneqq \set{b_\sigma \mid \sigma \in [m]^{[n]} ~\text{monotonically increasing}}
 \end{equation}
 
-forms an orthogonal basis (*not* orthonormal) of $H_{m,n}$ (note that $[m]^{[n]}$ denotes the set of maps with domain $[n]$ and codomain $[m]$.). The restriction to monotonically increasing $\sigma$ is simply to avoid overcounting, since for any $\pi \in S_n$, $b(v_1, \dots, v_n) = b(v_{\pi(1)}, \dots, v_{\pi(n)})$. Noticing that $\abs{\calB_{m,n}}$ is equivalent to the number of ways to put $n$ identical balls (i.e. bosons) into $m$ distinguishable bins (i.e. modes), we find that
+forms an orthogonal basis (*not* orthonormal) of $H_{m,n}$ (note that $[m]^{[n]}$ denotes the set of maps with domain $[n]$ and codomain $[m]$). The restriction to monotonically increasing $\sigma$ is simply to avoid overcounting, since for any $\pi \in S_n$, $b(v_1, \dots, v_n) = b(v_{\pi(1)}, \dots, v_{\pi(n)})$. Noticing that $\abs{\calB_{m,n}}$ is equivalent to the number of ways to put $n$ identical balls (i.e. bosons) into $m$ distinguishable bins (i.e. modes), we find that
 
 \begin{equation}
     M \coloneqq \dim H_{m,n} = \binom{n+m-1}{n}.
@@ -207,14 +217,14 @@ where $U(\bm n, \bm n')$ is the $n \times n$ matrix gotten from $U$ by repeating
 
 
 
-## Variants of formalism
+## Variants of the formalism
 
 Here we will discuss what happens when the bosons are replaced with distinguishable particles (e.g. billiard balls), or with fermions.
 
 
 ### Distinguishable particles
 
-In [Many boson states](#Many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,1}^{\otimes n} / \mathord \sim$. In the "classical" case, particles are distinguishable, and so no such equivalence relation exists. In this case, the space is simply $H_{m,1}^{\otimes n}$. Our homomorphsim $f \in \Hom{U(m), U(m^n)}$ is still $f(U) = U^{\otimes n}$. The transition probability from $e_{\sigma'(1)} \otimes \dots \otimes e_{\sigma'(n)}$ to $e_{\sigma(1)} \otimes \dots \otimes e_{\sigma(n)}$ (where now $\sigma, \sigma'$ do not need to be monotonically increasing) is
+In [Many boson states](#many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,1}^{\otimes n} / \mathord \sim$. In the "classical" case, particles are distinguishable, and so no such equivalence relation exists. In this case, the space is simply $H_{m,1}^{\otimes n}$. Our homomorphsim $f \in \Hom{U(m), U(m^n)}$ is still $f(U) = U^{\otimes n}$. The transition probability from $e_{\sigma'(1)} \otimes \dots \otimes e_{\sigma'(n)}$ to $e_{\sigma(1)} \otimes \dots \otimes e_{\sigma(n)}$ (where now $\sigma, \sigma'$ do not need to be monotonically increasing) is
 
 \begin{align}
     \abs{\angles{e_{\sigma(1)} \otimes \dots \otimes e_{\sigma(n)}, f(U)e_{\sigma'(1)} \otimes \dots \otimes e_{\sigma'(n)}}}^2 &= \prod_{i=1}^n \abs{\angles{e_{\sigma(i)}, U e_{\sigma'(i)}}}^2\\\\\\\\
@@ -233,11 +243,17 @@ where the absolute value and the square are elementwise. In comparing this to \e
 
 ### Fermions
 
-In [Many boson states](#Many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,1}^{\otimes n} / \mathord \sim$. Since an overall phase factor doesn't affect a quantum state, there is another way for particles to be indistiguishable; namely, exchanging any two particles affects the quantum state by an overall minus sign. Such particles are called fermions.
+In [Many boson states](#many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,1}^{\otimes n} / \mathord \sim$. Since an overall phase factor doesn't affect a quantum state, there is another way for particles to be indistiguishable; namely, exchanging any two particles affects the quantum state by an overall minus sign. Such particles are called fermions.
 
-**Definition** *(Fermions)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim \sgn(\pi) v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ fermions lives in $H_{m,1}^{\otimes n} /\mathord \sim$. Equivalently, $H_{m,1}^{\otimes n} / \mathord{\set{v_1\otimes \dots \otimes v_n - \sgn{\pi} v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)} \mid v_i \in H_{m,1}, \pi\in S_n}}$. {% include endproof.html %}
+**Definition** *(Fermions)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim \sgn(\pi) v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ fermions lives in $H_{m,1}^{\otimes n} /\mathord \sim$. {% include endproof.html %}
 
-In this case, the simplest complete set of representatives is the set of antisymmetric tensors of rank $n$ on $H_{m,1}$. The analogue to \eqref{eq:basisstates} is
+Note that this is equivalent to
+
+\begin{equation}
+     H_{m,1}^{\otimes n} / \mathord{\set{v_1\otimes \dots \otimes v_n - \sgn{\pi} v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)} \mid v_i \in H_{m,1}, \pi\in S_n}}.
+\end{equation}
+
+In this case, the simplest complete set of representatives is the set of antisymmetric tensors of rank $n$ on $H_{m,1}$. The analogue to \eqref{eq:basisstates} is then
 
 \begin{equation}
     b(v_1, \dots, v_n) = \frac{1}{\sqrt{n!}}\sum_{\pi\in S_n} \sgn{\pi} v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}.
@@ -272,7 +288,7 @@ Thus, we see that while for bosons we get the permanent, for fermions we get the
 
 ## Appendix: another way to deal with the quotient space
 
-In [Many boson states](#Many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,n} = H_{m,1}^{\otimes n} / \mathord \sim$. We then redefined $H_{m,n}$ by using a complete set of representatives of the equivalence classes, those being the symmetric tensor representatives. In this section, I will illustrate that we could have chosen any set of representatives with a suitable choice of an inner product. I will select representatives so that a orthogonal basis is
+In [Many boson states](#many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,n} = H_{m,1}^{\otimes n} / \mathord \sim$. We then redefined $H_{m,n}$ by using a complete set of representatives of the equivalence classes, those being the symmetric tensor representatives. In this section, I will illustrate that we could have chosen any set of representatives with a suitable choice of an inner product. I will select representatives so that a orthogonal basis is
 
 \begin{equation}
     \calB = \set{e_{\sigma(1)} \otimes \dots \otimes e_{\sigma(n)} \mid \sigma\in [m]^{[n]} ~\text{monotonically increasing}}.
@@ -284,8 +300,10 @@ In this case, though, we will have to redefine our inner product because $f(U)$ 
     1 &= \angles{e_1 \otimes e_1, e_1 \otimes e_1}\\\\\\\\
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
-    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}}\\\\\\\\
-    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\\\\\\\\
+    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1},\\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}} \nonumber \\\\\\\\
+    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2,\\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\nonumber \\\\\\\\
     &= \abs{U_{11}}^4 + \abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &\neq 1.
 \end{align}
@@ -296,8 +314,10 @@ Notice that this is not equal to one for a general $2 \times 2$ unitary matrix. 
     2 &= \angles{e_1 \otimes e_1, e_1 \otimes e_1}\\\\\\\\
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
-    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}}\\\\\\\\
-    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\\\\\\\\
+    &= \angles{U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}}\nonumber \\\\\\\\
+    &\sim \angles{U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2}\nonumber \\\\\\\\
     &= 2\abs{U_{11}}^4 + 2\abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &= 2 \parentheses{\abs{U_{11}}^4 + \abs{U_{21}}^4 + 2 \abs{U_{11}U_{21}}^2}\\\\\\\\
     &= 2 \parentheses{\abs{U_{11}}^2 + \abs{U_{21}^2}}^2\\\\\\\\
