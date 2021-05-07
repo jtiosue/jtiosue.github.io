@@ -104,13 +104,13 @@ Recall that $\dim H_{m,n} \eqqcolon M = \binom{m+n-1}{n}$. We would like to exte
     \ket{\bm n} = \ket{n_1\dots n_m} \longleftrightarrow \prod_{i=1}^m \frac{x_i^{n_i}}{\sqrt{n_i!}}.
 \end{equation}
 
-The $\sqrt{n_i!}$ are needed because of the $n_i!$ possible permutations of the $x_i$ in $x_i^{n_i}$ that leave the term itself unchanged. Ultimately, they are necessary to ensure that $f(U)$ as defined next is unitary, which will be shown in soon. In the [last section of this post](#linear-optics-formulation), I will show that the factorials arise from the normalization when creating Fock states with creation operators. In fact, the formal variable $x_i$ is precisely the creation operator $a_i^\dagger$ on mode $i$.
+The $\sqrt{n_i!}$ are needed because of the $n_i!$ possible permutations of the $x_i$ in $x_i^{n_i}$ that leave the term itself unchanged. Ultimately, they are necessary to ensure that $f(U)$ as defined next is unitary, which will be shown soon. In the [last section of this post](#linear-optics-formulation), I will show that the factorials arise from the normalization when creating Fock states with creation operators. In fact, the formal variable $x_i$ is precisely the creation operator $a_i^\dagger$ on mode $i$.
 
 With this mapping, a $2 \times 2$ unitary transformation $U$ between modes $i$ and $j$ acts on the basis as
 
 \begin{equation}
     \label{eq:f}
-    f(U)\parentheses{\frac{x_i^{n_i} x_j^{n_j}}{\sqrt{n_i! n_j!}}} \coloneqq \frac{1}{\sqrt{n_i! n_j!}}(U_{11}x_i + U_{21}x_j)^{n_i}(U_{12} x_i + U_{22} x_j)^{n_j}.
+    f(U)\pargs{\frac{x_i^{n_i} x_j^{n_j}}{\sqrt{n_i! n_j!}}} \coloneqq \frac{1}{\sqrt{n_i! n_j!}}(U_{11}x_i + U_{21}x_j)^{n_i}(U_{12} x_i + U_{22} x_j)^{n_j}.
 \end{equation}
 
 
@@ -153,7 +153,7 @@ This was a simple but instructive example. {% include endproof.html %}
         U_{11} V_{11}+U_{12} V_{21} & U_{11} V_{12}+U_{12} V_{22} \\\\\\
         U_{21} V_{11}+U_{22} V_{21} & U_{21} V_{12}+U_{22} V_{22}
       \end{pmatrix}
-    }\parentheses{x_i^a x_j^b}\\\\\\\\
+    }\pargs{x_i^a x_j^b}\\\\\\\\
     &= f(U \circ V) \parentheses{x_i^a x_j^b},
 \end{align}
 
@@ -170,7 +170,7 @@ The only remaining step is to show that $f(U)$ is indeed unitary, which will val
     f(U)\ket{a,b} &= \frac{1}{\sqrt{a!b!}}\parentheses{U_{11} x_i + U_{21}x_j}^a \parentheses{U_{12}x_i + U_{22}x_j}^b\\\\\\\\
     &= \frac{1}{\sqrt{a!b!}}\sum_{s=0}^a\sum_{t=0}^b \binom{a}{s}\binom{b}{t}U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}x_i^{s+t}x_j^{a+b-s-t}\\\\\\\\
     &= \sum_{s=0}^a\sum_{t=0}^b \binom{a}{s}\binom{b}{t}\sqrt{\frac{(s+t)!(a+b-s-t)!}{a!b!}}\\\\\\\\
-    &~ \times U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}\ket{s+t,a+b-s-t}.
+    &\quad \times U_{11}^sU_{21}^{a-s}U_{12}^tU_{22}^{b-t}\ket{s+t,a+b-s-t}.\nonumber
 \end{align}
 
 Therefore, the matrix elements of $f(U)$ are
@@ -313,7 +313,7 @@ where we used the fact that $V \ket{0^m} = \ket{0^m}$. Recall that a $[\sigma]$ 
 \begin{align}
     \Pr[\bm n] &= \abs{\alpha_{[\sigma]} \bra{\bm n}\prod_{j=1}^m a_{\sigma(j)}^\dag\ket{0^m}}^2\\\\\\\\
     &= \abs{\alpha_{[\sigma]} \bra{\bm n}\prod_{j=1}^m \sqrt{n_i!}~\frac{a_{\sigma(j)}^\dag}{\sqrt{n_i!}}\ket{0^m}}^2\\\\\\\\
-    &= \abs{\alpha_{[\sigma]} \prod_{j=1}^m \sqrt{n_i!} \bra{\bm n}\ket{\bm n}}^2\\\\\\\\
+    &= \abs{\alpha_{[\sigma]} \prod_{j=1}^m \sqrt{n_i!} \braket{\bm n}{\bm n}}^2\\\\\\\\
     &= \abs{\alpha_{[\sigma]}}^2\prod_{i=1}^m n_i!,
 \end{align}
 

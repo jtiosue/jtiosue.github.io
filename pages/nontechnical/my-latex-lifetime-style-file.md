@@ -69,12 +69,12 @@ comments: 14
 \newcommand{\Section}[1]{Section~\ref{sec:#1}}
 \newcommand{\Appendix}[1]{Appendix~\ref{ap:#1}}
 \newcommand{\Figure}[1]{Figure~\ref{fig:#1}}
-\newcommand{\Table}[1]{Table~\ref{table:#1}}
+\newcommand{\Table}[1]{Table~\ref{tab:#1}}
 \newcommand{\Definition}[1]{Definition~\ref{def:#1}}
 \newcommand{\Example}[1]{Example~\ref{ex:#1}}
 \newcommand{\Remark}[1]{Remark~\ref{re:#1}}
 \newcommand{\Theorem}[1]{Theorem~\ref{thm:#1}}
-\newcommand{\Claim}[1]{Claim~\ref{claim:#1}}
+\newcommand{\Claim}[1]{Claim~\ref{clm:#1}}
 \newcommand{\Proposition}[1]{Proposition~\ref{prop:#1}}
 \newcommand{\Lemma}[1]{Lemma~\ref{lem:#1}}
 \newcommand{\Corollary}[1]{Corollary~\ref{cor:#1}}
@@ -154,6 +154,7 @@ comments: 14
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
 \newcommand{\Dom}[1]{\mathrm{Dom}\pargs{#1}}
+\newcommand{\sgn}[1]{\mathrm{sgn}\pargs{#1}}
 
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}
