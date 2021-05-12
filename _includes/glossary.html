@@ -23,11 +23,9 @@
             + word
             + "</span>";
     }
-    window.onload = function() {
-        let used = {};
-        document.body.innerHTML = document.body.innerHTML.replace(
-            new RegExp(Object.keys(WORDS).join('|'), 'g'),
-            function(m) {return used[m] ? m : funReplace(used[m] = m);}
-        );
-    }
+    let used = {};
+    document.body.innerHTML = document.body.innerHTML.replace(
+        new RegExp(Object.keys(WORDS).join('|'), 'g'),
+        function(m) {return used[m] ? m : funReplace(used[m] = m);}
+    );
 </script>
