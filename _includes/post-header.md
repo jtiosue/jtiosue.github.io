@@ -1,6 +1,7 @@
 # {{ page.title }}
 
 {% include mathjax.html %}
+{% include glossary.html %}
 {% include top-button.html %}
 
 <style>
