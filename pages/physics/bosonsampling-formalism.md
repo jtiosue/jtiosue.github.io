@@ -17,7 +17,7 @@ comments: 18
 
 ## Aaronson & Arkhipov formulation
 
-In this section, I will review BosonSampling as it is introduced in the [original paper][BS2013].
+In this section, I will review BosonSampling as it is introduced in the [original paper][BS2013]. Please note that $[n] \coloneqq \set{1, 2, \dots, n}$ is the set of positive integers less than or equal to $n$.
 We begin with a quantum system of a fixed number $n$ of photons. Since photons are bosons, they are identical. The photons pass through a linear-optic network consisting of $m \geq n$ modes. Roughly speaking, optical modes are orthogonal solutions to the equations of motion for the propagation of electromagnetic waves given a set of boundary conditions. The relevant computational basis is the Fock (or occupation number) basis $\set{\ket{\bm n}\mid \bm n \in \Phi_{m,n}}$, where
 
 \begin{equation}

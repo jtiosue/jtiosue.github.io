@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    // Math symbols https://www.toptal.com/designers/htmlarrows/ for html codes for math symbols
+    const WORDS = {
+        "involution": "An involution is any map that is its own inverse. For a map f: X &rarr; X, f is an involution if f(f(x)) = x for all x &isin; X.",
+        "inclusion": "Let X &sube; Y. Then the inclusion map &#617;: X &rarr; Y (oftentimes written as X &rarrhk; Y) is the injective map x &#8614; x for all x &isin; X. \\n\\nEXAMPLE 1: &#617;: {1, 2} &rarrhk; {1, 2, 3} satisfies &#617;(1) = 1 and &#617;(2) = 2. \\n\\nEXAMPLE 2: &#617;: &#8477; &rarrhk; &#8477;&sup2; satisfies &#617;(x) = (x, 0).",
+        "equivalence relation": "An equivalence relation ~ on a set X is a reflexive, symmetric, and transitive binary relation. Thus for all x, y, z &isin; X, it satisfies x ~ x, x ~ y iff y ~ x, and x ~ y and y ~ z implies that x ~ z. An equivalence class of x &isin; X, denoted [x], is the set of all elements of X that are equivalent to x. That is [x] &#8788; {y &isin; X | x ~ y}.\\n\\nEXAMPLE: let ~ be defined on &#8484; such that x ~ y whenever x and y are the same parity (i.e. either both even or both odd). Then [0] = {x &isin; &#8484; | x is even} and [1] = {x &isin; &#8484; | x is odd}. Note that ... = [-4] = [-2] = [0] = [2] = [4] = ..., and ... = [-3] = [-1] = [1] = [3] = ...",
+        "equivalence class": "An equivalence relation ~ on a set X is a reflexive, symmetric, and transitive binary relation. Thus for all x, y, z &isin; X, it satisfies x ~ x, x ~ y iff y ~ x, and x ~ y and y ~ z implies that x ~ z. An equivalence class of x &isin; X, denoted [x], is the set of all elements of X that are equivalent to x. That is [x] &#8788; {y &isin; X | x ~ y}.\\n\\nEXAMPLE: let ~ be defined on &#8484; such that x ~ y whenever x and y are the same parity (i.e. either both even or both odd). Then [0] = {x &isin; &#8484; | x is even} and [1] = {x &isin; &#8484; | x is odd}. Note that ... = [-4] = [-2] = [0] = [2] = [4] = ..., and ... = [-3] = [-1] = [1] = [3] = ...",
+        "injective": "A map is called injective, one-to-one, or an injection if it maps distinct elements in the domain to distinct elements in the codomain.",
+        "injection": "A map is called injective, one-to-one, or an injection if it maps distinct elements in its domain to distinct elements in its codomain.",
+        "surjective": "A map is called surjective, onto, or a surjection if its image is equal to its codomain.",
+        "surjection": "A map is called surjective, onto, or a surjection if its image is equal to its codomain.",
+        "bijective": "A map is called bijective or a bijection if it is both injective and surjective.\\n\\nINJECTIVE: A map is called injective, one-to-one, or an injection if it maps distinct elements in the domain to distinct elements in the codomain.\\n\\nSURJECTIVE: A map is called surjective, onto, or a surjection if its image is equal to its codomain.",
+        "bijection": "A map is called bijective or a bijection if it is both injective and surjective.\\n\\nINJECTIVE: A map is called injective, one-to-one, or an injection if it maps distinct elements in the domain to distinct elements in the codomain.\\n\\nSURJECTIVE: A map is called surjective, onto, or a surjection if its image is equal to its codomain.",
+    };
+
+    function funReplace(word) {
+        var defn = WORDS[word];
+        return "<span style='color: blue; cursor: pointer;' title='"
+            + defn.replace(/\\n/g, "\n")
+            + "' onclick=\"alert('"
+            + defn
+            + "')\";>"
+            + word
+            + "</span>";
+    }
+    let used = {};
+    document.body.innerHTML = document.body.innerHTML.replace(
+        new RegExp(Object.keys(WORDS).join('|'), 'g'),
+        function(m) {return used[m] ? m : funReplace(used[m] = m);}
+    );
+</script>

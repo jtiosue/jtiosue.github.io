@@ -15,7 +15,7 @@ comments: 19
 
 ## Formalism
 
-The following is partially motivated by [these notes](http://math.univ-lyon1.fr/~attal/Mescours/fock.pdf).
+The following is partially motivated by [these notes](http://math.univ-lyon1.fr/~attal/Mescours/fock.pdf). Please note that $[n] \coloneqq \set{1, 2, \dots, n}$ is the set of positive integers less than or equal to $n$.
 
 
 ### Single boson states
@@ -113,13 +113,7 @@ We define the map $b\colon H_{m,1}^n \to H_{m,n}$ as
     b(v_1, \dots, v_n) = \frac{1}{\sqrt{n!}}\sum_{\pi \in S_n} v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}.
 \end{equation}
 
-Similarly, for any map $\sigma\colon [n]\to [m]$, define
-
-\begin{equation}
-    b_\sigma \coloneqq b(e_{\sigma(1)}, \dots, e_{\sigma(n)}).
-\end{equation}
-
-Then
+Similarly, for any map $\sigma\colon [n]\to [m]$, define $b_\sigma \coloneqq b(e_{\sigma(1)}, \dots, e_{\sigma(n)})$. Then
 
 \begin{equation}
     \calB_{m,n} \coloneqq \set{b_\sigma \mid \sigma \in [m]^{[n]} ~\text{monotonically increasing}}
@@ -169,7 +163,7 @@ The action of $f(U)$ on the basis $\calB_{m,n}$ is then
     &= \sum_{\pi\in S_n} \prod_{i=1}^n \angles{e_{\sigma(\pi(i))}, Ue_{\sigma'(i)}}.
 \end{align}
 
-Define $U(\sigma, \sigma')$ to be the $n \times n$ matrix with entries $U(\sigma,\sigma')\_{ij} = \angles{e\_{\sigma(i)}, U e\_{\sigma'(j)}}$. Thus, $U(\sigma, \sigma')$ is the matrix created from the matrix of $U$ in the basis $\calB_{m,1}$ as follows. For each row $r \in \Im(\sigma)$ of $U$, we repeat that row $\calM_{\sigma}(r)$ times. Then for each column $c \in \Im{\sigma'}$ of $U$, we repeat that column $\calM_{\sigma'}(c)$ times. By definition of the permanent for an $N \times N$ matrix,
+Define $U(\sigma, \sigma')$ to be the $n \times n$ matrix with entries $U(\sigma,\sigma')\_{ij} = \angles{e\_{\sigma(i)}, U e\_{\sigma'(j)}}$. Thus, $U(\sigma, \sigma')$ is the matrix created from the matrix of $U$ in the basis $\calB_{m,1}$ as follows. For each row $r \in \Im{\sigma}$ of $U$, we repeat that row $\calM_{\sigma}(r)$ times. Then for each column $c \in \Im{\sigma'}$ of $U$, we repeat that column $\calM_{\sigma'}(c)$ times. By definition of the permanent for an $N \times N$ matrix,
 
 \begin{equation}
     \label{eq:permanent}
@@ -245,7 +239,7 @@ where the absolute value and the square are elementwise. In comparing this to \e
 
 In [Many boson states](#many-boson-states), we defined bosons by the equivalence relation $\sim$ that satisfied $v_1 \otimes \dots \otimes v_n \sim v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. This was motivated by the fact that bosons are indistinguishable. Thus, the space of $n$ bosons was $H_{m,1}^{\otimes n} / \mathord \sim$. Since an overall phase factor doesn't affect a quantum state, there is another way for particles to be indistiguishable; namely, exchanging any two particles affects the quantum state by an overall minus sign. Such particles are called fermions.
 
-**Definition** *(Fermions)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim \sgn(\pi) v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ fermions lives in $H_{m,1}^{\otimes n} /\mathord \sim$. {% include endproof.html %}
+**Definition** *(Fermions)* For $v_1,\dots, v_n \in H_{m,1}$, define the equivalence relation $\sim$ that satisfies $v_1 \otimes \dots \otimes v_n \sim \sgn{\pi} v_{\pi(1)} \otimes \dots \otimes v_{\pi(n)}$ for any $\pi \in S_n$. Then the quantum state of $n$ fermions lives in $H_{m,1}^{\otimes n} /\mathord \sim$. {% include endproof.html %}
 
 Note that this is equivalent to
 
@@ -265,13 +259,7 @@ The basis is then
     \calB = \set{b_\sigma \mid \sigma \in [m]^{[n]} ~\text{monotonically increasing and injective}},
 \end{equation}
 
-where
-
-\begin{equation}
-    b_\sigma = b(e_{\sigma(1)}, \dots, e_{\sigma(n)}).
-\end{equation}
-
-The restriction to injective $\sigma$ is because $b_\sigma = 0$ for any non-injective $\sigma$. It's not hard to see that each $b_{\sigma}$ is already normalized, and thus $\calB$ is an orthonormal basis. So we get that
+where $b_\sigma = b(e_{\sigma(1)}, \dots, e_{\sigma(n)})$. The restriction to injective $\sigma$ is because $b_\sigma = 0$ for any non-injective $\sigma$. It's not hard to see that each $b_{\sigma}$ is already normalized, and thus $\calB$ is an orthonormal basis. So we get that
 
 \begin{align}
     \angles{b_\sigma, f(U) b_{\sigma'}} &= \frac{1}{n!}\sum_{\pi,\pi' \in S_n} \sgn{\pi}\sgn{\pi'}\prod_{i=1}^n \angles{e_{\sigma(\pi(i))}, U e_{\sigma'(\pi'(i))}}\\\\\\\\
@@ -301,9 +289,9 @@ In this case, though, we will have to redefine our inner product because $f(U)$ 
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
     &= \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1},\\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
-    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2,\\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle\nonumber \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
+    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2,\\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle\nonumber \\\\\\\\
     &= \abs{U_{11}}^4 + \abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &\neq 1.
 \end{align}
@@ -315,12 +303,12 @@ Notice that this is not equal to one for a general $2 \times 2$ unitary matrix. 
     &= \angles{f(U) e_1 \otimes e_1, f(U) e_1 \otimes e_1}\\\\\\\\
     &= \angles{\parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}, \parentheses{U_{11}e_1 + U_{21} e_2} \otimes \parentheses{U_{11}e_1 + U_{21} e_2}}\\\\\\\\
     &= \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1}, \\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
-    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
-    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{22}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle \nonumber \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + U_{11}U_{21} \parentheses{e_1 \otimes e_2 + e_2 \otimes e_1} \big\rangle \nonumber \\\\\\\\
+    &\sim \big\langle U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2, \\\\\\\\
+    &\qquad U_{11}^2 e_1 \otimes e_1 + U_{21}^2 e_2 \otimes e_2 + 2U_{11}U_{21} e_1 \otimes e_2 \big\rangle \nonumber \\\\\\\\
     &= 2\abs{U_{11}}^4 + 2\abs{U_{21}}^4 + 4 \abs{U_{11}U_{21}}^2\\\\\\\\
     &= 2 \parentheses{\abs{U_{11}}^4 + \abs{U_{21}}^4 + 2 \abs{U_{11}U_{21}}^2}\\\\\\\\
-    &= 2 \parentheses{\abs{U_{11}}^2 + \abs{U_{21}^2}}^2\\\\\\\\
+    &= 2 \parentheses{\abs{U_{11}}^2 + \abs{U_{21}}^2}^2\\\\\\\\
     &= 1
 \end{align}
 
