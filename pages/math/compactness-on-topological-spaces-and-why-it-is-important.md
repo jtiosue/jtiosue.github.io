@@ -48,7 +48,7 @@ This is a non-finite intersection of open subsets, and it equals $\curlybrackets
 
 #### Homeomorphisms
 
-A homeomorphism is a bijective continuous function between two topological spaces whose inverse is also continuous. The fact that it is continuous implies that it prerserves the open set structure. So two spaces are homeomorphic if they are topologically equivalent.
+A homeomorphism is an isomorphism between topological spaces. This means that it is a bijective continuous function between two topological spaces whose inverse is also continuous. The fact that it is continuous implies that it prerserves the open set structure. So two spaces are homeomorphic if they are topologically equivalent.
 
 *More to come in this section.*
 

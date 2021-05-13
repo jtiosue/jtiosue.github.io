@@ -37,7 +37,7 @@ Let $\mathcal M = \{M_i ~\mid~ i \in \bbZ^+ \}$, where each $M_i$ is a Turing ma
 
 Let
 
-$$A = \{\langle M, x \rangle ~\mid~ M \in \mathcal{M} ~ \textrm{s.t.} ~ M(x) = \textrm{Y} \},$ 
+$$A = \{\langle M, x \rangle ~\mid~ M \in \mathcal{M} ~ \textrm{s.t.} ~ M(x) = \textrm{Y} \},$$
 
 where $\langle \cdot \rangle$ denotes a description (i.e. $\langle M, x \rangle$ is a description of the Turing machine $M$ and the input $x$). In words, $A$ is the set of all (machine, input) pairs where the machine returns Yes on the input. 
 

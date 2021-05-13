@@ -83,7 +83,7 @@ $$\begin{aligned}
 \frac{x+y}{x} &= \frac{F_n + F_{n-1}}{F_n}\\
 &= \frac{F_n + F_{n-1}}{F_{n-1} + F_{n-2}}\\
 &\substack{=\\n\to\infty} \frac{F_n}{F_{n-1}}\\
-&= \frac{x}{y},
+&= \frac{x}{y}.
 \end{aligned}$$
 
 
