@@ -23,11 +23,11 @@
             + word
             + "</span>";
     }
-    // window.onload = function() {
     let used = {};
-    document.body.innerHTML = document.body.innerHTML.replace(
-        new RegExp(Object.keys(WORDS).join('|'), 'g'),
-        function(m) {return used[m] ? m : funReplace(used[m] = m);}
-    );
-    // }
+    for(let p of document.getElementsByTagName('p')) {
+        p.innerHTML = p.innerHTML.replace(
+            new RegExp(Object.keys(WORDS).join('|'), 'g'),
+            function(m) {return used[m] ? m : funReplace(used[m] = m);}
+        );
+    }
 </script>
