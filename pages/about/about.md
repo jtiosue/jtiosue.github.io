@@ -26,3 +26,5 @@ I am currently a PhD candidate in the Department of Physics at the University of
 {% include_relative appointments.md %}
 
 {% include_relative personal.md %}
+
+{% include top-button.html %}

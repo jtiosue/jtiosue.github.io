@@ -1,7 +1,5 @@
 # {{ page.title }}
 
-{% include mathjax.html %}
-
 <style>
   a {font-weight: 300;}
   p, ul, ol, blockquote {text-align: justify;}
