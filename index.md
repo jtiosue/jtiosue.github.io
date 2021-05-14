@@ -35,6 +35,7 @@ li a {font-weight: 300;}
 
 ## Computer science and programming topics
 
+- <span>13 May 2021</span> [Probability of return for a random walker](pages/computerscience/probability-of-return-for-a-random-walker.md)
 - <span>29 Mar 2021</span> [Flappy bird with Javascript](pages/computerscience/flappy-bird-with-javascript.md)
 - <span>02 Feb 2021</span> [Methods in pseudo-boolean optimization](pages/computerscience/methods-in-pseudo-boolean-optimization.md)
 - <span>23 Jan 2021</span> [Uncomputability, the halting problem, and diagonalization](pages/computerscience/uncomputability-the-halting-problem-and-diagonalization.md)

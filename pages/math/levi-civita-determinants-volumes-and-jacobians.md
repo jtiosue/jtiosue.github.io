@@ -192,11 +192,11 @@ Then
 
 $$\epsilon(v_1, v_2, v_3, \dots, v_n) = \norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots \cdot \epsilon(f_1, \dots, f_n).$$
 
-Since $\curlybrackets{f_i }$ is orthonormal, we know that $\curlybrackets{ e_i}$ and $\curlybrackets{f_i}$ are related by some orthogonal/unitary transformation $T$. We also showed above that for a change of basis tranformation $T$, $\epsilon(Te_1, \dots, Te_n) = \det(T)$. In this case, $T$ is orthogonal/unitary, and so as we showed in Property 3 has determinant equal to $\pm 1$. Thus,
+Since $\curlybrackets{f_i }$ is orthonormal, we know that $\curlybrackets{ e_i}$ and $\curlybrackets{f_i}$ are related by some orthogonal/unitary transformation $T$. We also showed above that for a change of basis tranformation $T$, $\epsilon(Te_1, \dots, Te_n) = \det(T)$. In this case, $T$ is orthogonal/unitary, and so as we showed in Property 3 has determinant equal to a phase $e^{i \phi}$. Thus,
 
-$$\epsilon(v_1, v_2, v_3, \dots, v_n) = \pm \norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$$
+$$\epsilon(v_1, v_2, v_3, \dots, v_n) = e^{i \phi} \norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$$
 
-where the sign depends on the transformation from the $\curlybrackets{e_i}$ basis to the $\curlybrackets{f_i}$ basis. We easily now recognize $\norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$ as the volume enclosed by the vectors $v_1, \dots, v_n$.
+where the phase depends on the transformation from the $\curlybrackets{e_i}$ basis to the $\curlybrackets{f_i}$ basis. We easily now recognize $\norm{v_1} \cdot \norm{v_2^\perp} \cdot \norm{v_3^\perp} \dots$ as the volume enclosed by the vectors $v_1, \dots, v_n$.
 
 In the case of the determinant, $v_1, \dots, v_n$ represent the columns of the matrix in question. So the determinant gives the (signed) volume enclosed by the column vectors of the matrix. Going back to the beginning now, we found that 
 

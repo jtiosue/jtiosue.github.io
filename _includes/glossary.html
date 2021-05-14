@@ -41,12 +41,12 @@
             + "</span>";
     }
     let used = {};
-    for(let p of document.getElementsByTagName('p')) {
+    for(let p of document.querySelectorAll('p,li')) {
         p.innerHTML = p.innerHTML.replace(
             new RegExp(Object.keys(WORDS).join('|'), 'g'),
             function(m) {return used[m] ? m : funReplace(used[m] = m);}
         );
     }
     // for some reason, when I did document.body.innerHTML = document.body.innerHTML.replace(...)
-    // it caused some weird things. So instead I iterate through the paragraphs here.
+    // it caused some weird things. So instead I iterate through the paragraphs and list items.
 </script>
