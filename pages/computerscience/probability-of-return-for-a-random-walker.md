@@ -5,7 +5,7 @@ comments: 20
 
 {% include post-header.md %}
 
-(13 May 2021) In this post I will *very informally* show that if a random walker walks forever in one or two dimensions, then she will *definitely* return to her starting spot at some point, whereas if a random walker walks forever in three or greater dimensions, then she may not ever return to her starting spot. These are from notes from a lecture from Victor Galitski in PHYS 625 as the University of Maryland, Spring 2021.
+(13 May 2021) In this post I will *very informally* show that if a random walker walks forever in one or two dimensions, then she will *definitely* return to her starting spot at some point, whereas if a random walker walks forever in three or greater dimensions, then she may not ever return to her starting spot. The last two sections of this post are based off of notes from a lecture from Victor Galitski in PHYS 625 as the University of Maryland, Spring 2021.
 
 
 ### Informal derivation of the diffusion equation
@@ -62,7 +62,7 @@ $$\parentheses{-i\omega + D p^2} G(\bm p, \omega) = 1$$
 
 where now $\omega$ corresponds to $t-t'$ and $\bm p$ to $\bm r - \bm r'$. Thus,
 
-$$G(\bm r, t) &= \int \frac{d^dp}{(2\pi)^d} \frac{d\omega}{2\pi} \exp\pargs{i\omega t - i\bm p \cdot \bm r}\frac{1}{(-i\omega + D p^2)}.$$
+$$G(\bm r, t) = \int \frac{d^dp}{(2\pi)^d} \frac{d\omega}{2\pi} \exp\pargs{i\omega t - i\bm p \cdot \bm r}\frac{1}{(-i\omega + D p^2)}.$$
 
 Going through this integral, one finds that $G(0, t) \propto t^{-d/2}$.
 
