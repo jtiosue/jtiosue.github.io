@@ -5,7 +5,7 @@ comments: 19
 
 {% include post-header.md %}
 
-(07 May 2021) In this post, I will derive the relationship between bosons and the matrix permanent. This ultimately serves as the basis for the argument that BosonSampling is computationally hard, since computing the matrix permanent is known to be #P-Hard. I will take a different approach than was taken in the [BosonSampling paper](https://www.theoryofcomputing.org/articles/v009a004/v009a004.pdf). I have [another post](bosonsampling-formalism.html) that moreso follows along with the paper. But I personally prefer this way.
+(07 May 2021) In this post, I will derive the relationship between bosons and the matrix permanent. This ultimately serves as the basis for the argument that BosonSampling is computationally hard, since computing the matrix permanent is known to be <span style="font-variant: small-caps;">#P-Hard</span>. I will take a different approach than was taken in the [BosonSampling paper](https://www.theoryofcomputing.org/articles/v009a004/v009a004.pdf). I have [another post](bosonsampling-formalism.html) that moreso follows along with the paper. But I personally prefer this way.
 
 **Contents:**
 

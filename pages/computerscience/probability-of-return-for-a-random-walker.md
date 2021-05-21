@@ -10,7 +10,7 @@ comments: 20
 
 ### Informal derivation of the diffusion equation
 
-Let $\rho(x, t)$ denote the density of a gas in one dimension at the point $x$ at time $t$. We model diffusion as a random walk, so that the gas particles have an equal chance of moving infinitesimally to the left or right at every point. Thus, particles at the point $x-dx$ walk to both $x-2dx$ and $x$, particles at the point $x+dx$ walk to both $x+2dx$ and $x$, and particles at the point $x$ walk to both $x-dx$ and $x+dx$. In this way, the density at a point $x$ at time $t+dt$ is simply the density coming from the point $x\pm dx$,
+Let $\rho(x, t)$ denote the density of a gas in one dimension at the point $x$ at time $t$. We model diffusion as a random walk, so that the gas particles have an equal chance of moving infinitesimally to the left or right at every point. Thus, particles at the point $x-dx$ walk to both $x-2dx$ and $x$, particles at the point $x+dx$ walk to both $x+2dx$ and $x$, and particles at the point $x$ walk to both $x-dx$ and $x+dx$. In this way, the density at a point $x$ at time $t+dt$ is simply the density coming from the points $x\pm dx$,
 
 $$\rho(x, t+dt) = \frac{1}{2}\rho(x-dx,t) + \frac{1}{2}\rho(x+dx, t).$$
 
@@ -30,7 +30,7 @@ Call the proportionality factor $D = \frac{dx^2}{2dt}$, so that
 
 $$\partial_t \rho(x, t) = D \partial_x^2 \rho(x, t).$$
 
-More generally, one can imagine jmps of size $\delta$ that occur accoringing to some probability density function $p(\delta)$. In this case, the analysis is the same, but we'd find that
+More generally, one can imagine jumps of size $\delta$ that occur accoringing to some probability density function $p(\delta)$. In this case, the analysis is the same, but we'd find that
 
 $$D = \int_{-\infty}^\infty \frac{\delta^2}{2dt}\cdot p(\delta) d\delta.$$
 
@@ -71,7 +71,7 @@ Going through this integral, one finds that $G(0, t) \propto t^{-d/2}$.
 
 As we informally argued before, $G(\bm r, t; \bm r', 0)$ tells us something about the probability to transition from $\bm r'$ to $\bm r$ in a time $t$. Thus, the probability to return to the same point as we started is something like
 
-$$\int_{\tau_i}^{\tau_f} G(0,t)dt = \int_{\tau_i}^{\tau_f} t^{-d/2} dt.$$
+$$\int_{\tau_i}^{\tau_f} G(0,t)dt \propto \int_{\tau_i}^{\tau_f} t^{-d/2} dt.$$
 
 We see that when $d = 1$ or $2$, this integral blows up, but when $d \geq 3$, it stays finite. This is characteristic of the fact that if a random walker walks forever in one or two dimensions, then she will *definitely* return to her starting spot at some point. However, if a random walker walks forever in three or greater dimensions, then she may not ever return to her starting spot.
 

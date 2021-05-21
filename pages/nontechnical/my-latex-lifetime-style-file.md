@@ -40,6 +40,9 @@ comments: 14
     \fi
 }
 
+% to label equations by section, e.g. equation 1.3, 2.5, etc.
+% \numberwithin{equation}{section}
+
 % for ``commenting out'' chunks of text 
 \newcommand{\ignore}[1]{}
 % for notes on the text 
@@ -148,9 +151,9 @@ comments: 14
 \newcommand{\set}{\curlybrackets}
 
 % other
-\newcommand{\pargs}[1]{\!\parentheses{#1}}
-\newcommand{\bargs}[1]{\!\brackets{#1}}
-\newcommand{\cbargs}[1]{\!\curlybrackets{#1}}
+\newcommand{\pargs}[1]{{\parentheses{#1}}}
+\newcommand{\bargs}[1]{{\brackets{#1}}}
+\newcommand{\cbargs}[1]{{\curlybrackets{#1}}}
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
 \newcommand{\Dom}[1]{\mathrm{Dom}\pargs{#1}}

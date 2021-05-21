@@ -9,7 +9,7 @@ I created qubovert, a Python package for dealing with binary optimization proble
 
 #### Contribution to SciPy [(View my pull request)](https://github.com/scipy/scipy/pull/10648)
 
-I am the author of pull request number 10648 on Python’s SciPy package. The moderators of SciPy have labeled it to be included in SciPy’s 1.5.0 release. The pull request implements an additional feature for SciPy’s minimization method. In my research of variational quantum algorithms, I devised a bounded version of the standard unbounded Powell minimization method and found to often perform much better than the other gradient-free minimizers. I then implemented this variant in SciPy’s software stack and created the pull request.
+I am the author of [pull request number 10648](https://github.com/scipy/scipy/pull/10648) on Python’s SciPy package. My contribution is included in the [1.5.0 release](https://github.com/scipy/scipy/releases/tag/v1.5.0) and later releases. The pull request implements an additional feature for SciPy’s minimization method. In my research of variational quantum algorithms, I devised a bounded version of the standard unbounded Powell minimization method and found to often perform much better than the other gradient-free minimizers. I then implemented this variant in SciPy’s software stack and created the pull request.
 
 
 #### qusetta [(View on GitHub)](https://github.com/qcware/qusetta)

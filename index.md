@@ -27,6 +27,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
+- <span>21 May 2021</span> [The scalar propagator](pages/physics/the-scalar-propagator.md)
 - <span>07 May 2021</span> [The connection between bosons and the permanent](pages/physics/the-connection-between-bosons-and-the-permanent.md)
 - <span>03 May 2021</span> [BosonSampling formalism](pages/physics/bosonsampling-formalism.md)
 - <span>13 Apr 2021</span> [Mean field theory in statistical mechanics](pages/physics/mean-field-theory-in-statistical-mechanics.md)

@@ -9,14 +9,14 @@ comments: 4
 
 **Define**:
 - $\tau, N \in \bbZ^+$,
-- $T \in \bbR_{> 0}^{\tau}$ (i.e. $\forall t \in \{0, \dots, \tau-1 \}: \ T_t\in \bbR_{> 0}$),
+- $T \in \bbR_{> 0}^{\tau}$ (i.e. $\forall t \in \curlybrackets{0, \dots, \tau-1 }: \ T_t\in \bbR_{> 0}$),
 - $\mathcal H = \left(\mathbb C^{N}, \braket{\cdot}{\cdot} \right)$ is an $N$-dimensional Hilbert space,
 - $H: \mathcal H \to \mathcal H$ with $H^{\dag} = H$ is the Hamiltonian of interest,
-- $\{\ket{i}~\mid~i\in\{0, \dots, N-1\} \}$ are orthonormal eigenvectors of $H$, thus an orthonormal basis of $\mathcal H$,
+- $\curlybrackets{\ket{i}~\mid~i\in\curlybrackets{0, \dots, N-1} }$ are orthonormal eigenvectors of $H$, thus an orthonormal basis of $\mathcal H$,
 - $H_{ii} = \bra{i} H \ket{i}$,
 - $\forall i, j, t: \ p_{ij}^t \in [0, 1]$ with $\forall i, t: \ \sum_{j}p_{ij}^t = 1$; $p_{ij}^t$ represents the probability of going from state $\ket i$ to state $\ket j$ at step $t$,
 - $\rho^0 : \mathcal H \to \mathcal H$ is a positive semi-definite operator with $\tr \rho^0 = 1$ representing the initial quantum state,
-- $K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$; the set $\{K_{ij}^t \}$ forms a valid set of Krauss operators since $\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \bbI_N$,
+- $K_{ij}^t = \sqrt{p_{ij}^t} \ketbra{j}{i}$; the set $\curlybrackets{K_{ij}^t }$ forms a valid set of Krauss operators since $\sum_{i,j} K_{ij}^{t\dag} K_{ij}^t = \bbI_N$,
 - $\mathcal E^t: \rho \mapsto \sum_{i, j} K_{ij}^t \rho K_{ij}^{t\dag}$ is the quantum channel at step $t$,
 - $\rho^{t+1} = \mathcal E^t\left(\rho^t \right)$ is a simulated annealing step, and
 - $\rho^\tau$ is the final state of the system.
@@ -32,7 +32,7 @@ $$\forall x:~~\sum_{i\neq x} p_{ix}^t \bra{i}\rho^t \ket{i} = \bra{x}\rho^t \ket
 Consider that our desired final state is $\rho^t \propto e^{-H / T_t}$ (e.g. the Boltzmann distribution). Then it is easy to see by plugging in that
 
 $$p_{ij}^t = \begin{cases}
-    \frac{1}{N}\exp\left(-\frac{\max \left\{0, H_{jj}-H_{ii} \right\}}{T_t} \right)&{\text{if }i \neq j},\\
+    \frac{1}{N}\exp\left(-\frac{\max \left\curlybrackets{0, H_{jj}-H_{ii} \right}}{T_t} \right)&{\text{if }i \neq j},\\
     1 - \sum_{k \neq i}^{N-1}p_{ik}^t&{\text{if }i = j}.
 \end{cases}$$
 
@@ -41,12 +41,12 @@ satisfies the detailed balance condition, and therefore the Boltzmann distributi
 One could aso do something like the following, though it is probably not a great choice unless you somehow use good information to choose $G$.
 
 $$p_{ij}^t = \begin{cases}
-    \exp\left(-\frac{\max\{0, H_{jj}-H_{ii} \}}{T_t} \right)&\text{if }j = G(i),\\
+    \exp\left(-\frac{\max\curlybrackets{0, H_{jj}-H_{ii} }}{T_t} \right)&\text{if }j = G(i),\\
     1-p_{i,G(i)}^t&\text{if }i = j,\\
     0&\text{else},
 \end{cases}$$
 
-where $G: \{0,\dots, N-1\} \to \{0, \dots, N-1 \}$ defines a bijection. Proving the uniqueness of the fixed point for these $p_{ij}^t$ is straightforward. Plugging into the detailed balance condition and simplifying, we can get rid of the $\max$ expressions and we are left with the condition that the fixed point for this system satisfies
+where $G: \curlybrackets{0,\dots, N-1} \to \curlybrackets{0, \dots, N-1 }$ defines a bijection. Proving the uniqueness of the fixed point for these $p_{ij}^t$ is straightforward. Plugging into the detailed balance condition and simplifying, we can get rid of the $\max$ expressions and we are left with the condition that the fixed point for this system satisfies
 
 $$\forall x:~~\frac{\bra{G(x)}\rho^t \ket{G(x)}}{\bra{x}\rho^t \ket{x}} = \exp\left(-\frac{H_{G(x), G(x)} - H_{x,x}}{T_t} \right),$$
 
@@ -59,25 +59,25 @@ which is precisely the definition of the Boltzmann distribution. Because $G$ is 
 
 ### Algorithm in practice
 
-Consider annealing a spin-1/2 Hamiltonian $H$ represented by the energy function $E(z) = \sum_{i=0}^{n-1} h_i z_i + \sum_{i < j} J_{ij}z_i z_j + \dots$, where $2^n = N$ and $z \in \{1, -1 \}^n$. A common implementation (see for example [qubovert](https://github.com/jtiosue/qubovert/tree/master/qubovert/sim) or [dwave-neal](https://github.com/dwavesystems/dwave-neal/)) of simulated annealing is as follows.
+Consider annealing a spin-1/2 Hamiltonian $H$ represented by the energy function $E(z) = \sum_{i=0}^{n-1} h_i z_i + \sum_{i < j} J_{ij}z_i z_j + \dots$, where $2^n = N$ and $z \in \curlybrackets{1, -1 }^n$. A common implementation (see for example [qubovert](https://github.com/jtiosue/qubovert/tree/master/qubovert/sim) or [dwave-neal](https://github.com/dwavesystems/dwave-neal/)) of simulated annealing is as follows.
 
 
 - *Input*
-  - $E: \{1, -1 \}^n \to \mathbb R$;
-  - $z^0 \in \{1, -1 \}^n$;
+  - $E: \curlybrackets{1, -1 }^n \to \mathbb R$;
+  - $z^0 \in \curlybrackets{1, -1 }^n$;
   - $\tau \in \mathbb Z^+$;
   - $T \in \mathbb R_{>0}^\tau$;
 - *Steps*
   - $z \leftarrow z^0$;
   - For $t=0,\dots,\tau-1$;
     - For $s=0,\dots,n-1$;
-      - $h \stackrel{\textrm{uniform}}{\sim} \{0, \dots, n-1 \}$;
+      - $h \stackrel{\textrm{uniform}}{\sim} \curlybrackets{0, \dots, n-1 }$;
       - $z' \leftarrow z$ but with the spin $h$ flipped;
       - $u \stackrel{\textrm{uniform}}{\sim} [0, 1]$;
-      - If $u < \exp\left(-\frac{\max\{0, E(z) - E(z') \}}{T_t}\right)$;
+      - If $u < \exp\left(-\frac{\max\curlybrackets{0, E(z) - E(z') }}{T_t}\right)$;
         - $z \leftarrow z'$;
 - *Output*
-  - $z \in \{1, -1 \}^n$.
+  - $z \in \curlybrackets{1, -1 }^n$.
 
 
 {% include post-footer.html %}
