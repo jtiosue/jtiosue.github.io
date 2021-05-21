@@ -32,7 +32,7 @@ $$\forall x:~~\sum_{i\neq x} p_{ix}^t \bra{i}\rho^t \ket{i} = \bra{x}\rho^t \ket
 Consider that our desired final state is $\rho^t \propto e^{-H / T_t}$ (e.g. the Boltzmann distribution). Then it is easy to see by plugging in that
 
 $$p_{ij}^t = \begin{cases}
-    \frac{1}{N}\exp\left(-\frac{\max \left\curlybrackets{0, H_{jj}-H_{ii} \right}}{T_t} \right)&{\text{if }i \neq j},\\
+    \frac{1}{N}\exp\left(-\frac{\max \curlybrackets{0, H_{jj}-H_{ii} }}{T_t} \right)&{\text{if }i \neq j},\\
     1 - \sum_{k \neq i}^{N-1}p_{ik}^t&{\text{if }i = j}.
 \end{cases}$$
 

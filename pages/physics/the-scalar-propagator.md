@@ -5,7 +5,7 @@ comments: 21
 
 {% include post-header.md %}
 
-(21 May 2021) In this post, we will derive the Feynman propagator for a real scalar field. Much of the discussion of course generalizes to complex scalar fields, and to other types of fields. Please note that I will use the metric convension $(+---)$ throughout this post.
+(21 May 2021) In this post, we will derive the Feynman propagator for a real scalar field. Much of the discussion of course generalizes to complex scalar fields, and to other types of fields. Please note that I will use the metric convension $(+,-,-,-)$ throughout this post.
 
 The propagator is a Green's function, and there are various choices such as the retarded, advanced, and Feynman propagators. For a more complete discussion on these topics, see e.g. [here](https://www.desy.de/~jlouis/Vorlesungen/QFTI10/QFTI.pdf) and [here](https://en.wikipedia.org/wiki/Propagator#Scalar_propagator). People have different definitions of propagators, and different interpretations of what they do. Ultimately, though, I think the simplest way to understand them is by defining the Feynman propagator as
 
@@ -63,7 +63,7 @@ Note that in complex scalar field theory, one does not require that $\phi(t, \bm
 
 ## Quantizing the scalar field
 
-To quantize the field \eqref{eq:phi}, one promotes the $a_{\bm p}$ to operators (also meaning that $a_{\bm p}^\ast \to a_{\bm p}^\dagger$) and enforces the canonical commutation relations
+To quantize the field \eqref{eq:classicalphi}, one promotes the $a_{\bm p}$ to operators (also meaning that $a_{\bm p}^\ast \to a_{\bm p}^\dagger$) and enforces the canonical commutation relations
 
 $$\comm{\phi(t, \bm x)}{\pi(t, \bm y)} = i\delta^3(\bm x - \bm y)$$
 
@@ -77,7 +77,7 @@ $$\begin{aligned}
 
 By defining $\widetilde \pi(t, \bm p)$ as we did $\widetilde \phi(t, \bm p)$, we find that
 
-$$\widetilde\pi(t, \bm p) = \partial_t \widetilde\phi(t, \bm p) = sqrt{\frac{\omega_{\bm p}}{2}}\parentheses{-a_{\bm p} e^{-i \omega_{\bm p} t} + a_{\bm p}^\dagger e^{i \omega_{\bm p} t}}.$$
+$$\widetilde\pi(t, \bm p) = \partial_t \widetilde\phi(t, \bm p) = \sqrt{\frac{\omega_{\bm p}}{2}}\parentheses{-a_{\bm p} e^{-i \omega_{\bm p} t} + a_{\bm p}^\dagger e^{i \omega_{\bm p} t}}.$$
 
 As such, the commutation relations become
 
@@ -85,12 +85,12 @@ $$\comm{\widetilde \phi(t, \bm p)}{\widetilde \pi(t, \bm q)} = i (2\pi)^3 \delta
 
 Using
 
-$$a_{\bm p}e^{-i \omega_{\bm p} t} = \frac{1}{2}\parentheses{\sqrt{2\omega_{\bm p}} \widetilde \phi(t, \bm p) + i \sqrt{\frac{2}{\omega_{\bm p}}} \widetilde \pi(t, \bm p)},$$
+$$a_{\bm p} = \frac{1}{2}\parentheses{\sqrt{2\omega_{\bm p}} \widetilde \phi(0, \bm p) + i \sqrt{\frac{2}{\omega_{\bm p}}} \widetilde \pi(0, \bm p)},$$
 
 we find
 
 $$\begin{aligned}
-  \comm{a_{\bm p}}{a_{\bm q}}e^{-i t (\omega_{\bm p}+\omega_{\bm q})} &= \frac{i}{2}\parentheses{\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \comm{\widetilde\phi(t, \bm p)}{\widetilde \pi(t, \bm q)} + \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \comm{\widetilde\pi(t, \bm p)}{\widetilde \phi(t, \bm q)} }\\
+  \comm{a_{\bm p}}{a_{\bm q}} &= \frac{i}{2}\parentheses{\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \comm{\widetilde\phi(0, \bm p)}{\widetilde \pi(0, \bm q)} + \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \comm{\widetilde\pi(0, \bm p)}{\widetilde \phi(0, \bm q)} }\\
   &= -\frac{(2\pi)^3}{2}\parentheses{\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \delta^3(\bm p - \bm q) - \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \delta^{3}(\bm q - \bm p) }\\
   &= 0,
 \end{aligned}$$
@@ -98,9 +98,9 @@ $$\begin{aligned}
 and
 
 $$\begin{aligned}
-  \comm{a_{\bm p}}{a_{\bm q}^\dagger}e^{-i t (\omega_{\bm p}-\omega_{\bm q})} &= \frac{i}{2}\parentheses{-\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \comm{\widetilde\phi(t, \bm p)}{\widetilde \pi(t, \bm q)} + \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \comm{\widetilde\pi(t, \bm p)}{\widetilde \phi(t, \bm q)} }\\
+  \comm{a_{\bm p}}{a_{\bm q}^\dagger} &= \frac{i}{2}\parentheses{-\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \comm{\widetilde\phi(0, \bm p)}{\widetilde \pi(0, \bm q)} + \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \comm{\widetilde\pi(0, \bm p)}{\widetilde \phi(0, \bm q)} }\\
   &= -\frac{(2\pi)^3}{2}\parentheses{-\sqrt{\frac{\omega_{\bm p}}{\omega_{\bm q}}} \delta^3(\bm p - \bm q) - \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}} \delta^{3}(\bm q - \bm p) }\\
-  &= (2\pi)^3} \delta^3(\bm p - \bm q).
+  &= (2\pi)^3 \delta^3(\bm p - \bm q).
 \end{aligned}$$
 
 So we see that $a_{\bm p}$ is an annihilation operator, and the corresponding creation operator is $a_{\bm p}^\dagger.$ In the end, the quantized scalar field $\phi$ is
@@ -127,8 +127,8 @@ where $\Theta$ is the Heaviside step function. We have that
 $$\begin{aligned}
 \bra 0 \phi(x) \phi(y) \ket 0 &= \bra 0 \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}}\parentheses{a_{\bm p} e^{-i p_\mu x^\mu} + a_{\bm p}^\dagger e^{i p_\mu x^\mu}}\parentheses{a_{\bm q} e^{-i q_\mu y^\mu} + a_{\bm q}^\dagger e^{i q_\mu y^\mu}} \ket 0\\
 &= \bra 0 \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}}\parentheses{a_{\bm p} e^{-i p_\mu x^\mu}}\parentheses{a_{\bm q}^\dagger e^{i q_\mu y^\mu}} \ket 0\\
-&= \bra 0 \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}} e^{i q_\mu y^\mu-i p_\mu x^\mu}  \bra 0 a_{\bm p} a_{\bm q}^\dagger \ket 0\\
-&= \bra 0 \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}} e^{i q_\mu y^\mu-i p_\mu x^\mu}  \bra 0 (2\pi)^3 \delta^3(\bm p - \bm q) +  a_{\bm q}^\dagger a_{\bm p}  \ket 0\\
+&= \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}} e^{i q_\mu y^\mu-i p_\mu x^\mu}  \bra 0 a_{\bm p} a_{\bm q}^\dagger \ket 0\\
+&= \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}} e^{i q_\mu y^\mu-i p_\mu x^\mu}  \bra 0 (2\pi)^3 \delta^3(\bm p - \bm q) +  a_{\bm q}^\dagger a_{\bm p}  \ket 0\\
 &=  \int \frac{d^3 p}{(2\pi)^3}\frac{d^3 q}{(2\pi)^3} \frac{1}{\sqrt{2 \omega_{\bm p}2 \omega_{\bm q}}} e^{i q_\mu y^\mu-i p_\mu x^\mu} (2\pi)^3 \delta^3(\bm p - \bm q)\\
 &= \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 \omega_{\bm p}} e^{i p_\mu (y^\mu- x^\mu)}.
 \end{aligned}$$
@@ -138,7 +138,7 @@ Therefore,
 $$\begin{aligned}
   D(x-y) &= \Theta\pargs{x^0 - y^0}\bra 0 \phi(x) \phi(y) \ket 0 + \Theta\pargs{y^0 - x^0}\bra 0 \phi(y) \phi(x) \ket 0\\
   &= \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 \omega_{\bm p}} \parentheses{ \Theta\pargs{x^0 - y^0}e^{i p_\mu (y^\mu- x^\mu)} + \Theta\pargs{y^0 - x^0}e^{i p_\mu (x^\mu- y^\mu)} }\\ 
-  &= \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 \omega_{\bm p}} \parentheses{ \Theta\pargs{x^0 - y^0}e^{i p_\mu (y^\mu- x^\mu)} + \Theta\pargs{y^0 - x^0}e^{-i p_\mu (y^\mu- x^\mu)} }\\.
+  &= \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 \omega_{\bm p}} \parentheses{ \Theta\pargs{x^0 - y^0}e^{i p_\mu (y^\mu- x^\mu)} + \Theta\pargs{y^0 - x^0}e^{-i p_\mu (y^\mu- x^\mu)} }\\
   &= \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 \omega_{\bm p}} \parentheses{ \Theta\pargs{x^0 - y^0}e^{-i p_\mu (x^\mu- y^\mu)} + \Theta\pargs{y^0 - x^0}e^{i p_\mu (x^\mu- y^\mu)} }.
 \end{aligned}$$
 
@@ -149,12 +149,12 @@ $$D(x-y) = \int \frac{d^4 p}{(2\pi)^4} \frac{i}{p_\mu p^\mu - m^2 + i \epsilon} 
 with $\epsilon \to 0$. Notice that $\sgn{x^0-y^0}$ determines the branch that we take when using the residue theorem on the integral over $dp^0$, which results in the Heaviside step functions. Let's quickly verify this. We can rewrite as
 
 $$\begin{aligned}
-D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{p^0^2 - \bm p^2 - m^2 + i \epsilon} e^{-i p^0 z^0}\\
-&= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{p^0^2 - \omega_{\bm p}^2 + i \epsilon} e^{-i p^0 z^0}\\
+D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{(p^0)^2 - \bm p^2 - m^2 + i \epsilon} e^{-i p^0 z^0}\\
+&= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{(p^0)^2 - \omega_{\bm p}^2 + i \epsilon} e^{-i p^0 z^0}\\
 &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{(p^0 - \omega_{\bm p})(p^0 + \omega_{\bm p}) + i \epsilon} e^{-i p^0 z^0}.
 \end{aligned}$$
 
-The poles are then at $p^0 = \pm \omega_{\bm p} \mp i \epsilon / (2 \omega_{\bm p}) + \bigO(\epsilon^2)$. Let's just relabel $\epsilon / (2 \omega_{\bm p}) \to \epsilon$ since we're taking $\epsilon\to 0$ anyways. When $z^0 > 0$, we choose the contour going in the lower half plane, which picks out the pole $p^0 = \omega_{\bm p} - i\epsilon$, and the $e^{-\epsilon z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
+The poles are then at $p^0 = \pm \omega_{\bm p} \mp i \epsilon / (2 \omega_{\bm p}) + \bigO(\epsilon^2)$. Let's just relabel $\epsilon / (2 \omega_{\bm p}) \to \epsilon$ since we're taking $\epsilon\to 0$ anyways. When $z^0 > 0$, we choose the contour going in the lower half plane, which picks out the pole $p^0 = \omega_{\bm p} - i\epsilon$, and the $e^{-i p^0 z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
 
 $$\begin{aligned}
 D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \frac{-2 \pi i}{2\pi} \frac{i}{p^0 + \omega_{\bm p}} e^{-i p^0 z^0} \bigg\vert_{p^0 = \omega_{\bm p} - i\epsilon}\\
@@ -162,7 +162,7 @@ D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \frac{-2 \pi i}{2\pi} 
 &= \int \frac{d^3 p}{(2\pi)^3}\frac{1}{2\omega_{\bm p}}e^{-i p_\mu x^\mu}.
 \end{aligned}$$
 
-Note that the minus sign on the first line (i.e. $-2\pi i$) comes from the fact that the residue theorem applies for counterclockwise contours around a polse, whereas our integral is going clockwise. When $z^0 < 0$, we choose the contour going in the upper half plane, which picks out the pole $p^0 = -\omega_{\bm p} + i\epsilon$, and the $e^{\epsilon z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
+Note that the minus sign on the first line (i.e. $-2\pi i$) comes from the fact that the residue theorem applies for counterclockwise contours around a polse, whereas our integral is going clockwise. When $z^0 < 0$, we choose the contour going in the upper half plane, which picks out the pole $p^0 = -\omega_{\bm p} + i\epsilon$, and the $e^{-i p^0 z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
 
 $$\begin{aligned}
 D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \frac{2 \pi i}{2\pi} \frac{i}{p^0 - \omega_{\bm p}} e^{-i p^0 z^0} \bigg\vert_{p^0 = -\omega_{\bm p} + i\epsilon}\\
