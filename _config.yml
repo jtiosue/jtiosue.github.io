@@ -4,6 +4,8 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+kramdown:
+  parse_block_html: true
 
 title: ramblings
 description: for my own benefit
