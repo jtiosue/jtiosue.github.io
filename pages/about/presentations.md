@@ -2,7 +2,7 @@
 
 <span id="pres-arrow" onclick="hideId('pres');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="pres">
+<div id="pres" style="display: 'none';">
 
 #### Posters
 

@@ -2,7 +2,7 @@
 
 <span id="edu-arrow" onclick="hideId('edu');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="edu">
+<div id="edu" style="display: 'none';">
 
 #### University of Maryland (Aug 2020 - Present)
 

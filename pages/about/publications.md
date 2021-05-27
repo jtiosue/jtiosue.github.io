@@ -2,7 +2,7 @@
 
 <span id="pubs-arrow" onclick="hideId('pubs');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="pubs">
+<div id="pubs" style="display: 'none';">
 
 [*See my Google Scholar profile*](https://scholar.google.com/citations?user=JXw0_fEAAAAJ&hl=en)
 

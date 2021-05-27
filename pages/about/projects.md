@@ -2,7 +2,7 @@
 
 <span id="proj-arrow" onclick="hideId('proj');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="proj">
+<div id="proj" style="display: 'none';">
 
 *This list is not meant to be comprehensive.*
 

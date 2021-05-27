@@ -2,7 +2,7 @@
 
 <span id="app-arrow" onclick="hideId('app');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="app">
+<div id="app" style="display: 'none';">
 
 ### Teaching
 

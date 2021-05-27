@@ -2,7 +2,7 @@
 
 <span id="pers-arrow" onclick="hideId('pers');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
 
-<div id="pers">
+<div id="pers" style="display: 'none';">
 
 I'm married to this wonderful lady; see [her page here](https://liandrea4.github.io/)!
 
