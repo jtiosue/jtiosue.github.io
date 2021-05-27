@@ -1,8 +1,7 @@
 ## Projects
 
-<span id="proj-arrow" onclick="hideId('proj');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
-
-<div id="proj" style="display: 'none';">
+<details>
+<summary>Click to show/hide section</summary>
 
 *This list is not meant to be comprehensive.*
 
@@ -45,4 +44,4 @@ Published Android application called "Distance to Green" on the Google Play stor
 
 A simple javascript file hosted on my site to easily add comments to a blog by hosting the comments on Github pages. This is what I use for comments on this site.
 
-</div>
+</details>

@@ -2,19 +2,14 @@
 title: About the author
 ---
 
-{% include post-header.md %}
+<style type="text/css">
+  summary {
+    color: blue;
+    cursor: pointer;
+  }
+</style>
 
-<script type="text/javascript">
-    function hideId(id) {
-        document.getElementById(id).style.display = 
-            (document.getElementById(id).style.display === 'block') ? 'none' : 'block';
-        document.getElementById(id + '-arrow').innerHTML =
-            document.getElementById(id + '-arrow').innerHTML.replace(
-                /show|hide/gi, 
-                function(x) {return (x === 'show') ? 'hide' : 'show';}
-            );
-    }
-</script>
+{% include post-header.md %}
 
 I am currently a PhD candidate in the Department of Physics at the University of Maryland. [See my CV](media/cv.pdf).
 

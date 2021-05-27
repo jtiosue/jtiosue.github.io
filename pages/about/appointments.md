@@ -1,8 +1,7 @@
 ## Appointments
 
-<span id="app-arrow" onclick="hideId('app');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
-
-<div id="app" style="display: 'none';">
+<details>
+<summary>Click to show/hide section</summary>
 
 ### Teaching
 
@@ -63,4 +62,4 @@ I interned at Space and Defense Power Systems. I shadowed the Director of Space 
 
 Laborer.
 
-</div>
+</details>
