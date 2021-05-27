@@ -5,13 +5,13 @@ comments: 21
 
 {% include post-header.md %}
 
-(21 May 2021) In this post, we will derive the Feynman propagator for a real scalar field. Much of the discussion of course generalizes to complex scalar fields, and to other types of fields. Please note that I will use the metric convension $(+,-,-,-)$ throughout this post.
+(21 May 2021) In this post, we will derive the Feynman propagator for a real scalar field. Much of the discussion of course generalizes to complex scalar fields, and to other types of fields. Please note that I will use the metric convention $(+,-,-,-)$ throughout this post.
 
 The propagator is a Green's function, and there are various choices such as the retarded, advanced, and Feynman propagators. For a more complete discussion on these topics, see e.g. [here](https://www.desy.de/~jlouis/Vorlesungen/QFTI10/QFTI.pdf) and [here](https://en.wikipedia.org/wiki/Propagator#Scalar_propagator). People have different definitions of propagators, and different interpretations of what they do. Ultimately, though, I think the simplest way to understand them is by defining the Feynman propagator as
 
 $$D(x-y) = \bra 0 T\cbargs{\phi(x) \phi(y)} \ket 0$$
 
-and noting that due to Wick's theorem such an object shows up everywhere in perturbation theory. Hopefully I'm not missing something major, but I don't really think there is too much more to it than that.
+and noting that due to [Wick's theorem](https://en.wikipedia.org/wiki/Wick%27s_theorem) such an object shows up everywhere in perturbation theory. Hopefully I'm not missing something major, but I don't really think there is too much more to it than that.
 
 
 ## The classical field
@@ -144,7 +144,10 @@ $$\begin{aligned}
 
 One can then verify using the residue theorem that
 
-$$D(x-y) = \int \frac{d^4 p}{(2\pi)^4} \frac{i}{p_\mu p^\mu - m^2 + i \epsilon} e^{-i p_\mu (x^\mu - y^\mu)},$$
+\begin{equation}
+\label{eq:propagator}
+D(x-y) = \int \frac{d^4 p}{(2\pi)^4} \frac{i}{p_\mu p^\mu - m^2 + i \epsilon} e^{-i p_\mu (x^\mu - y^\mu)},
+\end{equation}
 
 with $\epsilon \to 0$. Notice that $\sgn{x^0-y^0}$ determines the branch that we take when using the residue theorem on the integral over $dp^0$, which results in the Heaviside step functions. Let's quickly verify this. We can rewrite as
 
@@ -154,7 +157,7 @@ D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi}
 &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \int \frac{dp^0}{2\pi} \frac{i}{(p^0 - \omega_{\bm p})(p^0 + \omega_{\bm p}) + i \epsilon} e^{-i p^0 z^0}.
 \end{aligned}$$
 
-The poles are then at $p^0 = \pm \omega_{\bm p} \mp i \epsilon / (2 \omega_{\bm p}) + \bigO(\epsilon^2)$. Let's just relabel $\epsilon / (2 \omega_{\bm p}) \to \epsilon$ since we're taking $\epsilon\to 0$ anyways. When $z^0 > 0$, we choose the contour going in the lower half plane, which picks out the pole $p^0 = \omega_{\bm p} - i\epsilon$, and the $e^{-i p^0 z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
+The poles are then at $p^0 = \pm \omega_{\bm p} \mp i \epsilon / (2 \omega_{\bm p}) + \bigO{\epsilon^2}$. Let's just relabel $\epsilon / (2 \omega_{\bm p}) \to \epsilon$ since we're taking $\epsilon\to 0$ anyways. When $z^0 > 0$, we choose the contour going in the lower half plane, which picks out the pole $p^0 = \omega_{\bm p} - i\epsilon$, and the $e^{-i p^0 z^0}$ ensures that the closed loop integral along the contour is equal to the integral along the real axis. Then the residue theorem gives us
 
 $$\begin{aligned}
 D(z) &= \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm z} \frac{-2 \pi i}{2\pi} \frac{i}{p^0 + \omega_{\bm p}} e^{-i p^0 z^0} \bigg\vert_{p^0 = \omega_{\bm p} - i\epsilon}\\
@@ -174,7 +177,7 @@ Putting this together, we find that
 
 $$D(z) = \int \frac{d^3 p}{(2\pi)^3}\frac{1}{2\omega_{\bm p}}\parentheses{\Theta(z^0)e^{-i p_\mu x^\mu} + \Theta(-z^0) e^{i p_\mu x^\mu} }$$
 
-as desired.
+as desired. Thus, we have verified that \eqref{eq:propagator} is the scalar propagator.
 
 
 

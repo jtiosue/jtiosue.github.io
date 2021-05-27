@@ -1,5 +1,9 @@
 ## Appointments
 
+<span id="app-arrow" onclick="hideId('app');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
+
+<div id="app">
+
 ### Teaching
 
 #### Volunteer tutoring (Oct 2020 - Present)
@@ -58,3 +62,5 @@ I interned at Space and Defense Power Systems. I shadowed the Director of Space 
 #### Meadows Farms Nursery and Landscape (Mar 2013 - Mar 2015)
 
 Laborer.
+
+</div>

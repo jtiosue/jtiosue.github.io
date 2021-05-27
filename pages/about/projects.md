@@ -1,5 +1,9 @@
 ## Projects
 
+<span id="proj-arrow" onclick="hideId('proj');" style='color: blue; cursor: pointer;'>&#9758; Click to show section</span>
+
+<div id="proj">
+
 *This list is not meant to be comprehensive.*
 
 #### qubovert [(View on GitHub)](https://github.com/jtiosue/qubovert) [(View documentation)](https://qubovert.readthedocs.io/en/latest/)
@@ -40,3 +44,5 @@ Published Android application called "Distance to Green" on the Google Play stor
 #### Github blog comments [(View site)](https://jtiosue.github.io/GHBlogComments/) [(View source)](https://github.com/jtiosue/GHBlogComments/)
 
 A simple javascript file hosted on my site to easily add comments to a blog by hosting the comments on Github pages. This is what I use for comments on this site.
+
+</div>
