@@ -1,7 +1,7 @@
 ## Projects
 
 <details>
-<summary>Click to show/hide section</summary>
+<summary markdown="0">Click to show/hide section</summary>
 
 *This list is not meant to be comprehensive.*
 

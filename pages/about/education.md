@@ -1,7 +1,7 @@
 ## Education
 
 <details>
-<summary>Click to show/hide section</summary>
+<summary markdown="0">Click to show/hide section</summary>
 
 #### University of Maryland (Aug 2020 - Present)
 

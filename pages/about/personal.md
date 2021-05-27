@@ -1,7 +1,7 @@
 ## Personal
 
 <details>
-<summary>Click to show/hide section</summary>
+<summary markdown="0">Click to show/hide section</summary>
 
 I'm married to this wonderful lady; see [her page here](https://liandrea4.github.io/)!
 

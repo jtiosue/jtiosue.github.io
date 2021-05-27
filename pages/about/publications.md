@@ -1,7 +1,7 @@
 ## Publications
 
 <details>
-<summary>Click to show/hide section</summary>
+<summary markdown="0">Click to show/hide section</summary>
 
 [*See my Google Scholar profile*](https://scholar.google.com/citations?user=JXw0_fEAAAAJ&hl=en)
 
