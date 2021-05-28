@@ -4,7 +4,7 @@ title: About the author
 
 <style type="text/css">
   summary {
-    color: blue;
+    /*color: blue;*/
     cursor: pointer;
   }
 </style>
