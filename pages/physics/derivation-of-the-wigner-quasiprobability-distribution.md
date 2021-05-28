@@ -5,41 +5,21 @@ comments: 22
 
 {% include post-header.md %}
 
-(28 May 2021) In this post I will derive the form for the Wigner quasiprobability distribution of a mixed quantum state in one dimension. It then of course straightforwardly extends to three dimensions. I will be mostly following [these notes](https://arxiv.org/abs/1502.00666).
+(28 May 2021) In this post I will derive the form for the Wigner quasiprobability distribution of a mixed quantum state in one dimension. It is then of course straightforwardly extends to three dimensions. I will be mostly following [these notes](https://arxiv.org/abs/1502.00666).
 
 Suppose we want a quasiprobability distribution $W(x, p)$ such that
 
-$$\EX{}{f(x, p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx \wedge dp.$$
+$$\EX{}{f(x, p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx  dp.$$
 
 When working with quantum systems, $\EX{}{f(x, p)} = \Tr\bargs{\hat \rho f(\hat x, \hat p)}$ for a density matrix $\hat \rho$, so we want that
 
-$$ \Tr\bargs{\hat \rho f(\hat x, \hat p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx \wedge dp.$$
+$$ \Tr\bargs{\hat \rho f(\hat x, \hat p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx  dp.$$
 
 First we Fourier transform,
 
-$$\widetilde W(\alpha, \beta) = \iint_{\bbR^2} W(x, p) e^{-i (\alpha x+ \beta p)}  dx \wedge dp.$$
+$$\widetilde W(\alpha, \beta) = \iint_{\bbR^2} W(x, p) e^{-i (\alpha x+ \beta p)}  dx  dp.$$
 
-Note that we are working with differential forms here, which is simply because they conveniently deal with change of variable factors in the integral. We could of course not use differential forms and instead manually put in the Jacobian factor and we would get the same result. Next, we perform the change of variables
-
-$$\begin{aligned}
-  z &= \alpha x + \beta p\\
-  \implies dz &= \alpha dx + \beta dp\\
-  \implies dp &= \frac{1}{\beta}(dz - \alpha dx)\\
-  \implies dx \wedge dp &= \frac{1}{\beta}dx \wedge dz.
-\end{aligned}$$
-
-Then,
-
-$$\widetilde W(\alpha, \beta) = \frac{1}{\beta}\iint_{\bbR^2} W\pargs{x, \frac{1}{\beta}(z-\alpha x)} e^{-i z}  dx \wedge dz.$$
-
-Next, we argue that the right hand side is simply $\EX{}{e^{-i(\alpha x + \beta y)}}$, because
-
-$$\begin{aligned}
-  \EX{}{e^{-i(\alpha x + \beta y)}} &= \iint_{\bbR^2} W(x, p) e^{-i(\alpha x + \beta y)} dx \wedge dp\\
-  &= \frac{1}{\beta}\iint_{\bbR^2} W\pargs{x, \frac{1}{\beta}(z-\alpha x)} e^{-i z} dx \wedge dz.
-\end{aligned}$$
-
-Thus, 
+Notice that the right hand side is simply $\EX{}{e^{-i(\alpha x + \beta y)}}$. Thus, 
 
 $$\widetilde W(\alpha, \beta) = \Tr\bargs{\hat \rho e^{-i \hat z}}$$
 
@@ -57,11 +37,11 @@ $$\begin{aligned}
 where we used that $\hat p$ is the generator of translation. Now we inverse Fourier transform to find
 
 $$\begin{aligned}
-  W(x, p) &= \frac{1}{(2\pi)^2}\iint_{\bbR^2} \widetilde W(\alpha, \beta) e^{i (\alpha x + \beta p)} d\alpha \wedge d\beta\\
-  &= \frac{1}{(2\pi)^2}\iiint_{\bbR^3} e^{i \alpha \beta / 2}e^{-i\alpha y} \bra{y-\beta}\hat \rho \ket y e^{i (\alpha x + \beta p)} dy \wedge d\alpha \wedge d\beta\\
-  &= \frac{1}{(2\pi)^2}\iiint_{\bbR^3} e^{i \alpha (\beta / 2 - y + x)} \bra{y-\beta}\hat \rho \ket y e^{i \beta p} dy \wedge d\alpha \wedge d\beta\\
-  &= \frac{1}{(2\pi)^2}\iint_{\bbR^2} (2\pi)\delta(\beta / 2 - y + x) \bra{y-\beta}\hat \rho \ket y e^{i \beta p} d\beta \wedge dy\\
-  &= \frac{2}{(2\pi)^2}\iint_{\bbR^2} (2\pi)\delta(u - y + x) \bra{y-2u}\hat \rho \ket y e^{i 2u p} du \wedge dy\\
+  W(x, p) &= \frac{1}{(2\pi)^2}\iint_{\bbR^2} \widetilde W(\alpha, \beta) e^{i (\alpha x + \beta p)} d\alpha  d\beta\\
+  &= \frac{1}{(2\pi)^2}\iiint_{\bbR^3} e^{i \alpha \beta / 2}e^{-i\alpha y} \bra{y-\beta}\hat \rho \ket y e^{i (\alpha x + \beta p)} dy  d\alpha  d\beta\\
+  &= \frac{1}{(2\pi)^2}\iiint_{\bbR^3} e^{i \alpha (\beta / 2 - y + x)} \bra{y-\beta}\hat \rho \ket y e^{i \beta p} dy  d\alpha  d\beta\\
+  &= \frac{1}{(2\pi)^2}\iint_{\bbR^2} (2\pi)\delta(\beta / 2 - y + x) \bra{y-\beta}\hat \rho \ket y e^{i \beta p} d\beta  dy\\
+  &= \frac{2}{(2\pi)^2}\iint_{\bbR^2} (2\pi)\delta(u - y + x) \bra{y-2u}\hat \rho \ket y e^{i 2u p} du  dy\\
   &= \frac{1}{\pi}\int_{\bbR} \bra{2x-y}\hat \rho \ket y e^{i 2(y-x) p} dy\\
   &= \frac{1}{\pi}\int_{\bbR} \bra{x-v}\hat \rho \ket{x+v} e^{i 2v p} dv
 \end{aligned}$$
@@ -83,7 +63,7 @@ The ground state of the harmonic oscillator is
 
 $$\psi(x) = \parentheses{\frac{m \omega}{\pi}}^{1/4} \exp(-m \omega x^2 / 2)$$
 
-for some $\alpha$. Then
+So
 
 $$\begin{aligned}
     W(x, p) &= \frac{1}{\pi}\int_{\bbR} \bra{x-v}\ket{\psi} \bra\psi \ket{x+v} e^{i 2v p} dv \\
