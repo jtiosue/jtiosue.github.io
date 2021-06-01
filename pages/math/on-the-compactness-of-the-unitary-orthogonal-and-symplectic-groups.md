@@ -84,7 +84,7 @@ $$K(n) \coloneqq \text{Sp}(2n) \cap O(2n)$$
 
 is compact. The boundedness follows from the fact that $O(2n)$ is bounded. The closedness follows from the fact that both $\text{Sp}(2n)$ and $O(n)$ are closed and that the intersection of closed sets is closed. Therefore $K(n)$ is compact, and a Haar measure can be defined on it.
 
-*Proof*: Suppose $A, B \subset X$ are closed sets in the topological space $X$. Then $A^c = X \setminus A$ and $B^c = X \setminus B$ are open. By definition of a topological space, $A^c \cup B^c$ is open and therefore $(A^c \cup B^c)^c$ is closed. Then by De Morgan's laws, $A \cap B = (A^c \cup B^c)^c$, so that $A \cap B$ is closed. {% endproof.html %}
+*Proof*: Suppose $A, B \subset X$ are closed sets in the topological space $X$. Then $A^c = X \setminus A$ and $B^c = X \setminus B$ are open. By definition of a topological space, $A^c \cup B^c$ is open and therefore $(A^c \cup B^c)^c$ is closed. Then by De Morgan's laws, $A \cap B = (A^c \cup B^c)^c$, so that $A \cap B$ is closed. {% include endproof.html %}
 
 
 
