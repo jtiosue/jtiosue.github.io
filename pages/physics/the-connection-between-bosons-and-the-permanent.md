@@ -15,7 +15,7 @@ comments: 19
 
 ## Formalism
 
-The following is partially motivated by [these notes](http://math.univ-lyon1.fr/~attal/Mescours/fock.pdf). Please note that $[n] \coloneqq \set{1, 2, \dots, n}$ is the set of positive integers less than or equal to $n$.
+The following is partially motivated by [these notes](http://math.univ-lyon1.fr/~attal/Mescours/fock.pdf). Please note that $[n] \coloneqq \set{1, 2, \dots, n}$ is the set of positive integers less than or equal to $n$. $S_n = \text{Sym}([n])$ denotes the symmetric group on the integers $1$ through $n$. $[m]^{[n]}$ denotes the set of all maps with domain $[n]$ and codomain $[m]$. $\bbN_0$ denotes the set of natural numbers including $0$.
 
 
 ### Single boson states
@@ -119,7 +119,7 @@ Similarly, for any map $\sigma\colon [n]\to [m]$, define $b_\sigma \coloneqq b(e
     \calB_{m,n} \coloneqq \set{b_\sigma \mid \sigma \in [m]^{[n]} ~\text{monotonically increasing}}
 \end{equation}
 
-forms an orthogonal basis (*not* orthonormal) of $H_{m,n}$ (note that $[m]^{[n]}$ denotes the set of maps with domain $[n]$ and codomain $[m]$). The restriction to monotonically increasing $\sigma$ is simply to avoid overcounting, since for any $\pi \in S_n$, $b(v_1, \dots, v_n) = b(v_{\pi(1)}, \dots, v_{\pi(n)})$. Noticing that $\abs{\calB_{m,n}}$ is equivalent to the number of ways to put $n$ identical balls (i.e. bosons) into $m$ distinguishable bins (i.e. modes), we find that
+forms an orthogonal basis (*not* orthonormal) of $H_{m,n}$. The restriction to monotonically increasing $\sigma$ is simply to avoid overcounting, since for any $\pi \in S_n$, $b(v_1, \dots, v_n) = b(v_{\pi(1)}, \dots, v_{\pi(n)})$. Noticing that $\abs{\calB_{m,n}}$ is equivalent to the number of ways to put $n$ identical balls (i.e. bosons) into $m$ distinguishable bins (i.e. modes), we find that
 
 \begin{equation}
     M \coloneqq \dim H_{m,n} = \binom{n+m-1}{n}.
@@ -194,7 +194,7 @@ Putting this together with the lemma, we find that the probability to measure th
     \Pr[\sigma' \xrightarrow{U} \sigma] \coloneqq \frac{\abs{\angles{b_\sigma, f(U)b_{\sigma'}}}^2}{\norm{b_\sigma}^2 \norm{b_{\sigma'}}^2} = \frac{\abs{\perm(U(\sigma,\sigma'))}^2}{\prod_{i=1}^m \calM_\sigma(i)! \cdot \calM_{\sigma'}(i)!}
 \end{equation}
 
-As noted previously, $b_\sigma$ represents the unnormalized quantum state with $\calM_\sigma(i)$ bosons in mode $i \in [m]$. We can thus define $\ket{\bm n}$ to be $b_\sigma / \norm{b_\sigma}$, where $\bm n \in \bbN_0^m$ satisfies $n_i = \calM_\sigma(i)$ (note that $\bbN_0$ denotes the set of natural numbers including $0$). In this case, the so called Fock orthonormal basis is $\set{\ket{\bm n} \mid \bm n \in \Phi_{m,n}}$ where
+As noted previously, $b_\sigma$ represents the unnormalized quantum state with $\calM_\sigma(i)$ bosons in mode $i \in [m]$. We can thus define $\ket{\bm n}$ to be $b_\sigma / \norm{b_\sigma}$, where $\bm n \in \bbN_0^m$ satisfies $n_i = \calM_\sigma(i)$. In this case, the so called Fock orthonormal basis is $\set{\ket{\bm n} \mid \bm n \in \Phi_{m,n}}$ where
 
 \begin{equation}
     \Phi_{m,n} \coloneqq \set{\bm n \in \bbN_0^m ~\big\vert~ \sum_{i=1}^m n_i = n}.

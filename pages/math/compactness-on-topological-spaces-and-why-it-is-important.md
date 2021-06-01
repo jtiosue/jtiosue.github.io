@@ -76,9 +76,9 @@ Now we show a theorem that is used as an alternative definition of continuity.
 
 We'll conclude our discussion of continuous maps with a brief lemma that will be used later on in this post.
 
-**Lemma 1**: Consider a continuous mapping $f: X \to Y$ for two metric spaces $X, Y$. Then for every closed set $K \subseteq Y$, the preimage $f^{-1}[K] \subseteq X$ is closed.
+**Lemma 1**: Consider a continuous mapping $f: X \to Y$ for two topological spaces $X, Y$. Then for every closed set $K \subseteq Y$, the preimage $f^{-1}[K] \subseteq X$ is closed.
 
-*Proof*: Since $K$ is closed, $Y\setminus K$ is open. We saw in the theorems above that for a continuous function, the preimage of open sets is open. Therefore, $f^{-1}[Y\setminus K]$ is open. Then,
+*Proof*: Since $K$ is closed, $Y\setminus K$ is open. We saw in Theorem 1 above that for a continuous function, the preimage of open sets is open. Therefore, $f^{-1}[Y\setminus K]$ is open. Then,
 
 $$f^{-1}[Y\setminus K] = f^{-1}[Y]\setminus f^{-1}[K] = X\setminus f^{-1}[K]$$
 
@@ -146,37 +146,13 @@ $$V \coloneqq V_{k_1}\cap \dots \cap V_{k_m}$$
 
 is open since it is a finite intersection of open sets. Finally, we notice that $U \cap V = \emptyset$, so $V$ is an open neighborhood of $x$ that doesn't intersect $K$. But this contradicts $(*)$ from above. Therefore, our assumption that $K$ is not closed is incorrect. {% include endproof.html %}
 
-I'd like to mention that this theorem does *not* work the other way; namely, closed and bounded does not necessarily imply compact. See [this example](https://math.stackexchange.com/a/323074/395731) for example.
+I'd like to mention that this theorem does *not* work the other way; namely, closed and bounded on a metric space does not necessarily imply compact. In fact, our earlier example with the discrete metric provides a counterexample. With respect to the discrete metric $d$, $\brackets{0,1} \subset \bbR$ is bounded since $d(x,y) \leq 1$ for all $x, y \in \brackets{0,1}$. Similarly, it is easy to see that every subset is both open and closed with respect to the discrete metric. This is simply because the discrete metric induces a *discrete topology* $\calP(\bbR)$, where $\calP$ denotes the power set. Thus, $\brackets{0,1}$ is both closed and bounded, but as we showed in the ealier example it is not compact.
 
+Closed and boundedness *is* equivalent to compactness, however, for subspaces of Euclidean space, as we see in the following theorem.
 
-<!-- PROVE THAT CLOSED AND BOUNDED IMPLIES COMPACT IN THIS CASE -->
-<!-- #### Example of compactness on a metric space - the unitary group
+**Heine-Borel theorem:** Let $(\bbR^n, d_{\text{E}})$ be a metric space with the Euclidean metric $d_{\text{E}}(x, y)^2 = \sum_{i=1}^n (x_i-y_i)^2$. Then $K \subseteq \bbR^n$ is compact (with respect to the topology induced by the metric) if and only if it is closed and bounded.
 
-Consider the unitary group $U(n)$ of $n \times n$ complex matrices. We can define a metric $d$ on $U(n)$ via the operator norm. For $U_1, U_2 \in U(n)$,
-
-$$\begin{aligned}
-d(U_1, U_2) &= \norm{U_1 - U_2}\\
-&\coloneqq \sup\curlybrackets{\norm{(U_1-U_2)x}_2 ~\mid~ x \in \bbC^n, \norm{x}_2 = 1}.
-\end{aligned}$$
-
-Notice that $\norm U = 1$ for all $U \in U(n)$ since $U$ is an isometry. Therefore, for any $U_1, U_2 \in U(n)$,
-
-$$\begin{aligned}
-d(U_1, U_2) &= \norm{U_1 - U_2}\\
-&\leq \norm{U_1} + \norm{U_2}\qquad \textrm{tri. ineq.}\\
-&= 2.
-\end{aligned}$$
-
-This then proves that $U(n)$ is bounded. Now we consider the continuous function
-
-$$\begin{aligned}
-f:~ &\bbC^{n\times n} \to \bbC^{n\times n}\\
-&A \mapsto A^\dag A.
-\end{aligned}$$
-
-Notice that $U(n) = f^{-1}[\curlybrackets I]$. $\curlybrackets I$ is closed. So Lemma 1 from above shows that $f^{-1}[\curlybrackets I]$ is closed since $f$ is continuous. Therefore, $U(n)$ is closed.
-
-So we've shown that $U(n)$ is closed and bounded with respect to its metric topology. Thus, by Theorem 3 above, $U(n)$ is compact. {% include endproof.html %} -->
+*Proof*: We already proved one direction in Theorem 3, namely that compact implies closed and bounded. To prove the other direction, we refer to the short proof given on [Wikipedia](https://en.wikipedia.org/wiki/Heine–Borel_theorem#Proof) which I will not recreate here since I don't think I can be any more clear than it is written there. {% include endproof.html %}
 
 
 ### Continuous functions from compact sets to $\bbR$

@@ -5,7 +5,7 @@ comments: 22
 
 {% include post-header.md %}
 
-(28 May 2021) In this post I will derive the form for the Wigner quasiprobability distribution of a mixed quantum state in one dimension. It is then of course straightforwardly extends to three dimensions. I will be mostly following [these notes](https://arxiv.org/abs/1502.00666).
+(28 May 2021) In this post I will derive the form for the Wigner quasiprobability distribution of a mixed quantum state in one dimension. It then of course straightforwardly extends to three dimensions. I will be mostly following [these notes](https://arxiv.org/abs/1502.00666).
 
 Suppose we want a quasiprobability distribution $W(x, p)$ such that
 
@@ -66,11 +66,11 @@ $$\psi(x) = \parentheses{\frac{m \omega}{\pi}}^{1/4} \exp(-m \omega x^2 / 2)$$
 So
 
 $$\begin{aligned}
-    W(x, p) &= \frac{1}{\pi}\int_{\bbR} \bra{x-v}\ket{\psi} \bra\psi \ket{x+v} e^{i 2v p} dv \\
+    W(x, p) &= \frac{1}{\pi}\int_{\bbR} \braket{x-v}{\psi} \braket{\psi}{x+v} e^{i 2v p} dv \\
     &= \parentheses{\frac{m \omega}{\pi^3}}^{1/2} \int_{\bbR} \exp(-m \omega (x-v)^2 / 2) \exp(-m \omega (x+v)^2 / 2) e^{i 2v p} dv \\
     &= \parentheses{\frac{m \omega}{\pi^3}}^{1/2}e^{-m \omega x^2} \int_{\bbR} \exp(-m \omega v^2) e^{i 2v p} dv \\
     &= \text{Gaussian integral in } v\\
-    &= \frac{1}{\pi} \exp(-\frac{p^2}{m \omega }-m x^2 \omega).
+    &= \frac{1}{\pi} \exp(-\frac{p^2}{m \omega }-m \omega x^2).
 \end{aligned}$$
 
 In phase space, this looks like the following.
