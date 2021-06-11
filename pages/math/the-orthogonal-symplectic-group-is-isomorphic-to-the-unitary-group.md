@@ -25,7 +25,7 @@ The orthogonal symplectic group is
 
 $$\text K(n) = \text{Sp}(2n) \cap \text O (2n).$$
 
-In [this post of mine](on-the-compactness-of-the-unitary-orthogonal-and-symplectic-groups.md), we proved that $\text O(n), \text U(n),$ and $\text K(n)$ are all compact, while $\text{Sp}(2n)$ is not compact. In this post, we will prove that $U(n)$ and $K(n)$ are isomorphic.
+$\text O(n), \text U(n),$ and $\text K(n)$ are all compact, while $\text{Sp}(2n)$ is not compact, as we proved in [my previous post](on-the-compactness-of-the-unitary-orthogonal-and-symplectic-groups.md). In this post, we will prove that $U(n)$ and $K(n)$ are isomorphic.
 
 
 **Lemma 1**. $U=A+iB$ for $n\times n$ real matrices $A$ and $B$ is unitary if and only if $AA^T+BB^T=I$, $A^T A+B^T B = I$, and $AB^T$ and $A^T B$ are symmetric.

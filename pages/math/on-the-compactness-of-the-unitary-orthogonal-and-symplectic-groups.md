@@ -42,7 +42,7 @@ $$U(n) = \set{M \in \bbC^{n\times n} \mid M^\dagger M = MM^\dagger = I}.$$
 Note that each entry of a matrix in $U(n)$ has magnitude between $0$ and $1$ since the columns are orthonormal. Thus, for two matrices $A, B \in U(n)$,
 
 $$\begin{aligned}
-  d_{\text E}(A, B)^2 &= \sum_{i,j=1}^n (\Re A_{ij}- \Re B_{ij})^2 + \sum_{i,j=1}^n (\Im A_{ij}- \Im B_{ij})^2\\
+  d_{\text E}(A, B)^2 &= \sum_{i,j=1}^n (\Re{A_{ij}}- \Re{B_{ij}})^2 + \sum_{i,j=1}^n (\Im{A_{ij}}- \Im{B_{ij}})^2\\
   &= \sum_{i,j=1}^n \abs{A_{ij}- B_{ij}}^2\\
   &\leq 2n^2.
 \end{aligned}$$
