@@ -169,6 +169,8 @@ To prove Theorem 4, which is a useful application of compactness as a general pr
 
 Note here that this works for any topological space $X$ and any compact set $K \subseteq X$; $X$ need not be a metric space. I feel as though Theorem 4 is one of the first actual applications of general compactness one encounters. Prior to this, most applications have been with respect to metric spaces, where we could have never defined compactness and instead just always said "closed and bounded". But this theorem works for general topological spaces, and so is perhaps a reason to care about compactness as a topological property.
 
+Ultimately, Theorem 4 gives us some indication of how *compactness and continuous functions* together behave similarly to how *finiteness and general functions* together behave.
+
 
 #### References
 

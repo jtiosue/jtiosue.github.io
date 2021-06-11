@@ -16,6 +16,7 @@ li a {font-weight: 300;}
 
 ## Math topics
 
+- <span>11 Jun 2021</span> [The orthogonal symplectic group is isomorphic to the unitary group](pages/math/the-orthogonal-symplectic-group-is-isomorphic-to-the-unitary-group.md)
 - <span>01 Jun 2021</span> [On the compactness of the unitary, orthogonal, and symplectic groups](pages/math/on-the-compactness-of-the-unitary-orthogonal-and-symplectic-groups.md)
 - <span>02 Apr 2021</span> [In defense of symbols](pages/math/in-defense-of-symbols.md)
 - <span>25 Feb 2021</span> [Closed form of the Fibonacci sequence](pages/math/closed-form-of-the-fibonacci-sequence.html)
