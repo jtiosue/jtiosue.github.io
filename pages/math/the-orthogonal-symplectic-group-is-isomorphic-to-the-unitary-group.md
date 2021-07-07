@@ -42,7 +42,7 @@ UU^\dagger &= (A+iB)(A^T - i B^T)\\
 These equal the identity iff the conditions are met. {% include endproof.html %}
 
 
-**Lemma 2**. $M \in K(n) \iff$
+**Lemma 2**. $M \in \text K(n) \iff$
 
 $$M = \begin{pmatrix}A&-B\\B&A \end{pmatrix}$$
 
@@ -71,7 +71,7 @@ $$\phi(U) = \begin{pmatrix}\Re U&-\Im U\\\Im U&\Re U \end{pmatrix}$$
 
 is an isomorphism.
 
-*Proof:* Lemma 1 and 2 together prove that $M \in K(n)$ iff $M = \phi(U)$ for some unitary matrix $U$. Combining this with the obvious fact that $\phi$ is injective implies that $\phi$ is bijective. By just expanding out the multiplication, one finds that $\phi$ is a homomorphism. Combining this with the fact that a bijective homomorphism is always an isomorphism when dealing with groups, we find that $\phi$ is an isomorphism.
+*Proof:* Lemma 1 and 2 together prove that $M \in \text K(n)$ iff $M = \phi(U)$ for some unitary matrix $U$. Combining this with the obvious fact that $\phi$ is injective implies that $\phi$ is bijective. By just expanding out the multiplication, one finds that $\phi$ is a homomorphism. Combining this with the fact that a bijective homomorphism is always an isomorphism when dealing with groups, we find that $\phi$ is an isomorphism.
 
 For completeness, suppose we didn't know that a bijective homomorphism is always an isomorphism when dealing with groups. Then we would simply need to prove that $\phi^{-1}$ is a homomorphism. This is again straightforward to check via direct multiplication. {% include endproof.html %}
 

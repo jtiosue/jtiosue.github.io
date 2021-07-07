@@ -11,9 +11,11 @@ comments: 14
 
 ```latex
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,physics,mathtools}
-\usepackage[colorlinks,citecolor=blue,bookmarks=true]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,physics,mathtools,import}
 \allowdisplaybreaks
+
+% newline for new paragraph
+% \usepackage[parfill]{parskip}
 
 \usepackage[style=numeric-comp,sorting=none]{biblatex}\renewbibmacro{in:}{}
 % use with \addbibresource{filename1.bib,filename2.bib} then \printbibliography
@@ -27,7 +29,7 @@ comments: 14
 % meta
 \newcommand{\iosuename}{Joseph~T.~Iosue}
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}
-\newcommand{\UMD}{University~of~Maryland,~College~Park,~Maryland~20742~USA}
+\newcommand{\UMD}{University~of~Maryland,~College~Park,~Maryland~20742,~USA}
 \newcommand{\iosueaffiliations}[1]{
     \ifnum#1=1
         Joint~Quantum~Institute,~\UMD
@@ -49,6 +51,9 @@ comments: 14
 \usepackage{suffix}
 \newcommand{\note}[1]{{\color{red} [#1]}}
 \WithSuffix\newcommand\note*[1]{{\color{red} #1}}
+
+% supposed to be loaded last
+\usepackage[colorlinks,citecolor=blue,bookmarks=true]{hyperref}
 
 % theorems and etc.
 \newtheorem{theorem}{Theorem}[section]

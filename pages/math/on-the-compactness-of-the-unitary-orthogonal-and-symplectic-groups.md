@@ -54,7 +54,7 @@ $$\begin{aligned}
   &A \mapsto A^\dagger A.
 \end{aligned}$$
 
-Note that $\set{I}$ is closed and the preimage $f^{-1}\bargs{\set{I}} = U(n)$. Thus, by the Lemma, $U(n)$ is closed. Therefore, the unitary group is orthogonal.
+Note that $\set{I}$ is closed and the preimage $f^{-1}\bargs{\set{I}} = U(n)$. Thus, by the Lemma, $U(n)$ is closed. Therefore, the unitary group is compact.
 
 
 ### The symplectic group

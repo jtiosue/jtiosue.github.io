@@ -29,6 +29,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
+- <span>07 Jul 2021</span> [The space of quantum states](pages/physics/the-space-of-quantum-states.md)
 - <span>28 May 2021</span> [Derivation of the Wigner quasiprobability distribution](pages/physics/derivation-of-the-wigner-quasiprobability-distribution.md)
 - <span>21 May 2021</span> [The scalar propagator](pages/physics/the-scalar-propagator.md)
 - <span>07 May 2021</span> [The connection between bosons and the permanent](pages/physics/the-connection-between-bosons-and-the-permanent.md)

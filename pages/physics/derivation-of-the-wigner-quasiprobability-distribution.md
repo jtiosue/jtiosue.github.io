@@ -9,9 +9,9 @@ comments: 22
 
 Suppose we want a quasiprobability distribution $W(x, p)$ such that
 
-$$\EX{}{f(x, p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx  dp.$$
+$$\EX{}{f(\hat x, \hat p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx  dp,$$
 
-When working with quantum systems, $\EX{}{f(x, p)} = \Tr\bargs{\hat \rho f(\hat x, \hat p)}$ for a density matrix $\hat \rho$, so we want that
+whenever $f(x,p)$ is a function symmetric in $x$ and $p$. When working with quantum systems, $\EX{}{f(\hat x, \hat p)} = \Tr\bargs{\hat \rho f(\hat x, \hat p)}$ for a density matrix $\hat \rho$, so we want that
 
 $$ \Tr\bargs{\hat \rho f(\hat x, \hat p)} = \iint_{\bbR^2} W(x, p) f(x, p) dx  dp.$$
 
