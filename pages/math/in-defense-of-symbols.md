@@ -165,7 +165,7 @@ Since $e$ is irrational, we cannot actually express its decimal form. Here is an
 
 ### Summary
 
-Notice that in this entire post, it was necessary to introduce many symbols, and essentially no numbers were used. We used letters in place of numbers so that we can express them compactly, and so that we can adjust their values to compare their effects. We needed to introduce the $\floor{\cdot}$ symbol to talk about interest compounding noncontinuously. We needed to introduce the $\lim$ symbol to be able to talk about continuously compounded interest. In order to express $e$, we introduced the summation notation $\sum$, the factorial symbol $!$, and the infinity symbol $\infty$.
+Notice that in this entire post, it was necessary to introduce many symbols, and essentially no numbers were used. We used letters in place of numbers so that we can express them concisely, and so that we can adjust their values to compare their effects. We needed to introduce the $\floor{\cdot}$ symbol to talk about interest compounding noncontinuously. We needed to introduce the $\lim$ symbol to be able to talk about continuously compounded interest. In order to express $e$, we introduced the summation notation $\sum$, the factorial symbol $!$, and the infinity symbol $\infty$.
 
 On the right hand side of equation \eqref{eq:star}, we had the quantity
 

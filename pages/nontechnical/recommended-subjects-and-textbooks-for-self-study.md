@@ -36,7 +36,7 @@ I just started [these lectures](https://www.youtube.com/playlist?list=PL8yHsr3EF
 
 #### Differential geometry
 
-[Great mathematical physics lectures on the geometry of physics(https://youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic).
+[Great mathematical physics lectures on the geometry of physics](https://youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic).
 
 
 #### Functional analysis and measure theory
