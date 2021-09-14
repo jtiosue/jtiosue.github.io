@@ -16,6 +16,7 @@ li a {font-weight: 300;}
 
 ## Math topics
 
+- <span>13 Sep 2021</span> [On the requirement that manifolds be paracompact](pages/math/on-the-requirement-that-manifolds-be-paracompact.md)
 - <span>11 Jun 2021</span> [The orthogonal symplectic group is isomorphic to the unitary group](pages/math/the-orthogonal-symplectic-group-is-isomorphic-to-the-unitary-group.md)
 - <span>01 Jun 2021</span> [On the compactness of the unitary, orthogonal, and symplectic groups](pages/math/on-the-compactness-of-the-unitary-orthogonal-and-symplectic-groups.md)
 - <span>02 Apr 2021</span> [In defense of symbols](pages/math/in-defense-of-symbols.md)
@@ -48,5 +49,5 @@ li a {font-weight: 300;}
 
 ## Nontechnical topics
 
-- <span>20 Mar 2021</span> [My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)
-- <span>27 Feb 2021</span> [Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)
+- <span>30 Aug 2021</span> [Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)
+- <span>25 Aug 2021</span> [My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)

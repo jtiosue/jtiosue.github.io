@@ -5,7 +5,7 @@ comments: 14
 
 {% include post-header.md %}
 
-(20 Mar 2021) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command.
+(Updated 25 Aug 2021) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command. Or, even better, is the `\import{path}{file}` command, which updates the path in the import so you can use relative paths in your document.
 
 {% raw %}
 
@@ -181,6 +181,10 @@ comments: 14
 \newcommand{\bigTheta}[1]{\Theta\pargs{#1}}
 \newcommand{\poly}[1]{\mathrm{poly}\pargs{#1}}
 \newcommand{\polylog}[1]{\mathrm{polylog}\pargs{#1}}
+
+% more math
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\i}{\mathrm{i}}
 
 ```
 

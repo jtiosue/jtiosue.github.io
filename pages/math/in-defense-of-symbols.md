@@ -156,7 +156,7 @@ where each $f_n$ is just some number, so that $(f_1, f_2, \dots, f_N)$ is a sequ
 
 $$\lim_{N\to\infty}\sum_{n=1}^N f_n = f_1 + f_2 + f_3 + \dots$$
 
-For brevity, the limit is often removed and it is notated as $\sum_{n=1}^\infty$. With these new symbols, we can compactly express $e$ as
+For brevity, the limit is often removed and it is notated as $\sum_{n=1}^\infty$. With these new symbols, we can express $e$ as
 
 $$e = \sum_{n=0}^\infty \frac{1}{n!}.$$
 
