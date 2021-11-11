@@ -13,27 +13,27 @@ By the fundamental homomorphism theorem, $\SU(2)/\mathrm{Ker}(f) \cong \Im{f} = 
 
 We know that for each $n$, there is an irreducible representation of $\SU(2)$. Let's denote this by the map $\Pi_n\colon \SU(2) \to \GL(n,\bbC)$. Fix $X$ to be a set of representatives of $\SU(2) / \bbZ_2$. In other words, for each $g \in \SU(2)$, exactly one of $\set{g,-g}$ is in $X$. We define the map
 
-\[
+$$
 \begin{aligned}
 \phi\colon &\SU(2) / \bbZ_2 \to \SU(2)\\
 &g \bbZ_2 \mapsto \begin{cases}g&\text{if } g \in X\\-g&\text{if }-g \in X.\end{cases}
 \end{aligned}
-\]
+$$
 
 Note that
 
-\[\phi(g_i \bbZ_2)\phi(\g_j \bbZ_2) = c(g_i,g_j)\phi(g_i g_j \bbZ_2)\]
+$$\phi(g_i \bbZ_2)\phi(\g_j \bbZ_2) = c(g_i,g_j)\phi(g_i g_j \bbZ_2)$$
 
 for some $c(g_i,g_j) \in \bbZ_2$. Define that map $\rho_n \coloneqq \Pi_n \circ \phi$ so that $\rho_n \colon \SU(2)/\bbZ_2 \to \GL(n,\bbC)$. Notice that
 
-\[\begin{aligned}
+$$\begin{aligned}
 \rho_n(g_i\bbZ_2) \rho_n(g_j \bbZ_2) &= \Pi_n(\phi(g_i\bbZ_2)) \Pi_n(\phi(g_j\bbZ_2)) \\
 &= \Pi_n(\phi(g_i\bbZ_2) \phi(g_j\bbZ_2)) \qquad \text{since } \Pi_n \text{ is a homomorphism}\\
 &= \Pi_n(c(g_i,g_j) \phi(g_i g_j \bbZ_2))\\
 &= \Pi_n(c(g_i,g_j)) \Pi_n(\phi(g_i g_j \bbZ_2))\\
 &= \Pi_n(c(g_i,g_j)) \rho_n(g_i g_j \bbZ_2)\\
 &= c_n(g_i,g_j) \rho_n(g_i g_j \bbZ_2),
-\end{aligned}\]
+\end{aligned}$$
 
 where we've defined $c_n(g_i,g_j) \coloneqq \Pi_n(c(g_i,g_j))$. Since $\Pi_n$ is a homomorphism, $\Pi_n(1) = 1$ and $\Pi_n(-1) = \pm 1$; hence, $c_n(g_i,g_j) \in \bbZ_2$. Therefore, we see that $\rho_n$ is indeed a projective unitary representation, so that $\rho_n \circ h^{-1}$ is a projective unitary representation of $\SO(3)$ on $\GL(n,\bbC)$. 
 
@@ -42,14 +42,14 @@ where we've defined $c_n(g_i,g_j) \coloneqq \Pi_n(c(g_i,g_j))$. Since $\Pi_n$ is
 
 In this section we will show that $\rho_3 \circ h^{-1}$ is a linear representation. Since $h$ is just an isomorphism, we just show that $\rho_3$ is a linear representation. This amounts to showing that $c_3(g_i,g_j)$ is always equal to 1. Hence, we just need to show that $\Pi_3(-1) = 1$. We can construct the irrep $\Pi_3$ explicitly as
 
-\[\begin{aligned}
+$$\begin{aligned}
 \Pi_3\colon &\SU(2) \to \GL(3,\bbC)\\
 &g \mapsto h(g\bbZ_2).
-\end{aligned}\]
+\end{aligned}$$
 
 Then $\Pi_3(-1) = h(-\bbZ_2) = h(\bbZ_2) = \Pi_3(1) = 1$, as desired. The only thing to confirm is that this explict representation $\Pi_3$ is indeed irreducible. To do this, we need to show that if $W \subset \bbC^3$ satisfies $Pi_3(g)W = W$ for all $g \in \SU(2)$, then $W = \set{0}$ or $\bbC^3$. Using our explicit form of $\Pi_3$, this amounts to showing that
 
-\[(\forall R \in \SO(3)\colon R W = W) \implies W = \set{0} \text{ or } \bbC^3. \]
+$$(\forall R \in \SO(3)\colon R W = W) \implies W = \set{0} \text{ or } \bbC^3. $$
 
 This is not too hard to show by just looking at the action of a rotation $R$ on the vector $\begin{pmatrix} \alpha&\beta&\gamma \end{pmatrix}^T$, and showing that any such vector will be rotated around the whole space $\bbC^3$.
 

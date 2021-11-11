@@ -9,26 +9,26 @@ comments: 27
 
 Suppose we have two spin-1/2 particles. Then the wavefunction lives in the space $V = \bbC^2 \otimes \bbC^2$. The fundamental representation is
 
-\[\rho\colon \SU(2) \to \GL(V)$,\]
+$$\rho\colon \SU(2) \to \GL(V)$,$$
 
 where $\rho(g)$ is the $2\times 2$ matrix representing $g$. The tensor product representation is \
 
-\[\Pi\colon \SU(2) \to \GL(V \otimes V), g \mapsto \rho(g)\otimes \rho(g). \]
+$$\Pi\colon \SU(2) \to \GL(V \otimes V), g \mapsto \rho(g)\otimes \rho(g). $$
 
 Let's fix a, as we will see, nice orthonormal basis of $V$, namely $V = \mathrm{span}\cbargs{\ket{\psi_0},\ket{\psi_1},\ket{\psi_2},\ket{\psi_3}}$, where
 
-\[
+$$
 \begin{aligned}
 \ket{\psi_0} &= \ket{01} - \ket{10}\\
 \ket{\psi_1} &= \ket{00}\\
 \ket{\psi_2} &= \ket{01} + \ket{10}\\
 \ket{\psi_3} &= \ket{11}.
 \end{aligned}
-\]
+$$
 
 Define $W \coloneqq \mathrm{span}\cbargs{\ket{\psi_0}}$, and recall that $V = W \oplus W^\perp$. We will show that $W$ and $W^\perp$ are invariant subspaces under the action of $\Pi(\SU(2))$. Consider, for example, $R_x(\theta) = \e^{\i \theta \sigma^x} \in \rho(\SU(2))$, and consider the action of $R_x(\theta) \otimes R_x(\theta) \in \Pi(\SU(2))$ on $W$. We have that
 
-\[
+$$
 \begin{aligned}
 R_x(\theta) \otimes R_x(\theta) \ket{\psi_0} &= \parentheses{\cos\theta + \i \sin\theta \sigma^x}\otimes \parentheses{\cos\theta + \i \sin\theta \sigma^x} \ket{\psi_0}\\
 &= \parentheses{\cos^2\theta + \i\cos\theta\sin\theta \brackets{\sigma^x \otimes 1 + 1\otimes \sigma^x} - \sin^2\theta \sigma^x \otimes \sigma^x} \ket{\psi_0}\\
@@ -36,7 +36,7 @@ R_x(\theta) \otimes R_x(\theta) \ket{\psi_0} &= \parentheses{\cos\theta + \i \si
 &= \parentheses{\cos^2\theta + \sin^2\theta} \ket{\psi_0}\\
 &= \ket{\psi_0}.
 \end{aligned}
-\]
+$$
 
 Indeed one can perform similar calculations for any arbitrary $\e^{\i \vec{\theta} \cdot \vec{\sigma}} \in \rho(\SU(2))$ and find that $\Pi(\SU(2)) W = W$. Therefore, $W$ *is an invariant subsapce*, which also implies that $W^\perp$ is also an invariant subspace. 
 
