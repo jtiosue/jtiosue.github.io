@@ -12,6 +12,7 @@
     WORDS["bijective"] = "A map is called bijective or a bijection if it is both injective and surjective.\\n\\nINJECTIVE: " + WORDS["injective"] + "\\n\\nSURJECTIVE: " + WORDS["surjective"];
     WORDS["bijection"] = WORDS["bijective"];
     WORDS["normal subgroup"] = "Fix a group G with group operation &#8729;. A subgroup N is called normal if g &#8729; N = N &#8729; g for all g &isin; G. The notation used is N &vltri; G.";
+    WORDS["fundamental homomorphism theorem"] = "The fundamental homomorphism theorem states that if f: G &#8594; H is a homomorphism between two groups G and H, then G/Ker(f) &cong; Im(f). Intuitively, we can see that h: G/Ker(f) &#8594; Im(f) is an isomorphism, where for any g in G, h(g Ker(f)) = f(g Ker(f)) = f(g)f(Ker(f)) = f(g).";
     WORDS["homomorphism"] = "A homomorphism is a structure preserving map. Specifically, consider two sets X and Y equipped with the operations &#8729; and &#8727; respectively. A homomorphism is a map f: X &rarr; Y that satisfies f(a &#8729; b) = f(a) &#8727; f(b).";
     WORDS["homomorphic"] = WORDS["homomorphism"];
     WORDS["endomorphism"] = "An endomorphism is a homomorphism with the same domain and codomain.";
@@ -40,6 +41,7 @@
     WORDS["Hausdorff"] = "A topological space is called Hausdorff if for every distinct pair of points in the space, there exists neighborhoods of each point respectively that are disjoint.";
     WORDS["topological manifold"] = "A d-dimensional topological manifold is a Hausdorff topological space that satisfies the following property: for every point in the manifold, there is an open neighborhood of that point that is homeomorphic to &#8477;^d. " + WORDS["Hausdorff"];
     WORDS["partition of unity"] = "A partition of unity on a topological space is a set X of continuous functions from the space to the [0, 1] such that for each point p in the space, two conditions are satisfied: (1) there is a neighborhood of p for which only finitely many functions in X are nonzero, and (2) the sum of all the function values at p is 1.";
+    WORDS["projective unitary representation"] = "A projective unitary representation of a group G on a Hilbert space H is a map f: G &#8594; U(H) satisfying f(g)f(h) = c(g,h)f(gh), where c(g,h) is a complex number with unit norm.";
 
 
     function funReplace(word) {

@@ -16,6 +16,7 @@ li a {font-weight: 300;}
 
 ## Math topics
 
+- <span>11 Nov 2021</span> [Spin-1/2 and spin-1 representations of SO(3)](pages/math/spin-12-and-spin-1-representations-of-s03.md)
 - <span>13 Sep 2021</span> [On the requirement that manifolds be paracompact](pages/math/on-the-requirement-that-manifolds-be-paracompact.md)
 - <span>11 Jun 2021</span> [The orthogonal symplectic group is isomorphic to the unitary group](pages/math/the-orthogonal-symplectic-group-is-isomorphic-to-the-unitary-group.md)
 - <span>01 Jun 2021</span> [On the compactness of the unitary, orthogonal, and symplectic groups](pages/math/on-the-compactness-of-the-unitary-orthogonal-and-symplectic-groups.md)
@@ -30,6 +31,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
+- <span>11 Nov 2021</span> [Addition of angular momentum, a simple example](pages/physics/addition-of-angular-momentum-a-simple-example.md)
 - <span>07 Jul 2021</span> [The space of quantum states](pages/physics/the-space-of-quantum-states.md)
 - <span>28 May 2021</span> [Derivation of the Wigner quasiprobability distribution](pages/physics/derivation-of-the-wigner-quasiprobability-distribution.md)
 - <span>21 May 2021</span> [The scalar propagator](pages/physics/the-scalar-propagator.md)

@@ -1,5 +1,6 @@
 ---
 title: On the requirement that manifolds be paracompact
+comments: 26
 ---
 
 {% include post-header.md %}
