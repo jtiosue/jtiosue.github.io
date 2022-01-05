@@ -9,13 +9,13 @@ comments: 27
 
 Suppose we have two spin-1/2 particles. Then the wavefunction lives in the space $V = \bbC^2 \otimes \bbC^2$. The fundamental representation is
 
-$$\rho\colon \SU(2) \to \GL(V)$,$$
+$$\rho\colon \SU(2) \to \GL(\bbC^2),$$
 
-where $\rho(g)$ is the $2\times 2$ matrix representing $g$. The tensor product representation is \
+where $\rho(g)$ is the $2\times 2$ matrix representing $g$. The tensor product representation is
 
-$$\Pi\colon \SU(2) \to \GL(V \otimes V), g \mapsto \rho(g)\otimes \rho(g). $$
+$$\Pi\colon \SU(2) \to \GL(V), g \mapsto \rho(g)\otimes \rho(g). $$
 
-Let's fix a, as we will see, nice orthonormal basis of $V$, namely $V = \mathrm{span}\cbargs{\ket{\psi_0},\ket{\psi_1},\ket{\psi_2},\ket{\psi_3}}$, where
+Let's fix a, as we will see, nice orthonormal basis of $V$, namely $V = \mathrm{span}\cbargs{\ket{\psi_0},\ket{\psi_1},\ket{\psi_2},\ket{\psi_3}}$, where (I'm ignoring normalization)
 
 $$
 \begin{aligned}
@@ -44,7 +44,7 @@ In general, what we find is that for any $g \in \SU(2)$, $\Pi(g)\ket{\psi_0} = \
 
 One can go through the same calculations and find that there is no invariant subspace of $W^\perp$ (except of course $\set{0}$ and $W^\perp$ itself) under the action of $\Pi(\SU(2))$. Thus, $\Pi$, when restricted to $W^\perp$, is a three-dimensional irreducible representation. 
 
-Let's review what we've found. The space of two spin-1/2 particles $V$ can be decomposed as $V = W \oplus W^\perp$, where $W$ and $W^\perp$ are one and three dimensional subspaces of $V$ that are invariant under the action of $\SU(2)$. Hence, the space of two spin-1/2 paricles can be decomposed into a direct sum of the one and three dimensional irrpeps of $\SU(2)$. As such, the state $\ket{\psi_0}$ transforms as a spin-0 particle and the space $W^\perp$ is a spin-1 particle.
+Let's review what we've found. The space of two spin-1/2 particles $V$ can be decomposed as $V = W \oplus W^\perp$, where $W$ and $W^\perp$ are one and three dimensional subspaces of $V$ that are invariant under the action of $\SU(2)$. Hence, the space of two spin-1/2 paricles can be decomposed into a direct sum of the one and three dimensional irreps of $\SU(2)$. As such, the state $\ket{\psi_0}$ transforms as a spin-0 particle and the space $W^\perp$ is a spin-1 particle.
 
 This is the origin of the notation $\ket{0,0} \equiv \ket{\psi_0}$, $\ket{1,1} \equiv \ket{\psi_1}$, $\ket{1,0} \equiv \ket{\psi_2}$, and $\ket{1,-1} \equiv \ket{\psi_3}$. The first number denotes the irrep that the state lives in (i.e. $\ket{0,0}$ lives in the spin-0 irrep and $\ket{1,m}$ lives in the spin-1 irrep). The second number denotes the eigenvalue of the total $z$ angular momentum $\frac{1}{2}\parentheses{\sigma^z\otimes 1 + 1 \otimes \sigma^z}$.
 

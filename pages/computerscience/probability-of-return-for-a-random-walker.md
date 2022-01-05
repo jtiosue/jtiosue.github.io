@@ -54,9 +54,11 @@ $$\begin{aligned}
 
 which equals zero whenver $t \neq t'$. Thus, if $\rho(\bm r', 0)$ is a solution at time $t=0$, then
 
-$$\rho(\bm r, t) = \int d^d r' G(\bm r, t; \bm r', 0) \rho(\bm r', 0)$$
+$$\rho(\bm r, t) = \int d^d r' ~ G(\bm r, t; \bm r', 0) \rho(\bm r', 0)$$
 
-is a solution at time $t$. Thus $G(\bm r, t; \bm r', 0)$ tells us something about the probability to transition from $\bm r'$ to $\bm r$ in a time $t$. By going to Fourier space, the equation for the Green's function becomes
+is a solution at time $t$. Thus $G(\bm r, t; \bm r', 0)$ tells us something about the probability to transition from $\bm r'$ to $\bm r$ in a time $t$. In particular, suppose we are initially localized at zero, which corresponds to $\rho(\bm r',0) = \delta^d(r')$, where $\delta^d$ is the $d$-dimensional Delta (generalized) function. Then $\rho(\bm r, t) = G(\bm r, t; \bm 0, 0)$. Therefore, if we start off completely localized at zero, then the probability that we are localized somewhere within a distance $\epsilon$ from zero at time $t$ is $\int_{\abs{\bm r} < \epsilon} d^d r~ G(\bm r, t)$, where we define $G(\bm r, t) = G(\bm r, t; \bm 0, 0)$. 
+
+By going to Fourier space, the equation for the Green's function becomes
 
 $$\parentheses{-i\omega + D p^2} G(\bm p, \omega) = 1$$
 
@@ -69,9 +71,15 @@ Going through this integral, one finds that $G(0, t) \propto t^{-d/2}$.
 
 ### Probability of return
 
-As we informally argued before, $G(\bm r, t; \bm r', 0)$ tells us something about the probability to transition from $\bm r'$ to $\bm r$ in a time $t$. Thus, the probability to return to the same point as we started is something like
+As we informally argued before, if we start off completely localized at zero, then the probability that we are localized somewhere within a distance $\epsilon$ from zero at time $t$ is $\int_{\abs{\bm r} < \epsilon} d^d r~ G(\bm r, t)$. For small epsilon, this is $\approx G(0,t) \frac{\pi^{d/2} \epsilon^d}{\Gamma(1+d/2)}$. The last factor comes from the volume of the $d$-ball of radius $\epsilon$. 
 
-$$\int_{\tau_i}^{\tau_f} G(0,t)dt \propto \int_{\tau_i}^{\tau_f} t^{-d/2} dt.$$
+Thus, the probability to return to the same point as we started -- i.e. zero -- at some point in the future after a time $\tau_i$, is something like
+
+$$\begin{aligned}
+\lim_{\epsilon\to 0} \epsilon^d \int_{\tau_i}^{\infty} G(0,t)dt &\propto \lim_{\epsilon\to 0} \epsilon^d\int_{\tau_i}^{\infty} t^{-d/2} dt\\
+&= \lim_{\epsilon\to 0} \int_{\tau_i}^{\infty} (t/\epsilon^2)^{-d/2} dt\\
+&= \lim_{\epsilon\to 0} \epsilon^2 \int_{\tau_i/\epsilon^2}^{\infty} u^{-d/2} du.
+\end{aligned}$$
 
 We see that when $d = 1$ or $2$, this integral blows up, but when $d \geq 3$, it stays finite. This is characteristic of the fact that if a random walker walks forever in one or two dimensions, then she will *definitely* return to her starting spot at some point. However, if a random walker walks forever in three or greater dimensions, then she may not ever return to her starting spot.
 

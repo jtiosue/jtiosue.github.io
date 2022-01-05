@@ -11,14 +11,17 @@ comments: 14
 
 ```latex
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,physics,mathtools,import}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,braket,mathtools,import}
 \allowdisplaybreaks
 
 % newline for new paragraph
 % \usepackage[parfill]{parskip}
 
 \usepackage[style=numeric-comp,sorting=none]{biblatex}\renewbibmacro{in:}{}
-% use with \addbibresource{filename1.bib,filename2.bib} then \printbibliography
+% use with \addbibresource{filename1.bib} then \printbibliography
+
+% make bib font smaller
+% \renewcommand*{\bibfont}{\small}
 
 % ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
 \usepackage{showkeys}
@@ -30,12 +33,14 @@ comments: 14
 \newcommand{\iosuename}{Joseph~T.~Iosue}
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}
 \newcommand{\UMD}{University~of~Maryland,~College~Park,~Maryland~20742,~USA}
+\newcommand{\JQI}{Joint~Quantum~Institute,~\UMD}
+\newcommand{\QUICS}{Joint~Center~for~Quantum~Information~and~Computer~Science,~\UMD}
 \newcommand{\iosueaffiliations}[1]{
     \ifnum#1=1
-        Joint~Quantum~Institute,~\UMD
+        \JQI
     \else 
         \ifnum#1=2 
-            Joint~Center~for~Quantum~Information~and~Computer~Science,~\UMD
+            \QUICS
         \else 
             \iosueaffiliations{1},~\iosueaffiliations{2}
         \fi
@@ -55,6 +60,9 @@ comments: 14
 % supposed to be loaded last
 \usepackage[colorlinks,citecolor=blue,bookmarks=true]{hyperref}
 
+% needs to be loaded after hyperref
+\usepackage[capitalize]{cleveref}
+
 % theorems and etc.
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{claim}[theorem]{Claim}
@@ -71,24 +79,6 @@ comments: 14
 \newenvironment{example}
   {\pushQED{\qed}\renewcommand{\qedsymbol}{$\diamond$}\examplex}
   {\popQED\endexamplex}
-
-% ref
-\newcommand{\Equation}[1]{\eqref{eq:#1}}
-\newcommand{\Section}[1]{Section~\ref{sec:#1}}
-\newcommand{\Appendix}[1]{Appendix~\ref{ap:#1}}
-\newcommand{\Figure}[1]{Figure~\ref{fig:#1}}
-\newcommand{\Table}[1]{Table~\ref{tab:#1}}
-\newcommand{\Definition}[1]{Definition~\ref{def:#1}}
-\newcommand{\Example}[1]{Example~\ref{ex:#1}}
-\newcommand{\Remark}[1]{Remark~\ref{re:#1}}
-\newcommand{\Theorem}[1]{Theorem~\ref{thm:#1}}
-\newcommand{\Claim}[1]{Claim~\ref{clm:#1}}
-\newcommand{\Proposition}[1]{Proposition~\ref{prop:#1}}
-\newcommand{\Lemma}[1]{Lemma~\ref{lem:#1}}
-\newcommand{\Corollary}[1]{Corollary~\ref{cor:#1}}
-\newcommand{\Conjecture}[1]{Conjecture~\ref{con:#1}}
-\newcommand{\Observation}[1]{Observation~\ref{obs:#1}}
-\newcommand{\Fact}[1]{Fact~\ref{fact:#1}}
 
 % bb
 \newcommand{\bbA}{\mathbb{A}}
@@ -153,7 +143,9 @@ comments: 14
 \newcommand{\angles}[1]{\left\langle #1\right\rangle}
 \newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
 \newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
-\newcommand{\set}{\curlybrackets}
+\renewcommand{\set}{\curlybrackets}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
 
 % other
 \newcommand{\pargs}[1]{\!\parentheses{#1}}
@@ -161,8 +153,11 @@ comments: 14
 \newcommand{\cbargs}[1]{\!\curlybrackets{#1}}
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
-\newcommand{\Dom}[1]{\mathrm{Dom}\pargs{#1}}
-\newcommand{\sgn}[1]{\mathrm{sgn}\pargs{#1}}
+\newcommand{\Dom}[1]{\operatorname{Dom}\pargs{#1}}
+\newcommand{\sgn}[1]{\operatorname{sgn}\pargs{#1}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\Dd}[1]{\mathop{}\!\mathrm{d^#1}}
 
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}
@@ -179,12 +174,17 @@ comments: 14
 \newcommand{\bigOmega}[1]{\Omega\pargs{#1}}
 \newcommand{\littleomega}[1]{\omega\pargs{#1}}
 \newcommand{\bigTheta}[1]{\Theta\pargs{#1}}
-\newcommand{\poly}[1]{\mathrm{poly}\pargs{#1}}
-\newcommand{\polylog}[1]{\mathrm{polylog}\pargs{#1}}
+\newcommand{\poly}[1]{\operatorname{poly}\pargs{#1}}
+\newcommand{\polylog}[1]{\operatorname{polylog}\pargs{#1}}
 
 % more math
 \newcommand{\e}{\mathrm{e}}
 \renewcommand{\i}{\mathrm{i}}
+\newcommand{\U}{\mathrm{U}}
+\renewcommand{\O}{\mathrm{O}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\GL}{\mathrm{GL}}
+
 
 ```
 
