@@ -10,18 +10,17 @@ comments: 14
 {% raw %}
 
 ```latex
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+% \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,braket,mathtools,import}
+\usepackage{cmap} % Makes ligatured fonts searchable and copyable in pdf readers
 \allowdisplaybreaks
 
 % newline for new paragraph
 % \usepackage[parfill]{parskip}
 
-\usepackage[style=numeric-comp,sorting=none]{biblatex}\renewbibmacro{in:}{}
-% use with \addbibresource{filename1.bib} then \printbibliography
-
-% make bib font smaller
-% \renewcommand*{\bibfont}{\small}
+% Make theorems in appendix labeled by section
+\usepackage{apptools}
+\AtAppendix{\counterwithin{theorem}{section}}
 
 % ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
 \usepackage{showkeys}
@@ -34,7 +33,7 @@ comments: 14
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}
 \newcommand{\UMD}{University~of~Maryland,~College~Park,~Maryland~20742,~USA}
 \newcommand{\JQI}{Joint~Quantum~Institute,~\UMD}
-\newcommand{\QUICS}{Joint~Center~for~Quantum~Information~and~Computer~Science,~\UMD}
+\newcommand{\QUICS}{Joint~Center~for~Quantum~Information~and~Computer~Science,~National~Institute~of~Standards~and~Technology~and~\UMD}
 \newcommand{\iosueaffiliations}[1]{
     \ifnum#1=1
         \JQI
@@ -162,11 +161,13 @@ comments: 14
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}
 \newcommand{\EX}[2]{\Expval_{#1}\bargs{#2}}
+\DeclareMathOperator*{\Prob}{Pr}
+\renewcommand{\Pr}[2]{\Prob_{#1}\bargs{#2}}
 
 % morphisms
-\newcommand{\Hom}[1]{\mathrm{Hom}\pargs{#1}}
-\newcommand{\End}[1]{\mathrm{End}\pargs{#1}}
-\newcommand{\Aut}[1]{\mathrm{Aut}\pargs{#1}}
+\newcommand{\Hom}[1]{\operatorname{Hom}\pargs{#1}}
+\newcommand{\End}[1]{\operatorname{End}\pargs{#1}}
+\newcommand{\Aut}[1]{\operatorname{Aut}\pargs{#1}}
 
 % big O notation
 \newcommand{\bigO}[1]{\calO\pargs{#1}}
@@ -184,7 +185,8 @@ comments: 14
 \renewcommand{\O}{\mathrm{O}}
 \newcommand{\Sp}{\mathrm{Sp}}
 \newcommand{\GL}{\mathrm{GL}}
-
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
 
 ```
 

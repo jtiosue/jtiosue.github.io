@@ -30,12 +30,16 @@ To learn about quantum computing, quantum algorithms, and C++, I coded a quantum
 A HTML/CSS/Javascript website hosted with GitHub pages to easily track ice hockey stats and keep notes while watching somebody play. The site stores cookies so that statistics are remembered even if the browser is closed. 
 
 
+### Distance to Green [(View site)](https://jtiosue.github.io/PythonGames/DistanceToGreen/javascriptImplementation/index.html) [(View source)](https://github.com/jtiosue/PythonGames/tree/master/DistanceToGreen/javascriptImplementation)
+A little HTML/CSS/Javascript website hosted with GitHub pages to determine the distance you are from the green.
+
+
 #### Numerical steppers [(View on GitHub)](https://github.com/jtiosue/QuadratureCandJulia)
 
 I provide a general overview of implicit versus explicit and single- versus multi-step steppers for numerically solving differential equations. I implemented dozens of methods in [Julia](https://julialang.org/) which are included at the end of the paper (see the link). I explore several interesting systems, including geodesics around Schwarzschild and Kerr black holes, motion of a Kapitza pendulum, E cross B drift of a charged particle in perpendicular electric and magnetic fields, etc. See the report and code on the GitHub page. 
 
 
-#### Android application [(View on Google Play)](https://play.google.com/store/apps/details?id=main.distancetogreen)
+#### Android application [(View on Google Play)](https://play.google.com/store/apps/details?id=main.distancetogreen) [(View source)](https://github.com/jtiosue/PythonGames/tree/master/DistanceToGreen)
 
 Published Android application called "Distance to Green" on the Google Play store under the developer name "Eigenjoe" with monetized adds from AdMob. See the link for more information.
 
