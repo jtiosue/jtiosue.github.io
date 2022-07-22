@@ -30,7 +30,7 @@ To learn about quantum computing, quantum algorithms, and C++, I coded a quantum
 A HTML/CSS/Javascript website hosted with GitHub pages to easily track ice hockey stats and keep notes while watching somebody play. The site stores cookies so that statistics are remembered even if the browser is closed. 
 
 
-### Distance to Green [(View site)](https://jtiosue.github.io/PythonGames/DistanceToGreen/javascriptImplementation/index.html) [(View source)](https://github.com/jtiosue/PythonGames/tree/master/DistanceToGreen/javascriptImplementation)
+#### Distance to Green [(View site)](https://jtiosue.github.io/PythonGames/DistanceToGreen/javascriptImplementation/index.html) [(View source)](https://github.com/jtiosue/PythonGames/tree/master/DistanceToGreen/javascriptImplementation)
 A little HTML/CSS/Javascript website hosted with GitHub pages to determine the distance you are from the green.
 
 

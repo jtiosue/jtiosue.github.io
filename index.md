@@ -16,6 +16,7 @@ li a {font-weight: 300;}
 
 ## Math topics
 
+- <span>22 Jul 2022</span> [Lie exponential is matrix exponential for matrix Lie groups](pages/math/lie-exponential-is-matrix-exponential-for-matrix-lie-groups.md)
 - <span>11 Nov 2021</span> [Spin-1/2 and spin-1 representations of SO(3)](pages/math/spin-12-and-spin-1-representations-of-s03.md)
 - <span>13 Sep 2021</span> [On the requirement that manifolds be paracompact](pages/math/on-the-requirement-that-manifolds-be-paracompact.md)
 - <span>11 Jun 2021</span> [The orthogonal symplectic group is isomorphic to the unitary group](pages/math/the-orthogonal-symplectic-group-is-isomorphic-to-the-unitary-group.md)
