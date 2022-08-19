@@ -53,5 +53,6 @@ li a {font-weight: 300;}
 
 ## Nontechnical topics
 
+- <span>19 Aug 2022</span> [LaTeX section headers and hyperref](pages/nontechnical/latex-section-headers-and-hyperref.md)
 - <span>30 Aug 2021</span> [Recommended subjects and textbooks for self-study (for physicists)](pages/nontechnical/recommended-subjects-and-textbooks-for-self-study.md)
 - <span>25 Aug 2021</span> [My LaTeX lifetime style file](pages/nontechnical/my-latex-lifetime-style-file.md)
