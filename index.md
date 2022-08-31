@@ -32,6 +32,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
+- <span>30 Aug 2022</span> [Why is classical mechanics symplectic?](pages/physics/why-is-classical-mechanics-symplectic.md)
 - <span>21 Jan 2022</span> [Gaussian linear optics](pages/physics/gaussian-linear-optics.md)
 - <span>11 Nov 2021</span> [Addition of angular momentum, a simple example](pages/physics/addition-of-angular-momentum-a-simple-example.md)
 - <span>07 Jul 2021</span> [The space of quantum states](pages/physics/the-space-of-quantum-states.md)
