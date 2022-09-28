@@ -14,6 +14,10 @@ li a {font-weight: 300;}
 - [Curriculum Vitae](pages/about/media/cv.pdf)
 - [Contact the author](mailto:jtiosue@umd.edu)
 
+
+{% include search-bar.html %}
+
+
 ## Math topics
 
 - <span>22 Jul 2022</span> [Lie exponential is matrix exponential for matrix Lie groups](pages/math/lie-exponential-is-matrix-exponential-for-matrix-lie-groups.md)
