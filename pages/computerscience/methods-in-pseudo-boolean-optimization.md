@@ -9,8 +9,10 @@ comments: 10
 
 <!-- <embed src="media/pseudo_boolean_optimization.pdf" width="100%" height="1000px" /> -->
 
-<object data="mypdf.pdf" type="application/pdf" frameborder="0" width="100%" height="1000px">
-    <embed src="media/pseudo_boolean_optimization.pdf" width="100%" height="1000px"/> 
+<object data="media/pseudo_boolean_optimization.pdf" type="application/pdf" width="100%" height="600px">
+    <embed src="media/pseudo_boolean_optimization.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="media/pseudo_boolean_optimization.pdf">Download Slides</a>.</p>
+    
 </object>
 
 {% include post-footer.html %}
