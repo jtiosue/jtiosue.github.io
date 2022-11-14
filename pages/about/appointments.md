@@ -5,7 +5,7 @@
 
 ### Teaching
 
-#### Volunteer tutoring (Oct 2020 - Present)
+#### Volunteer tutoring (Oct 2020 - Oct 2022)
 
 I tutor undergraduate physics students at the University of Maryland for one hour a week.
 

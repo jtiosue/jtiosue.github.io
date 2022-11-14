@@ -5,7 +5,7 @@
 
 #### University of Maryland (Aug 2020 - Present)
 
-I am a PhD candidate in the Joint Quantum Institute (JQI) and the Joint Center for Quantum Information and Computer Science (QuICS) supported by the JQI Graduate Fellowship. My supervisor is Professor Alexey Gorshkov.
+I am a PhD candidate in the Joint Quantum Institute (JQI) and the Joint Center for Quantum Information and Computer Science (QuICS) supported by the JQI Graduate Fellowship. My supervisors are Professor Alexey Gorshkov and Professor Victor Albert.
 
 #### Massachusetts Institute of Technology (Sep 2015 - Dec 2018)
 

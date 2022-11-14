@@ -5,22 +5,21 @@ comments: 14
 
 {% include post-header.md %}
 
-(Updated 25 Aug 2021) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command. Or, even better, is the `\import{path}{file}` command, which updates the path in the import so you can use relative paths in your document.
+(Updated 31 Oct 2022) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command. Or, even better, is the `\import{path}{file}` command, which updates the path in the import so you can use relative paths in your document.
 
 {% raw %}
 
 ```latex
 % \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,braket,mathtools,import}
-\usepackage{cmap} % Makes ligatured fonts searchable and copyable in pdf readers
+\usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,mathtools,import,ifthen,xcolor}
 \allowdisplaybreaks
+
+% to allow for defining commands with *
+% e.g. see \note and \note* below
+\usepackage{suffix}
 
 % newline for new paragraph
 % \usepackage[parfill]{parskip}
-
-% Make theorems in appendix labeled by section
-\usepackage{apptools}
-\AtAppendix{\counterwithin{theorem}{section}}
 
 % ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
 \usepackage{showkeys}
@@ -28,23 +27,28 @@ comments: 14
 % for dummy words, use with \lipsum or \lipsum[50], etc.
 \usepackage{lipsum}
 
+% Make theorems in appendix labeled by section
+\usepackage{apptools}
+\AtAppendix{\counterwithin{theorem}{section}}
+
+% Make figures in appendix labeled by section
+\let\oldappendix\appendix
+\renewcommand\appendix{\oldappendix
+    % footnotes are different with revtex
+    % \setcounter{footnote}{0} 
+    % counters should reset each section
+    \counterwithin{figure}{section}
+    \counterwithin{table}{section}
+    % footnote formatting
+    % \renewcommand*{\thefootnote}{\fnsymbol{\fontsize{10pt}{10pt}footnote}}
+}
+
 % meta
 \newcommand{\iosuename}{Joseph~T.~Iosue}
 \newcommand{\iosueemail}{\href{mailto:jtiosue@umd.edu}{jtiosue@umd.edu}}
 \newcommand{\UMD}{University~of~Maryland,~College~Park,~Maryland~20742,~USA}
-\newcommand{\JQI}{Joint~Quantum~Institute,~\UMD}
-\newcommand{\QUICS}{Joint~Center~for~Quantum~Information~and~Computer~Science,~National~Institute~of~Standards~and~Technology~and~\UMD}
-\newcommand{\iosueaffiliations}[1]{
-    \ifnum#1=1
-        \JQI
-    \else 
-        \ifnum#1=2 
-            \QUICS
-        \else 
-            \iosueaffiliations{1},~\iosueaffiliations{2}
-        \fi
-    \fi
-}
+\newcommand{\JQI}{Joint~Quantum~Institute, NIST/\UMD}
+\newcommand{\QUICS}{Joint~Center~for~Quantum~Information~and~Computer~Science, NIST/\UMD}
 
 % to label equations by section, e.g. equation 1.3, 2.5, etc.
 % \numberwithin{equation}{section}
@@ -52,18 +56,33 @@ comments: 14
 % for ``commenting out'' chunks of text 
 \newcommand{\ignore}[1]{}
 % for notes on the text 
-\usepackage{suffix}
 \newcommand{\note}[1]{{\color{red} [#1]}}
 \WithSuffix\newcommand\note*[1]{{\color{red} #1}}
 
 % supposed to be loaded last
-\usepackage[colorlinks,citecolor=blue,bookmarks=true]{hyperref}
+% lintocpage makes the page numbers be linked in the 
+% table of contents instead of the section titles.
+\usepackage[colorlinks,citecolor=blue,bookmarks=true,breaklinks=true,linktocpage=true]{hyperref}
+% make ref to figure go to top of figure instead of to caption
+\usepackage[all]{hypcap}
+
+% Makes ligatured fonts searchable and copyable in pdf readers. Should be loaded after hyperref
+\usepackage{cmap}
+
+% for stuff like ï. Should be after cmap
+\usepackage[T1]{fontenc}
 
 % needs to be loaded after hyperref
 \usepackage[capitalize]{cleveref}
 
+% headings after \notoc will not be in the table of contents
+% headings after \toc will be
+\let\originaladdtocontents\addtocontents
+\newcommand{\notoc}{\renewcommand{\addtocontents}[2]{}}
+\newcommand{\toc}{\let\addtocontents\originaladdtocontents}
+
 % theorems and etc.
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}%[section]
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -78,6 +97,18 @@ comments: 14
 \newenvironment{example}
   {\pushQED{\qed}\renewcommand{\qedsymbol}{$\diamond$}\examplex}
   {\popQED\endexamplex}
+  
+% number aligned equations as subequations. uses ifthen
+% usage: just like align. But if you want to label the full block, include optional arg \begin{salign}[eq:label]
+\newenvironment{salign}[1][]{
+    \subequations
+    \ifthenelse{\equal{#1}{}}
+        {}
+        {\label{#1}}
+    \align
+}{
+    \endalign\endsubequations
+}
 
 % bb
 \newcommand{\bbA}{\mathbb{A}}
@@ -139,17 +170,37 @@ comments: 14
 \newcommand{\parentheses}[1]{\left(#1\right)}
 \newcommand{\brackets}[1]{\left[#1\right]}
 \newcommand{\curlybrackets}[1]{\left\{#1\right\}}
-\newcommand{\angles}[1]{\left\langle #1\right\rangle}
-\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
-\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
-\renewcommand{\set}{\curlybrackets}
-\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
-\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
-
-% other
+\newcommand{\set}{\curlybrackets}
 \newcommand{\pargs}[1]{\!\parentheses{#1}}
 \newcommand{\bargs}[1]{\!\brackets{#1}}
 \newcommand{\cbargs}[1]{\!\curlybrackets{#1}}
+\newcommand{\angles}[1]{\left\langle #1\right\rangle}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+% with *, don't automatically size
+\WithSuffix\newcommand\parentheses*[1]{(#1)}
+\WithSuffix\newcommand\brackets*[1]{[#1]}
+\WithSuffix\newcommand\curlybrackets*[1]{\{#1\}}
+\WithSuffix\newcommand\pargs*[1]{(#1)}
+\WithSuffix\newcommand\bargs*[1]{[#1]}
+\WithSuffix\newcommand\cbargs*[1]{\{#1\}}
+\WithSuffix\newcommand\angles*[1]{\langle #1\rangle}
+\WithSuffix\newcommand\ceil*[1]{\lceil #1\rceil}
+\WithSuffix\newcommand\floor*[1]{\lfloor #1\rfloor}
+\WithSuffix\newcommand\abs*[1]{\lvert #1 \rvert}
+\WithSuffix\newcommand\norm*[1]{\lVert #1 \rVert}
+
+% brakets
+\makeatletter
+\newcommand{\ket}[1]{\@ifnextchar\bra{\mathinner{\lvert#1\rangle}\!}{\mathinner{\lvert#1\rangle}}}
+\newcommand{\bra}[1]{\@ifnextchar\ket{\mathinner{\langle#1}\!}{\mathinner{\langle#1\rvert}}}
+\newcommand{\Ket}[1]{\@ifnextchar\Bra{\mathinner{\big\lvert#1\big\rangle}\!}{\mathinner{\big\lvert#1\big\rangle}}}
+\newcommand{\Bra}[1]{\@ifnextchar\Ket{\mathinner{\big\langle#1}\!}{\mathinner{\big\langle#1\big\rvert}}}
+\makeatother
+
+% other
 \DeclareMathOperator*{\argmax}{arg\!\max}
 \DeclareMathOperator*{\argmin}{arg\!\min}
 \newcommand{\Dom}[1]{\operatorname{Dom}\pargs{#1}}
@@ -163,6 +214,7 @@ comments: 14
 \newcommand{\EX}[2]{\Expval_{#1}\bargs{#2}}
 \DeclareMathOperator*{\Prob}{Pr}
 \renewcommand{\Pr}[2]{\Prob_{#1}\bargs{#2}}
+\DeclareMathOperator*{\variance}{Var}
 
 % morphisms
 \newcommand{\Hom}[1]{\operatorname{Hom}\pargs{#1}}
@@ -177,6 +229,14 @@ comments: 14
 \newcommand{\bigTheta}[1]{\Theta\pargs{#1}}
 \newcommand{\poly}[1]{\operatorname{poly}\pargs{#1}}
 \newcommand{\polylog}[1]{\operatorname{polylog}\pargs{#1}}
+% with *, don't automatically size
+\WithSuffix\newcommand\bigO*[1]{\calO\pargs*{#1}}
+\WithSuffix\newcommand\littleo*[1]{o\pargs*{#1}}
+\WithSuffix\newcommand\bigOmega*[1]{\Omega\pargs*{#1}}
+\WithSuffix\newcommand\littleomega*[1]{\omega\pargs*{#1}}
+\WithSuffix\newcommand\bigTheta*[1]{\Theta\pargs*{#1}}
+\WithSuffix\newcommand\poly*[1]{\operatorname{poly}\pargs*{#1}}
+\WithSuffix\newcommand\polylog*[1]{\operatorname{polylog}\pargs*{#1}}
 
 % more math
 \newcommand{\e}{\mathrm{e}}
@@ -187,6 +247,7 @@ comments: 14
 \newcommand{\GL}{\mathrm{GL}}
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
+
 
 ```
 
