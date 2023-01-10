@@ -5,12 +5,11 @@ comments: 14
 
 {% include post-header.md %}
 
-(Updated 31 Oct 2022) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command. Or, even better, is the `\import{path}{file}` command, which updates the path in the import so you can use relative paths in your document.
+(Updated 10 Jan 2023) Over the years, I've learned that LaTeX is really quite wonderful. Many have suggested that I have a "lifetime style file" that I add to my LaTeX documents with `\usepackage{lifetime.sty}`. So I created one, and will (probably) continue updating it as I go along. By the way, one of the things I most wish I knew about LaTeX a long time ago was the ability to separate documents into multiple files and compile them into one file via the `\input{}` command. Or, even better, is the `\import{path}{file}` command, which updates the path in the import so you can use relative paths in your document.
 
 {% raw %}
 
 ```latex
-% \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,amsfonts,bm,graphicx,mathtools,import,ifthen,xcolor}
 \allowdisplaybreaks
 
@@ -24,23 +23,19 @@ comments: 14
 % ONLY FOR DRAFTING, COMMENT THIS OUT FOR THE FINAL DOCUMENT.
 \usepackage{showkeys}
 
-% for dummy words, use with \lipsum or \lipsum[50], etc.
-\usepackage{lipsum}
-
 % Make theorems in appendix labeled by section
 \usepackage{apptools}
-\AtAppendix{\counterwithin{theorem}{section}}
-
-% Make figures in appendix labeled by section
-\let\oldappendix\appendix
-\renewcommand\appendix{\oldappendix
+\AtAppendix{
+    \numberwithin{theorem}{section}
     % footnotes are different with revtex
     % \setcounter{footnote}{0} 
     % counters should reset each section
-    \counterwithin{figure}{section}
-    \counterwithin{table}{section}
+    \numberwithin{figure}{section}
+    \numberwithin{table}{section}
     % footnote formatting
     % \renewcommand*{\thefootnote}{\fnsymbol{\fontsize{10pt}{10pt}footnote}}
+    \numberwithin{equation}{section}
+    \renewcommand{\theequation}{\thesection\arabic{equation}}
 }
 
 % meta
@@ -207,7 +202,7 @@ comments: 14
 \newcommand{\sgn}[1]{\operatorname{sgn}\pargs{#1}}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
-\newcommand{\Dd}[1]{\mathop{}\!\mathrm{d^#1}}
+\newcommand{\Dd}[1]{\mathop{}\!\mathrm{d^{#1}}}
 
 % probability
 \DeclareMathOperator*{\Expval}{\mathbb{E}}

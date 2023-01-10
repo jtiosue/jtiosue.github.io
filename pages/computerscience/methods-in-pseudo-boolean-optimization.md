@@ -7,12 +7,9 @@ comments: 10
 
 (02 Feb 2021) This is a subset of the slides that I made for a presentation on an introduction to pseudo-boolean optimization, especially applied to quantum optimization algorithms such as the Quantum Adiabatic Algorithm and the Quantum Approximate Optimization Algorithm. *If the viewer below doesn't display well, see the slides [here](media/pseudo_boolean_optimization.pdf).*
 
-<!-- <embed src="media/pseudo_boolean_optimization.pdf" width="100%" height="1000px" /> -->
-
 <object data="media/pseudo_boolean_optimization.pdf" type="application/pdf" width="100%" height="600px">
     <embed src="media/pseudo_boolean_optimization.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="media/pseudo_boolean_optimization.pdf">Download Slides</a>.</p>
-    
+        <p><a href="media/pseudo_boolean_optimization.pdf">Download Slides</a>.</p>
 </object>
 
 {% include post-footer.html %}

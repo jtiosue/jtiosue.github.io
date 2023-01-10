@@ -48,4 +48,9 @@ Published Android application called "Distance to Green" on the Google Play stor
 
 A simple javascript file hosted on my site to easily add comments to a blog by hosting the comments on Github pages. This is what I use for comments on this site.
 
+
+#### Review calibration [(View report)](https://github.com/jtiosue/rcal/blob/main/report/review_calibration.pdf) [(View code)](https://github.com/jtiosue/rcal/)
+
+Calibrating reviews from multiple reviewers over the course of multiple days with improvement taken into account.
+
 </details>
