@@ -13,7 +13,7 @@ title: About the author
 
 I am currently a PhD candidate in the Department of Physics at the University of Maryland. [See my CV](media/cv.pdf).
 
-{% include_relative education.md %}
+<!-- {% include_relative education.md %} -->
 
 {% include_relative projects.md %}
 
@@ -21,7 +21,9 @@ I am currently a PhD candidate in the Department of Physics at the University of
 
 {% include_relative presentations.md %}
 
-{% include_relative appointments.md %}
+<!-- {% include_relative appointments.md %} -->
+
+{% include_relative miscellaneous.md %}
 
 {% include_relative personal.md %}
 

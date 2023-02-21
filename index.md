@@ -36,6 +36,7 @@ li a {font-weight: 300;}
 
 ## Physics topics
 
+- <span>21 Feb 2023</span> [Continuous-variable quantum designs](pages/physics/continuous-variable-quantum-designs.md)
 - <span>30 Aug 2022</span> [Why is classical mechanics symplectic?](pages/physics/why-is-classical-mechanics-symplectic.md)
 - <span>21 Jan 2022</span> [Gaussian linear optics](pages/physics/gaussian-linear-optics.md)
 - <span>11 Nov 2021</span> [Addition of angular momentum, a simple example](pages/physics/addition-of-angular-momentum-a-simple-example.md)

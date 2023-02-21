@@ -25,6 +25,11 @@ I created qusetta, a Python package for translating between different quantum ci
 To learn about quantum computing, quantum algorithms, and C++, I coded a quantum computer simulator and implemented many quantum algorithms, such as Shor's factorization algorithm, Grover's search algorithm, etc.
 
 
+#### Review calibration [(View report)](https://github.com/jtiosue/rcal/blob/master/report/review_calibration.pdf) [(View code)](https://github.com/jtiosue/rcal/)
+
+Calibrating reviews from multiple reviewers over the course of multiple days with improvement taken into account.
+
+
 #### Hockey Stats [(View site)](https://jtiosue.github.io/HockeyStats/) [(View source)](https://github.com/jtiosue/HockeyStats)
 
 A HTML/CSS/Javascript website hosted with GitHub pages to easily track ice hockey stats and keep notes while watching somebody play. The site stores cookies so that statistics are remembered even if the browser is closed. 
@@ -48,9 +53,5 @@ Published Android application called "Distance to Green" on the Google Play stor
 
 A simple javascript file hosted on my site to easily add comments to a blog by hosting the comments on Github pages. This is what I use for comments on this site.
 
-
-#### Review calibration [(View report)](https://github.com/jtiosue/rcal/blob/main/report/review_calibration.pdf) [(View code)](https://github.com/jtiosue/rcal/)
-
-Calibrating reviews from multiple reviewers over the course of multiple days with improvement taken into account.
 
 </details>
