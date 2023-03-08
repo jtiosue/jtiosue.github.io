@@ -7,14 +7,14 @@
 
 - *Continuous-variable quantum state designs: theory and applications*. 
   - Quantum Information Processing (QIP) 2023. [View my slides](media/qip23slides.pdf). [View my recorded talk](https://youtu.be/yiH0L8PYmTo).
-  - APS March Meeting, 2023.
+  - APS March Meeting, 2023. [View my slides](media/MM23_CVDesigns.pdf).
   - Prof. David Gross’s group seminar (invited, virtual), 2022.
   - University of Colorado, Boulder, Journal Club (invited, virtual), 2022.
   - University of Maryland, Quantum Seminar, 2022.
   - APS March Meeting (virtual), 2022.
 
 - *Page curves and typical entanglement in linear optics*.
-  - APS March Meeting, 2023.
+  - APS March Meeting, 2023. [View my slides](media/MM23_PageCurves.pdf).
 
 
 #### Posters

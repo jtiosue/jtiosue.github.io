@@ -21,6 +21,7 @@ body {-webkit-font-smoothing: subpixel-antialiased;} /* consistent font across b
 
 ## Math topics
 
+- <span>07 Mar 2023</span> [Moduli spaces, classifying spaces, and characteristic classes](pages/math/moduli-spaces-classifying-spaces-and-characteristic-classes.md)
 - <span>22 Jul 2022</span> [Lie exponential is matrix exponential for matrix Lie groups](pages/math/lie-exponential-is-matrix-exponential-for-matrix-lie-groups.md)
 - <span>11 Nov 2021</span> [Spin-1/2 and spin-1 representations of SO(3)](pages/math/spin-12-and-spin-1-representations-of-s03.md)
 - <span>13 Sep 2021</span> [On the requirement that manifolds be paracompact](pages/math/on-the-requirement-that-manifolds-be-paracompact.md)
