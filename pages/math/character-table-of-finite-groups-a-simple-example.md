@@ -5,13 +5,13 @@ comments: 36
 
 {% include post-header.md %}
 
-(04 May 2023) Consider the group presented as $G = \langle a, b \vert ab=-ba, a^2=b^2=1\rangle$. By multiplying in all combinations, we find that $|G|=8$ with $G= \{1,-1,a,-a,b,-b,ab,-ab\}$. One can check that there are five conjugacy classes:
+(04 May 2023) Consider the group presented as $G = \langle a, b \vert ab=-ba, a^2=b^2=1\rangle$. By multiplying in all combinations, we find that $\vert G \vert=8$ with $G= \{1,-1,a,-a,b,-b,ab,-ab\}$. Recall that a conjugacy class is defined as $C(x) = \{ gxg^{-1} \vert g \in G  \}$. One can check that there are five conjugacy classes:
 
 $$
 C(1) = \{1\},~ C(-1)=\{-1\},~C(a) = \{a,-a\},~C(b)=\{b,-b\},~C(ab)=\{ab,-ab\}.
 $$
 
-Therefore, there are five irreducible representations. Let $d_1,\dots,d_5$ be the dimensions of the representations. Then we know that $\sum_i d_i^2 = |G|=8$. The only way to satisfy this equation is $d_1=d_2=d_3=d_4=1$ and $d_5=2$. Thus, $G$ has four one-dimensional irreps and one two-dimensional irrep. 
+Therefore, there are five irreducible representations. Let $d_1,\dots,d_5$ be the dimensions of the representations. Then we know that $\sum_i d_i^2 = \vert G\vert=8$. The only way to satisfy this equation is $d_1=d_2=d_3=d_4=1$ and $d_5=2$. Thus, $G$ has four one-dimensional irreps and one two-dimensional irrep. 
 
 Let $\rho_i$ be the irreps and $\chi_{\rho}$ be the character $\chi_\rho(g) = \mathrm{Tr}(\rho(g))$ which is constant inside a conjugacy class. Then we can construct the character table, where the columns correspond to conjugacy classes and the rows correspond to the irreps. Each element then corresponds to the character acting on that conjugacy class. The character table is square. The columns are orthogonal. Furthermore, the rows are orthogonal when weighting the dot product by the size of the conjugacy classes. 
 
