@@ -21,6 +21,7 @@ body {-webkit-font-smoothing: subpixel-antialiased;} /* consistent font across b
 
 ## Math topics
 
+- <span>04 May 2023</span> [Character table of finite groups - a simple example](pages/math/character-table-of-finite-groups-a-simple-example.md)
 - <span>25 Apr 2023</span> [Principle ideal domains yield Noetherian modules](pages/math/principle-ideal-domains-yield-noetherian-modules.md)
 - <span>07 Mar 2023</span> [Moduli spaces, classifying spaces, and characteristic classes](pages/math/moduli-spaces-classifying-spaces-and-characteristic-classes.md)
 - <span>22 Jul 2022</span> [Lie exponential is matrix exponential for matrix Lie groups](pages/math/lie-exponential-is-matrix-exponential-for-matrix-lie-groups.md)
