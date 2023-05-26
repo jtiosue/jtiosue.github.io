@@ -1,11 +1,11 @@
 ---
-title: Character table of finite groups - a simple example
+title: Character table of finite groups, a simple example
 comments: 36
 ---
 
 {% include post-header.md %}
 
-(04 May 2023) Consider the group presented as $G = \langle a, b \vert ab=-ba, a^2=b^2=1\rangle$. By multiplying in all combinations, we find that $\vert G \vert=8$ with $G= \{1,-1,a,-a,b,-b,ab,-ab\}$. Recall that a conjugacy class is defined as $C(x) = \{ gxg^{-1} \vert g \in G  \}$. One can check that there are five conjugacy classes:
+(04 May 2023) Consider the group presented as $G = \langle a, b \mid ab=-ba, a^2=b^2=1\rangle$ (the quaternion group). By multiplying in all combinations, we find that $\vert G \vert=8$ with $G= \set{1,-1,a,-a,b,-b,ab,-ab}$. Recall that a conjugacy class is defined as $C(x) = \set{ gxg^{-1} \mid g \in G  }$. One can check that there are five conjugacy classes:
 
 $$
 C(1) = \{1\},~ C(-1)=\{-1\},~C(a) = \{a,-a\},~C(b)=\{b,-b\},~C(ab)=\{ab,-ab\}.
