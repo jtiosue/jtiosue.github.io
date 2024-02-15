@@ -6,7 +6,7 @@
 #### Talks
 
 - *Projective toric designs, difference sets, and quantum state deisgns*.
-  - (Scheduled, Feb. 13) Codes and Expansions ([CodEx](https://www.math.colostate.edu/~king/codex/)) Seminary (invited, virtual). [View my recorded talk](https://www.youtube.com/@codexseminar4631/videos)
+  - (Scheduled, Feb. 13) Codes and Expansions ([CodEx](https://www.math.colostate.edu/~king/codex/)) Seminary (invited, virtual). [View my recorded talk](https://youtu.be/Wi7-Q98M3-E?si=Rqc28Cn_Ju8ZQmwE). [View my slides](media/CodEx2024.pdf).
 
 - *Continuous-variable quantum state designs: theory and applications*. 
   - Quantum Information Processing (QIP) 2023. [View my slides](media/qip23slides.pdf). [View my recorded talk](https://youtu.be/yiH0L8PYmTo).
