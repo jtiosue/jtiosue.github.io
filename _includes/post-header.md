@@ -7,6 +7,10 @@
   	p, ul, ol, blockquote {text-align: left;}
   }
   body {-webkit-font-smoothing: subpixel-antialiased;} /* consistent font across browsers */
+  summary {
+    /*color: blue;*/
+    cursor: pointer;
+  }
 </style>
 
 {% include top-button.html %}
