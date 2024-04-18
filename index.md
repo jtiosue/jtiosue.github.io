@@ -9,4 +9,4 @@ li a {font-weight: 300;}
 body {-webkit-font-smoothing: subpixel-antialiased;} /* consistent font across browsers */
 </style>
 
-{% include pages/about.md %}
+{% include_relative pages/about.md %}
