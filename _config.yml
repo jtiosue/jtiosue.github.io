@@ -1,0 +1,13 @@
+theme: jekyll-theme-dinky
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+
+kramdown:
+  parse_block_html: true
+
+title: Joseph T. Iosue
+description: PhD student at UMD
+# favicon: favicon.ico
