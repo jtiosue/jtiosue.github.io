@@ -1,19 +1,20 @@
 ---
 permalink: /
-title: "Dr. Joseph T. Iosue"
+title: "Joseph T. Iosue, Ph.D."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Summary of me
+I am currently a staff research scientist at the Johns Hopkins University Applied Physics Laboratory reseraching quantum information theory, quantum error correction, and quantum sensing.
 
 ## Publications
 
 <script type="text/javascript">
 	var arxiv_authorid = "0000-0003-3383-1946";
-	var arxiv_format = "arxiv";
+	// var arxiv_format = "arxiv";
+  var arxiv_max_entries = 0;
 </script>
 <script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
 
