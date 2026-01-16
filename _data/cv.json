@@ -3,12 +3,12 @@
     "name": "Your Sidebar Name",
     "email": "none@example.org",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://jtiosue.github.io",
+    "summary": "Staff Research Scientist at JHU APL",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Maryland",
       "countryCode": "US",
       "region": ""
     },
@@ -16,46 +16,37 @@
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=JXw0_fEAAAAJ&hl=en"
       },
       {
         "network": "ORCID",
         "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0000-0003-3383-1946"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "jtiosue",
+        "url": "https://github.com/jtiosue"
       }
     ]
   },
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "University of Maryland, College Park",
+      "area": "Ph.D in Quantum Information Theory",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2020",
+      "endDate": "2025",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "Massachusetts Institue of Technology",
+      "area": "B.S. in Physics",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "startDate": "2015",
+      "endDate": "2019",
       "gpa": null,
       "courses": []
     }
@@ -69,28 +60,28 @@
       "name": "Paper Title Number 1",
       "publisher": "Journal 1",
       "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
+      "website": "https://jtiosue.github.io/files/paper1.pdf",
       "summary": "This paper is about the number 1. The number 2 is left for future work."
     },
     {
       "name": "Paper Title Number 2",
       "publisher": "Journal 1",
       "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
+      "website": "https://jtiosue.github.io/files/paper2.pdf",
       "summary": "This paper is about the number 2. The number 3 is left for future work."
     },
     {
       "name": "Paper Title Number 3",
       "publisher": "Journal 1",
       "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
+      "website": "https://jtiosue.github.io/files/paper3.pdf",
       "summary": "This paper is about the number 3. The number 4 is left for future work."
     },
     {
       "name": "Paper Title Number 4",
       "publisher": "GitHub Journal of Bugs",
       "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
+      "website": "https://jtiosue.github.io/files/paper3.pdf",
       "summary": "This paper is about fixing template issue #693."
     }
   ],
