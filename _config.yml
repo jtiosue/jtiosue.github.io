@@ -26,11 +26,11 @@ author:
   avatar           : "profile.png"
   name             : "Joseph T. Iosue"
   pronouns         : # example: "she/her"  
-  bio              : "Staff Research Scientist"
-  location         : "Maryland, USA"
-  employer         : "JHU Applied Physics Laboratory"
+  bio              : "Senior Researcher"
+  location         : # "Maryland, USA"
+  employer         : "Microsoft"
   uri              : # URL
-  email            : "jtiosue@umd.edu" 
+  email            : "jtiosue@gmail.edu" 
 
   # Academic websites
   academia         : # URL

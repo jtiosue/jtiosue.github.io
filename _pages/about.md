@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a staff research scientist at the Johns Hopkins University Applied Physics Laboratory reseraching quantum information theory, quantum error correction, and quantum sensing. I received my Ph.D. in physics at the University of Maryland, College Park and my B.S. in physics with a minor is computer science at the Massachusetts Institute of Technology.
+I am currently a Senior Researcher at Microsoft Quantum.
+I received my Ph.D. in physics at the University of Maryland, College Park and my B.S. in physics with a minor is computer science at the Massachusetts Institute of Technology.
 
 ## Publications
 
