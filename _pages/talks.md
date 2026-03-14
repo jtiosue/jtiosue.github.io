@@ -17,8 +17,10 @@ author_profile: true
 
 ## Talks
 
+*This list is not comprehensive*
+
 - *Higher moment theory and learnability of bosonic states*.
-  - (Scheduled) Prof. Scott Aaronson’s group meeting, 2026.
+  - Prof. Scott Aaronson’s group meeting, 2026. [View my slides](/files/aaronson-group-meeting.pdf).
 
 - *Projective toric designs, difference sets, and quantum state deisgns*.
   - Quantum Information Processing (QIP) 2025. [View my recorded talk](https://youtu.be/zukyDkl9UEY?si=p_ET1ffrKhJnx3vh).
