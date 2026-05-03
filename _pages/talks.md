@@ -20,6 +20,7 @@ author_profile: true
 *This list is not comprehensive*
 
 - *Higher moment theory and learnability of bosonic states*.
+  - The Theory of Quantum Computation, Communication and Cryptography (TQC), 2026 (upcoming)
   - Prof. Scott Aaronson’s group meeting, 2026. [View my slides](/files/aaronson-group-meeting.pdf).
 
 - *Projective toric designs, difference sets, and quantum state deisgns*.
